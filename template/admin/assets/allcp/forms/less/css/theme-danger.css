@@ -1,0 +1,170 @@
+.allcp-form .bg-danger {
+  background-color: #f5393d;
+}
+.allcp-form .bg-danger.light {
+  background-color: #fc6e51;
+}
+.allcp-form .bg-danger.lighter {
+  background-color: #f08c7c;
+}
+.allcp-form .bg-danger.dark {
+  background-color: #e63c21;
+}
+.allcp-form .bg-danger.darker {
+  background-color: #cd3117;
+}
+.allcp-form .panel-danger > .panel-heading {
+  border-top-color: #fc6e51;
+}
+.allcp-form .panel-danger > .panel-heading:before {
+  background-color: #f5393d;
+}
+.allcp-form .panel-danger.heading-border:before,
+.allcp-form .panel-danger .heading-border:before {
+  background-color: #f5393d;
+}
+.allcp-form .option-danger input:hover + .checkbox,
+.allcp-form .option-danger input:hover + .radio {
+  border-color: #fc6e51;
+}
+.allcp-form .option-danger input:checked + .checkbox,
+.allcp-form .option-danger input:focus + .checkbox,
+.allcp-form .option-danger input:checked + .radio,
+.allcp-form .option-danger input:focus + .radio {
+  border-color: #f5393d;
+}
+.allcp-form .option-danger input:checked + .radio:before,
+.allcp-form .option-danger input:focus + .radio:before {
+  background: #f5393d;
+}
+.allcp-form .option-danger input:checked + .checkbox:before,
+.allcp-form .option-danger input:focus + .checkbox:before {
+  border-color: #f5393d;
+}
+.allcp-form .btn-danger {
+  background-color: #f5393d;
+}
+.allcp-form .btn-danger:hover,
+.allcp-form .btn-danger:focus {
+  background-color: #fc6e51;
+  border-color: #fc6e51;
+}
+.allcp-form .btn-danger:active {
+  background-color: #e63c21;
+}
+.allcp-form .btn-danger,
+.allcp-form .btn-danger:hover,
+.allcp-form .btn-danger:focus,
+.allcp-form .btn-danger:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.allcp-form .switch-danger > input:checked + label {
+  background: transparent;
+  border-color: #f5393d;
+  color: #f5393d;
+}
+.allcp-form .switch-danger > input:checked + label:after {
+  background: #f5393d;
+  color: #f5393d;
+}
+.allcp-form .switch-danger > input:checked:focus + label {
+  background: #fff;
+  border-color: #f5393d;
+}
+.allcp-form .slider-wrapper.slider-danger .ui-slider .ui-slider-range {
+  background-color: #f5393d;
+}
+.allcp-form .slider-wrapper.slider-danger .ui-slider .ui-slider-handle {
+  border-color: #f5393d;
+}
+.allcp-form .slider-wrapper.slider-danger .ui-slider .ui-slider-handle:before {
+  background-color: #f5393d;
+}
+.allcp-form.theme-danger .tagline span {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .theme-link {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .section-divider span {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .gui-input:hover,
+.allcp-form.theme-danger .gui-textarea:hover,
+.allcp-form.theme-danger .select > select:hover,
+.allcp-form.theme-danger .select-multiple select:hover,
+.allcp-form.theme-danger .gui-input:hover ~ .input-footer,
+.allcp-form.theme-danger .file .gui-file:hover + .gui-input,
+.allcp-form.theme-danger .gui-textarea:hover ~ .input-footer {
+  border-color: #fc6e51;
+}
+.allcp-form.theme-danger .gui-input:focus,
+.allcp-form.theme-danger .gui-textarea:focus,
+.allcp-form.theme-danger .select > select:focus,
+.allcp-form.theme-danger .select-multiple select:focus {
+  border-color: #fc6e51;
+  color: #3C3C3C;
+}
+.allcp-form.theme-danger .gui-textarea:focus {
+  height: 120px;
+}
+.allcp-form.theme-danger .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.allcp-form.theme-danger .gui-input:focus ~ .field-icon i,
+.allcp-form.theme-danger .gui-textarea:focus ~ .field-icon i {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .select-multiple select:focus,
+.allcp-form.theme-danger .gui-input:focus ~ .input-footer,
+.allcp-form.theme-danger .gui-textarea:focus ~ .input-footer,
+.allcp-form.theme-danger .file .gui-file:focus + .gui-input {
+  border-color: #fc6e51;
+}
+.allcp-form.theme-danger .select > select:focus + .arrow {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .ui-datepicker .ui-datepicker-prev,
+.allcp-form.theme-danger .ui-datepicker .ui-datepicker-next,
+.allcp-form.theme-danger .ui-datepicker .ui-datepicker-title {
+  color: #f5393d;
+}
+.allcp-form.theme-danger .ui-datepicker-today a,
+.allcp-form.theme-danger .ui-datepicker-calendar a:hover,
+.allcp-form.theme-danger .ui-datepicker-today a:hover,
+.allcp-form.theme-danger .ui-datepicker .ui-state-highlight {
+  background-color: #ffffff !important;
+  color: #f5393d !important;
+}
+.allcp-form.theme-danger .ui-datepicker .ui-state-active {
+  background-color: #ffffff !important;
+  color: #f5393d !important;
+}
+.allcp-form.theme-danger .rating:hover .rating-star:hover,
+.allcp-form.theme-danger .rating:hover .rating-star:hover ~ .rating-star,
+.allcp-form.theme-danger .rating-input:checked ~ .rating-star {
+  color: #67d3e0;
+}
+.allcp-form.theme-danger .rating-star,
+.allcp-form.theme-danger .rating:hover .rating-star {
+  color: #b9bbc5;
+}
+.allcp-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.allcp-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #f5393d;
+}
+.allcp-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #f5393d;
+}
+.allcp-form.theme-danger .wizard .steps li a,
+.allcp-form.theme-danger .wizard .actions li a {
+  background-color: #f5393d;
+}
+.allcp-form.theme-danger .wizard .steps li.current a {
+  background-color: #e63c21;
+}
+/*# sourceMappingURL=../css/theme-danger.map */

@@ -1,0 +1,98 @@
+// ====================== Labels =======================
+
+.label {
+  //display: block;
+  position: relative;
+  padding: 5px 10px;
+  //max-width: 124px;
+  //height: 28px;
+  font-family: @font-family-2nd;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 24px;
+  color: @label-color;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border-radius: 3px;
+  letter-spacing: 0;
+  //vertical-align: baseline;
+  //border-radius: @border-radius-base;
+
+  // Label size
+  &.label-xs {
+    padding: 0 .35em .1em;
+    font-size: 75%;
+  }
+
+  // Label size
+  &.label-sm {
+    padding: .1em .65em .2em;
+    font-size: 75%;
+  }
+  &.label-lg {
+    padding: .4em .9em .5em;
+    font-size: 95%;
+  }
+
+  // Rounded option
+  &.label-rounded {
+    padding: .2em 0.85em .3em;
+    border-radius: 1em;
+      &.label-xs { padding: 0 .35em .1em; }
+      &.label-sm { padding: .1em .65em .2em; }
+      &.label-lg { padding: .4em .9em .5em; }
+  }
+
+  // Add hover effects for links only
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Empty labels collapse automatically
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.label.with-icon:before {
+  position: absolute;
+  opacity: .2;
+}
+
+.with-icon.label-info:before {
+  font-family: "icomoon";
+  content: "\e6bd";
+  font-size: 58px;
+  top: 5px;
+  right: 0;
+}
+
+.with-icon.label-primary:before{
+  font-family: "FontAwesome";
+  content: "\f135";
+  font-size: 48px;
+  top: 16px;
+  right: 10px;
+}
+
+.with-icon.label-warning:before{
+  font-family: "FontAwesome";
+  content: "\f071";
+  font-size: 50px;
+  top: 0;
+  right: 10px;
+}

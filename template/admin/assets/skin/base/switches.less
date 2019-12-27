@@ -1,0 +1,347 @@
+// ====================== Switches =======================
+
+div.switch label {
+  display: block;
+  position: relative;
+  color: transparent;
+  background: transparent;
+  border: 2px solid @brand-light;
+  text-indent: 100%;
+  width: 52px;
+  height: 26px;
+  cursor: pointer;
+  transition: left .15s ease-out;
+  border-radius: 2px;
+}
+
+div.switch input {
+  display: none
+}
+
+div.switch input + label {
+  margin-left: 0;
+  margin-right: 0
+}
+
+div.switch label:after {
+  content: "";
+  display: block;
+  background: @brand-light;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+
+  border-radius: 2px;
+  -webkit-transition: left .15s ease-out;
+  -moz-transition: left .15s ease-out;
+  transition: left .15s ease-out;
+}
+
+div.switch input:checked + label:after {
+  left: 28px
+}
+
+div.switch label {
+  width: 52px;
+  height: 26px
+}
+
+div.switch label:after {
+  width: 18px;
+  height: 18px
+}
+
+div.switch input:checked + label:after {
+  left: 28px
+}
+
+div.switch label {
+  background: transparent;
+  border-color: @brand-light;
+  color: transparent;
+}
+
+div.switch label:after {
+  background: @brand-light
+}
+
+div.switch input:checked + label {
+  border-color: #2ba6cb
+}
+
+// Switch Sizes
+div.switch.switch-lg label {
+  width: 65px;
+  height: 32px
+}
+
+div.switch.switch-lg label:after {
+  width: 24px;
+  height: 24px
+}
+
+div.switch.switch-lg input:checked + label:after {
+  left: 35px
+}
+
+div.switch.switch-sm label {
+  width: 45px;
+  height: 22px
+}
+
+div.switch.switch-sm label:after {
+  width: 14px;
+  height: 14px
+}
+
+div.switch.switch-sm input:checked + label:after {
+  left: 26px
+}
+
+div.switch.switch-xs label {
+  width: 39px;
+  height: 19px
+}
+
+div.switch.switch-xs label:after {
+  width: 11px;
+  height: 11px
+}
+
+div.switch.switch-xs input:checked + label:after {
+  left: 22px
+}
+
+div.switch.radius label {
+  border-radius: 4px
+}
+
+div.switch.radius label:after {
+  border-radius: 3px
+}
+
+// Rounded Switch
+div.switch.round {
+  border-radius: 1000px
+}
+
+div.switch.round label {
+  border-radius: 26px
+}
+
+div.switch.round label:after {
+  border-radius: 26px
+}
+
+// Inline Switch
+.switch.switch-inline {
+  display: inline-block
+}
+
+.switch.switch-inline + .switch.switch-inline {
+  margin-left: 15px
+}
+
+// Flipswitch
+.flipswitch {
+  position: relative;
+  width: 50px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+div.flipswitch input {
+  display: none
+}
+.flipswitch.switch-inline {
+    display: inline-block;
+}
+.flipswitch.switch-inline-table{
+    display: inline-table;
+    vertical-align: middle;
+}
+.flipswitch.switch-inline-table + span{
+  display: inline-table;
+  vertical-align: middle;
+  margin-left: 14px;
+  margin-top: -3px;
+}
+.flipswitch.switch-inline {
+  margin-right: 15px;
+}
+.flipswitch.switch-inline:last-child {
+  margin-right: 0;
+}
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid @allcp-form-switcher-color;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+.flipswitch-label.no-br {
+  border-radius: 0;
+}
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -ms-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 17px;
+  padding: 0;
+  line-height: 17px;
+  font-size: 9px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: @white;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flipswitch-inner:before {
+  content: "on";
+  padding-left: 7px;
+  //background-color: @brand-success;
+  color: @white;
+  text-align: left;
+}
+.flipswitch-inner:after {
+  content: "off";
+  // padding-right: 5px;
+  // text-align: right;
+  padding-left: 24px;
+  color: @allcp-form-switcher-color;
+  font-weight: 700;
+}
+.flipswitch-inner.no-yes:before {
+  //background-color: @muted2;
+  content: "yes";
+  // text-align: left;
+}
+.flipswitch-inner.no-yes:after {
+  content: "no";
+  //padding-right: 4px;
+}
+// .flipswitch-label.no-br .flipswitch-inner.no-yes:after {
+//   content: "no";
+//   // padding-right: 5px;
+// }
+.flipswitch-switch {
+  width: 14px;
+  height: 13px;
+  margin: 4px;
+  background: @white;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+  // -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+  // -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+  // box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+}
+.flipswitch-label:not(.flipswitch-checked) .flipswitch-switch{
+  //background-color: @allcp-form-switcher-color !important;
+}
+
+.flipswitch-label.no-br .flipswitch-switch,
+.flipswitch-label.no-br .flipswitch-inner:before, 
+.flipswitch-label.no-br .flipswitch-inner:after{
+  border-radius: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}
+
+.flipswitch-cb:not(:checked) + .flipswitch-label .flipswitch-switch {
+  background-color: @allcp-form-switcher-color !important;
+}
+
+// Flipswitch Sizes
+.flipswitch.switch-lg {
+  width: 65px;
+}
+
+.flipswitch.switch-lg .flipswitch-inner:after, .flipswitch.switch-lg .flipswitch-inner:before {
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+}
+.flipswitch.switch-lg .flipswitch-switch {
+  width: 22px;
+  height: 22px;
+  margin: 5px 2px;
+  right: 38px;
+}
+.flipswitch.switch-lg .flipswitch-inner.no-yes:after {
+  padding-right: 6px;
+}
+
+.flipswitch.switch-lg .flipswitch-inner:before {
+  padding-left: 11px
+}
+
+.flipswitch.switch-lg .flipswitch-inner:after {
+  padding-right: 11px;
+}
+
+.flipswitch.switch-md {
+  width: 51px;
+}
+
+.flipswitch.switch-md .flipswitch-inner:after, .flipswitch.switch-md .flipswitch-inner:before {
+  height: 26px;
+  line-height: 26px;
+  font-size: 13px;
+}
+.flipswitch.switch-md .flipswitch-switch {
+  width: 18px;
+  height: 18px;
+  margin: 4px 2px;
+  right: 29px;
+}
+.flipswitch.switch-md .flipswitch-inner.no-yes:after {
+  padding-right: 6px;
+}
+
+.flipswitch.switch-xs {
+  width: 40px;
+}
+
+.flipswitch.switch-xs .flipswitch-inner:after, .flipswitch.switch-xs .flipswitch-inner:before {
+  height: 18px;
+  line-height: 18px;
+  font-size: 11px;
+}
+.flipswitch.switch-xs .flipswitch-switch {
+  width: 10px;
+  height: 10px;
+  margin: 4px 2px;
+}
+

@@ -1,0 +1,658 @@
+//Variables
+
+//Define Directory with Path Structure
+@root-path: "../../../../";
+@assets-path: "../../../";
+@img-path: "../../../img";
+@fonts-path: "../../../fonts";
+
+//Colors
+@white: #fff;
+
+@muted: #a9a9ab;
+@muted-alt: #929599;
+@muted2: #cfdce2;
+
+@transparent: transparent;
+
+@brand-light: #e5eaee;
+@brand-light-light: lighten(@brand-light, 3.5%);
+@brand-light-lighter: lighten(@brand-light, 7.5%);
+@brand-light-dark: darken(@brand-light, 3.5%);
+@brand-light-darker: darken(@brand-light, 7.5%);
+
+@gray: #f4f5f6;
+@gray-light: lighten(@gray, 3.5%);
+@gray-lighter: lighten(@gray, 7.5%);
+@gray-dark: darken(@gray, 3.5%);
+@gray-darker: darken(@gray, 7.5%);
+
+@border-gray: #eeeff1;
+@border-light-gray: #dfdfdf;
+@light-gray: #f4f7f9;
+@text-light-grey: #c7c7c7;
+
+// @gray-darker: #909091;
+// @gray-dark: #858b95;
+// @gray-light: @muted;
+// @gray-lighter: #bdbfc2;
+//
+
+//Gradient Color
+@gradient-grey-dark: #eaebec;
+@gradient-grey: #f5f6f7;
+
+
+//default contextual colors
+// @brand-default: #fafafa;
+@brand-default: #23cac0;
+@brand-default-light: lighten(@brand-default, 3.5%);
+@brand-default-lighter: lighten(@brand-default, 7.5%);
+@brand-default-dark: darken(@brand-default, 3.5%);
+@brand-default-darker: darken(@brand-default, 7.5%);
+
+// @brand-primary: #11a8bb;
+// @brand-primary: #1ca4B8;
+@brand-primary: #1ca5b8;
+@brand-primary-light: lighten(@brand-primary, 3.5%);
+@brand-primary-lighter: lighten(@brand-primary, 7.5%);
+@brand-primary-dark: darken(@brand-primary, 3.5%);
+@brand-primary-darker: darken(@brand-primary, 7.5%);
+
+// @brand-success: #47D178;
+@brand-success: #8892da;
+@brand-success-light: lighten(@brand-success, 3.5%);
+@brand-success-lighter: lighten(@brand-success, 7.5%);
+@brand-success-dark: darken(@brand-success, 3.5%);
+@brand-success-darker: darken(@brand-success, 7.5%);
+
+// @brand-success-dark: #2dc19c;
+// @brand-success-light: lighten(@brand-success, 5%);
+// @brand-success-lighter: lighten(@brand-success-light, 5%);
+
+//@brand-info: #009688;
+
+// @brand-info: #47d1af;
+// @brand-info: #22cabf;
+@brand-info: #22cabf;
+@brand-info-light: lighten(@brand-info, 3.5%);
+@brand-info-lighter: lighten(@brand-info, 7.5%);
+@brand-info-dark: darken(@brand-info, 3.5%);
+@brand-info-darker: darken(@brand-info, 7.5%);
+
+// @brand-info-light: @brand-info;
+// @brand-info-lighter: lighten(@brand-info-light, 10%);
+//
+
+// @brand-warning: #ff7444;
+@brand-warning: #5866c7;
+@brand-warning-light: lighten(@brand-warning, 3.5%);
+@brand-warning-lighter: lighten(@brand-warning, 7.5%);
+@brand-warning-dark: darken(@brand-warning, 3.5%);
+@brand-warning-darker: darken(@brand-warning, 7.5%);
+
+@brand-danger: #ee5744;
+@brand-danger-light: lighten(@brand-danger, 3.5%);
+@brand-danger-lighter: lighten(@brand-danger, 7.5%);
+@brand-danger-dark: darken(@brand-danger, 3.5%);
+@brand-danger-darker: darken(@brand-danger, 7.5%);
+
+//@brand-danger-light: lighten(@brand-danger, 5%);
+// @brand-danger-alt: #d33d3d;
+// @brand-danger-alt-2: #f55753;
+
+
+//@brand-alert: #ffca4c;
+@brand-alert: #fdb94b;
+@brand-alert-light: lighten(@brand-alert, 3.5%);
+@brand-alert-lighter: lighten(@brand-alert, 7.5%);
+@brand-alert-dark: darken(@brand-alert, 3.5%);
+@brand-alert-darker: darken(@brand-alert, 7.5%);
+// @brand-alert-alt: #f89948;
+// @brand-alert-light: @brand-alert;
+//
+
+//@brand-system: #5A5386;
+// @brand-system: #2a3342;
+@brand-system: #303034;
+@brand-system-light: lighten(@brand-system, 3.5%);
+@brand-system-lighter: lighten(@brand-system, 7.5%);
+@brand-system-dark: darken(@brand-system, 3.5%);
+@brand-system-darker: darken(@brand-system, 7.5%);
+//@brand-system-alt: @purple;
+@brand-dark: #191315;
+@brand-dark2: #1e2535;
+// @brand-dark: #2a3342;
+@brand-dark-light: lighten(@brand-dark, 3.5%);
+@brand-dark-lighter: lighten(@brand-dark, 7.5%);
+@brand-dark-dark: darken(@brand-dark, 3.5%);
+@brand-dark-darker: darken(@brand-dark, 7.5%);
+
+@border-dark: #30333a;
+@icon-bg-darker: #292c32;
+
+// @brand-dark2: #373c4e;
+// @brand-dark-dark: #262a39;
+// @brand-dark-darker: #1e2028;
+// @brand-dark-dark2: #232734;
+
+//Global styles settings
+
+//Body background color
+@body-bg: #fff;
+//Body text color
+//edit
+@text-color: #a2a5aa;
+
+//Text link color
+//@link-color: @brand-primary;
+@link-color: @brand-info;
+@link-hover-color: darken(@brand-success, 15%);
+
+//"main" background color
+@main-bg: #f2f3f5;
+@main-bg-alt: @brand-dark;
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,vietnamese,latin-ext,cyrillic);
+
+//Typography
+@font-family-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
+@font-family-sans-serif-2nd: 'Open Sans', Helvetica, Arial, sans-serif;
+//@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base: @font-family-sans-serif;
+@font-family-2nd: @font-family-sans-serif-2nd;
+
+@font-weight-base: 400;
+
+@font-size-base: 14px;
+@font-size-large: ceil((@font-size-base * 1.285));
+//~18px
+@font-size-larger: ceil((@font-size-base * 1.1));
+//~16px
+@font-size-small: ceil((@font-size-base * 0.9));
+//~13px
+@font-size-smaller: ceil((@font-size-base * 0.8));
+//~12px
+@font-size-smallest: ceil((@font-size-base * 0.75));
+//~11px
+
+@font-size-h1: floor((@font-size-base * 3.25));
+//~45px
+@font-size-h2: floor((@font-size-base * 2.5));
+//~36px
+@font-size-h3: ceil((@font-size-base * 1.71));
+//~24px
+@font-size-h4: ceil((@font-size-base * 1.5));
+//~22px
+@font-size-h5: ceil((@font-size-base * 1.285));
+//~ 20px(base)
+@font-size-h6: ceil((@font-size-base * 1.071));
+//~14px
+@font-color-h6: @muted;
+
+//"line-height" for button-like components
+@line-height-base: 1.49;
+//"line-height" for `margin`, `padding`, etc
+@line-height-computed: floor((@font-size-base * @line-height-base));
+
+//Inherited from "<body>" by default
+@headings-font-family: inherit;
+@headings-font-weight: 600;
+@headings-line-height: 1.2;
+@headings-color: @brand-dark;
+
+//Headings small color
+@headings-small-color: @muted;
+
+//Media Object global font weight
+@media-font-weight: 600;
+@media-body-color: @text-muted-alt;
+@media-heading-color: @brand-dark;
+
+//Components
+
+@padding-base-vertical: 6px;
+@padding-base-horizontal: 15px;
+
+@padding-large-vertical: 10px;
+@padding-large-horizontal: 30px;
+
+@padding-small-vertical: 5px;
+@padding-small-horizontal: 14px;
+
+@padding-xs-vertical: 3px;
+@padding-xs-horizontal: 8px;
+
+@line-height-larger: 2;
+@line-height-large: 1.9;
+@line-height-small: 1.5;
+
+@border-radius-base: 5px;
+@border-radius-large: 0;
+@border-radius-small: 3px;
+
+//Active items global color
+@component-active-color: #fff;
+//Dark active items global color
+//@component-active-color-dark: #bcbdc0;
+@component-active-color-dark: @brand-success;
+//Active items global background color
+@component-active-bg: @brand-primary;
+
+//Width of the "border" for generating carets that indicator dropdowns
+@caret-width-base: 4px;
+//Carets increase slightly in size for larger components
+@caret-width-large: 5px;
+
+//Tables
+
+//"<th>"/"<td>" paddings
+//@table-cell-padding: 9px;
+@table-cell-padding: 17px;
+//".table-condensed" cell padding
+@table-condensed-cell-padding: 5px;
+
+//Default background color used for all tables.
+@table-bg: transparent;
+//".table-striped" background color
+@table-bg-accent: @brand-light;
+//".table-hover" background color
+@table-bg-hover: @brand-light;
+@table-bg-active: @table-bg-hover;
+
+//table and cell border color
+@table-border-color: @brand-light;
+
+//Buttons
+
+@btn-font-weight: 700;
+
+@btn-default-color: @brand-dark;
+@btn-default-bg: @brand-light;
+@btn-default-border: #d5dadd;
+
+@btn-primary-color: @white;
+@btn-primary-bg: @brand-primary;
+@btn-primary-border: @brand-primary;
+
+@btn-success-color: @white;
+@btn-success-bg: @brand-success;
+@btn-success-border: @brand-success;
+
+@btn-info-color: @white;
+@btn-info-bg: @brand-info;
+@btn-info-border: @brand-info;
+
+@btn-warning-color: @white;
+@btn-warning-bg: @brand-warning;
+@btn-warning-border: @brand-warning;
+
+@btn-danger-color: @white;
+@btn-danger-bg: @brand-danger;
+@btn-danger-border: @brand-danger;
+
+@btn-alert-color: @white;
+@btn-alert-bg: @brand-alert;
+@btn-alert-border: @brand-alert;
+
+@btn-system-color: @white;
+@btn-system-bg: @brand-system;
+@btn-system-border: @brand-system;
+
+@btn-dark-color: @white;
+@btn-dark-bg: @brand-dark;
+@btn-dark-border: @brand-dark;
+
+@btn-link-disabled-color: @gray-light;
+
+//Button Gradient
+@btn-gradient-grey-0: #cfd0d1;
+@btn-gradient-grey-50: #fff;
+@btn-gradient-grey-100: #b3b4b5;
+
+@btn-gradient-primary-0: @brand-primary;
+@btn-gradient-primary-50: @brand-primary;
+@btn-gradient-primary-100: @brand-primary;
+
+@btn-gradient-success-0: @white;
+@btn-gradient-success-50: #fff;
+@btn-gradient-success-100: @brand-success;
+
+@btn-gradient-info-0: @white;
+@btn-gradient-info-50: #fff;
+@btn-gradient-info-100: @brand-info;
+
+@btn-gradient-warning-0: #f27146;
+@btn-gradient-warning-50: #fff;
+@btn-gradient-warning-100: #ef5b44;
+
+@btn-gradient-danger-0: @white;
+@btn-gradient-danger-50: #fff;
+@btn-gradient-danger-100: @brand-danger;
+
+@btn-gradient-alert-0: @white;
+@btn-gradient-alert-50: #fff;
+@btn-gradient-alert-100: @brand-alert;
+
+@btn-gradient-system-0: @white;
+@btn-gradient-system-50: #fff;
+@btn-gradient-system-100: @brand-system;
+
+@btn-gradient-dark-0: #3b3b3b;
+@btn-gradient-dark-50: #fff;
+@btn-gradient-dark-100: #1e1e1e;
+
+
+
+
+
+
+
+
+//Forms
+
+//"<input>" background color
+@input-bg: #fff;
+//"<input disabled>" background color
+@input-bg-disabled: #fafafa;
+
+//"<input>" text color
+@input-color: @allcp-form-text-color;
+//"<input>" border color
+@input-border: @allcp-form-border-color;
+//"<input>" border radius
+@input-border-radius: @border-radius-base;
+//input:focus border color
+//@input-border-focus: lighten(@brand-primary, 10%);
+@input-border-focus: @brand-success;
+
+//Placeholder text color
+@input-color-placeholder: @gray-light;
+
+//Default ".form-control" height
+@input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 4);
+//Large ".form-control" height
+@input-height-large: (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//Small ".form-control" height
+@input-height-small: (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color: @gray-dark;
+@legend-border-color: #e5e5e5;
+
+//textual input addons color
+@input-group-addon-color: @muted2;
+//textual input addons background color
+@input-group-addon-bg: #fff;
+//textual input addons border color
+@input-group-addon-border-color: #ddd;
+
+//Dropdowns
+
+//Dropdown menu background color
+@dropdown-bg: #fff;
+//Dropdown menu border color
+@dropdown-border: rgba(0, 0, 0, .15);
+//Dropdown menu IE 8 border color
+@dropdown-fallback-border: #ccc;
+//Dropdown items divider color
+@dropdown-divider-bg: @brand-dark;
+
+//Dropdown link text color
+@dropdown-link-color: @brand-dark;
+//Dropdown link hover color
+@dropdown-link-hover-color: @muted;
+//Dropdown links hover background color
+@dropdown-link-hover-bg: #f5f5f5;
+
+//Active dropdown menu item text color
+@dropdown-link-active-color: @component-active-color;
+//Active dropdown menu item background color
+@dropdown-link-active-bg: @component-active-bg;
+
+//Disabled dropdown menu item background color
+@dropdown-link-disabled-color: @gray-light;
+
+//Text color for headers within dropdown menus
+@dropdown-header-color: @gray-light;
+
+//Dark dropdown menu container and contents.
+
+//Dropdown menu background color
+@dropdown-bg-dark: @brand-dark;
+//Dropdown menu border color
+@dropdown-border-dark: @brand-dark;
+//Dropdown items divider color
+@dropdown-divider-bg-dark: #4c536e;
+
+//Dropdown link text color
+@dropdown-link-color-dark: @muted;
+//Dropdown link hover color
+@dropdown-link-hover-color-dark: @component-active-color-dark;
+//Dropdown links hover background color
+@dropdown-link-hover-bg-dark: @brand-dark;
+
+//Active dropdown menu item text color
+@dropdown-link-active-color-dark: @component-active-color-dark;
+//Active dropdown menu item background color
+@dropdown-link-active-bg-dark: @brand-dark;
+
+//Disabled dropdown menu item background color
+@dropdown-link-disabled-color-dark: darken(@component-active-color-dark, 15%);
+
+//Text color for headers within dropdown menus
+@dropdown-header-color-dark: @gray-light;
+
+//-- Z-index prime list
+
+@zindex-navbar: 1000;
+@zindex-dropdown: 1000;
+@zindex-popover: 1060;
+@zindex-tooltip: 1070;
+@zindex-navbar-fixed: 1030;
+@zindex-modal-background: 1040;
+@zindex-modal: 1050;
+
+//Media queries breakpoints
+
+//Extra small screen/phone
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-phone: @screen-xs-min;
+
+//Small screen/tablet
+@screen-sm: 768px;
+@screen-sm-min: @screen-sm;
+@screen-tablet: @screen-sm-min;
+
+//Medium screen/desktop
+@screen-md: 992px;
+@screen-md-min: @screen-md;
+@screen-desktop: @screen-md-min;
+
+//Large screen/wide desktop
+@screen-lg: 1140px;
+@screen-lg-min: @screen-lg;
+@screen-lg-desktop: @screen-lg-min;
+
+//XLarge screen/extra wide desktop
+@screen-xl: 1400px;
+@screen-xl-min: @screen-xl;
+@screen-xl-desktop: @screen-xl-min;
+
+//Add maximum to aboid overlapping
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@screen-lg-max: (@screen-xl-min - 1);
+
+//Mobile View Breakpoint - 0 = disable
+@screen-mobile: 0px;
+
+//Grid system
+
+//Grid columns num
+@grid-columns: 12;
+//Columns left/right padding. Divides by 2 for the left and right
+@grid-gutter-width: 15px;
+
+//Navbar collapse
+//When it stops to collapse
+//"@screen-xs-min" - will prevent the navbar from entering mobile mode
+@grid-float-breakpoint: @screen-xs-min;
+////When it collapses
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+//Container sizes
+
+//Small screen/tablet
+@container-tablet: ((720px + @grid-gutter-width));
+//"@screen-sm-min" and up
+@container-sm: @container-tablet;
+
+//Medium screen/desktop
+@container-desktop: ((940px + @grid-gutter-width));
+//"@screen-md-min" and up
+@container-md: @container-desktop;
+
+//Large screen/wide desktop
+@container-large-desktop: ((1040px + @grid-gutter-width));
+//"@screen-lg-min" and up
+@container-lg: @container-large-desktop;
+
+//Extra Large screen/Extra wide desktop
+@container-xlarge-desktop: ((1280px + @grid-gutter-width));
+//"@screen-xl-min" and up
+@container-xl: @container-xlarge-desktop;
+
+//Content Chute Navs
+@chute-nav-active-icon: @brand-primary;
+@chute-nav-active-border: @brand-primary;
+
+//Navbar
+
+@navbar-height: 64px;
+@navbar-margin-bottom: @line-height-computed;
+@navbar-border-radius: @border-radius-base;
+@navbar-padding-horizontal: floor((@grid-gutter-width / 2));
+@navbar-padding-vertical: ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height: 340px;
+
+@navbar-default-color: #777;
+@navbar-default-bg: #f8f8f8;
+@navbar-default-border: darken(@navbar-default-bg, 6.5%);
+@navbar-dropdown-menu-bg: #f9f9f9;
+
+//Navbar links
+@navbar-default-link-color: #777;
+@navbar-default-link-hover-color: #333;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-active-color: #555;
+@navbar-default-link-active-bg: darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color: #ccc;
+@navbar-default-link-disabled-bg: transparent;
+
+//Navbar brand label
+@navbar-default-brand-color: @navbar-default-link-color;
+@navbar-default-brand-hover-color: darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg: transparent;
+
+//Navbar toggle
+@navbar-default-toggle-hover-bg: #ddd;
+@navbar-default-toggle-icon-bar-bg: #888;
+@navbar-default-toggle-border-color: #ddd;
+
+//Inverted navbar
+//Reset inverted navbar basics
+@navbar-inverse-color: @gray-light;
+@navbar-inverse-bg: #222;
+@navbar-inverse-border: darken(@navbar-inverse-bg, 10%);
+
+//Inverted navbar links
+@navbar-inverse-link-color: @gray-light;
+@navbar-inverse-link-hover-color: #fff;
+@navbar-inverse-link-hover-bg: transparent;
+@navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg: darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color: #444;
+@navbar-inverse-link-disabled-bg: transparent;
+
+//Inverted navbar brand label
+@navbar-inverse-brand-color: @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color: #fff;
+@navbar-inverse-brand-hover-bg: transparent;
+
+//Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg: #333;
+@navbar-inverse-toggle-icon-bar-bg: #fff;
+@navbar-inverse-toggle-border-color: #3INDX( 	 õ∂`Æ   <       (   8   Ë       i       “~ “Po                    Ÿ    5 N^¡#Â“ñÑÁ#Â“ñÑÁ#Â“N^¡#Â“       #˘             ~ E 6 5 5 0 ~ 1 . T M P p o i               Ÿ    5 N^¡#Â“ñÑÁ#Â“ñÑÁ#Â“N^¡#Â“       #˘             ~ E 6 5 5 0 ~ 1 . T M P p o i               Ÿ    5 N^¡#Â“ñÑÁ#Â“ñÑÁ#Â“N^¡#Â“       #˘             ~ E 6 5 5 0 ~ 1 . T M P p o i               Ÿ    5 N^¡#Â“ñÑÁ#Â“ñÑÁ#Â“N^¡#Â“       #˘             ~ E 6 5 5 0 ~ 1 . T M P p o                Ÿ    5 N^¡#Â“ñÑÁ#Â“ñÑÁ#Â“N^¡#Â“       #˘             ~ E 6 5 5 0 ~ 1 . T M P p o i               Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                    ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 8ùö!Â“^˛ª!Â“^˛ª!Â“8ùö!Â“                     ~ E E 6 A 3 ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                  Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!             ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â ≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 r¡ Â“≥¿9 Â“≥¿9 Â“r¡ Â“ 0      =!              ~ F 7 7 F E ~ 1 . T M P p                   Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C  1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 dÂ“∫÷*Â“∫÷*Â“dÂ“       ˆ              ~ F E A B C ~ 1 . T M P                     Ÿ    5 é™¸Â“F
+…¸Â“F
+…¸Â é™¸Â“       >              ~ d c 5 1 c 4 d d . t m p o i  ±     p Z     Ÿ    5 é™¸Â“F
+…¸Â“F
+…¸Â“é™¸Â“       >              ~ D C 5 1 C ~ 1 . T M P p o i ≤     p \     Ÿ    5 ;<ù˝Â“æµ˝Â“æµ˝Â“;<ù˝Â“        r              ~ e e 0 9 8 5 9 5 . t m p o i ≤     p Z     Ÿ    5 ;<ù˝Â“æµ˝Â“æµ˝Â“;<ù˝Â“        r              ~ E E 0 9 8 ~ 1 . T M P p o i               @popover-max-width: 276px;
+//Popover border color
+@popover-border-color: rgba(0, 0, 0, .2);
+// INDX( 	 -ç`Æ   =       (   8   Ë       i       “~ “
+/                    Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o                Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“      @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i              Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ a d 1 7 f 3 f 3 . t m p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ A D 1 7 F ~ 1 . T M P p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ A D 1 7 F ~ 1 . T M P p o i               Ÿ    5 ÑÈÊ!Â“(`¸!Â“(`¸!Â“ÑÈÊ!Â“       @              ~ A D 1 7 F ~ 1 . T M P p o i               Ÿ    5 ‘]Â“©qzÂ“©qzÂ“‘]Â“ P     §M            ~ F A F 6 D ~ 1 . T M P                     Ÿ    5 ‘]Â“©qzÂ“©qzÂ“‘]Â“ P     §M             ~ F A F 6 D ~ 1 . T M P                     Ÿ    5 ‘]Â“©qzÂ“©qzÂ“‘]Â“ P     §M             ~ F A F 6 D ~ 1 . T M P                     Ÿ    5 ‘]Â“©qzÂ“©qzÂ“‘]Â“ P     §M             ~ F A F 6 D ~ 1 . T M P                     Ÿ    5 %õÜÂ“wÉÔÂ“wÉÔÂ“%õÜÂ“ Ä      ~w              ~ d 9 5 c 6 c b 3 . t m p o i ò≤     p Z     Ÿ    5 %õÜÂ wÉÔÂ“wÉÔÂ“%õÜÂ“ Ä      ~w              ~ D 9 5 C 6 ~ 1 . T M P p o i ù≤    	 p \     Ÿ    5 wÉÔÂ“W7Â“W7Â“wÉÔÂ“       ó              ~ d 9 8 e 4 3 2 a . t m p o i ù≤    	 p Z     Ÿ    5 wÉÔÂ“W7Â“W7Â“wÉÔÂ“       ó              ~ D 9 8 E 4 ~ 1 . T M P p o i  ±     p \     Ÿ    5 é™¸Â“F
+…¸Â“F
+…¸Â“é™¸Â“       >              ~ d c 5 1 c 4 d d . t m p o i  ±     p Z     Ÿ    5 é™¸Â“F
+…¸Â“F
+…¸Â“é™¸Â“       >              ~ D C 5 1 C  1 . T M P p o i â≤     p \     Ÿ    5 á,Â“çâTÂ“çâTÂ“á,Â“                     ~ d c f 0 6 b d 7 . t m p o i â≤     p Z     Ÿ    5 á,Â“çâTÂ“çâTÂ“á,Â“                     ~ D C F 0 6 ~ 1 . T M P p o i –≤     p \     Ÿ    5 `#Â“~]aÂ“~]aÂ“`#Â“ p      "`              ~ e 4 3 c 4 b d 9 . t m p o i –≤     p Z     Ÿ    5 `#Â“~]aÂ“~]aÂ“`#Â“ p      "`              ~ E 4 3 C 4 ~ 1 . T M P p o i ›≤     p \     Ÿ    5 A”ïÂ“˘ˆªÂ“˘ˆªÂ A”ïÂ“X      W              ~ e 8 9 6 6 8 7 8 . t m p o i ›≤     p Z     Ÿ    5 A”ïÂ“˘ˆªÂ“˘ˆªÂ“A”ïÂ“X      W              ~ E 8 9 6 6 ~ 1 . T M P p o i ≤     p \     Ÿ    5 ;<ù˝Â“æµ˝Â“æµ˝Â“;<ù˝Â“        r              ~ e e 0 9 8 5 9 5 . t m p o i ≤     p Z     Ÿ    5 ;<ù˝Â“æµ˝Â“æµ˝Â“;<ù˝Â“        r              ~ E E 0 9 8 ~ 1 . T M P p o i               lor: @list-group-link-color;
+@list-group-link-heading-color: #333;
+
+//Panels
+@panel-bg: #fff;
+ INDX( 	 J√\Æ   >       (   8   Ë               “~ otor                    Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                    Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡     ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                    Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄             ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 Ÿ;£Â“àà–Â“àà–Â“Ÿ;£Â“‡      ⁄              ~ F E E 0 5 ~ 1 . T M P                     Ÿ    5 ¬ dﬁÂ“c…ÉﬁÂ“c…ÉﬁÂ“¬ dﬁÂ“H      F              ~ E 7 7 C 3 ~ 1 . T M P p                   Ÿ    5 ¬ dﬁÂ c…ÉﬁÂ“c…ÉﬁÂ“¬ dﬁÂ“H      F              ~ E 7 7 C 3 ~ 1 . T M P p                   Ÿ    5 ¬ dﬁÂ“c…ÉﬁÂ“c…ÉﬁÂ“¬ dﬁÂ“H      F              ~ E 7 7 C 3 ~ 1 . T M P p                   Ÿ    5 ¬ dﬁÂ“c…ÉﬁÂ“c…ÉﬁÂ“¬ dﬁÂ“H      F              ~ E 7 7 C 3 ~ 1 . T M P p                   Ÿ    5 HÂìŸÂ“ˆœæŸÂ“ˆœæŸÂ“HÂìŸÂ“H       F               ~ E F A 7 5 ~ 1 . T M P p                   Ÿ    5 HÂìŸÂ“ˆœæŸÂ“ˆœæŸÂ“HÂìŸÂ“H       F               ~ E F A 7 5  1 . T M P p                   
+@code-bg: #f9f2f4;
+
+@kbd-color: #fff;
+@kbd-bg: #333;
+
+@pre-bg: #eaeef0;
+@pre-color: @gray-dark;
+@pre-border-color: #cbd6d6;
+@pre-scrollable-max-height: 340px;
+
+//Type
+
+//Forms / lists horizontal offset
+@component-offset-horizontal: 180px;
+//Text muted color
+@text-muted: @muted;
+@text-muted-alt: @muted-alt;
+//Abbreviations and acronyms border color
+@abbr-border-color: @gray-light;
+//Blockquote small color
+@blockquote-small-color: @gray-light;
+//Blockquote font size
+@blockqu e-font-size: (@font-size-base * 1.25);
+//Blockquote border color
+@blockquote-border-color: @gray-lighter;
+//Page header border color
+@page-header-border-color: #DDD;
+//Horizontal description list titles width
+@dl-horizontal-offset: @component-offset-horizontal;
+//Horizontal line color
+@hr-border: @gray-lighter;
+
+//Status Colors
+@status-online: #73cd61;
+
+//Poll
+@poll-legend-bg: #fafafb;
+@poll-legend-grey-dark: #eaebec;
+
+//Allcp
+@allcp-form-border-color: #dddfe3;
+@allcp-form-text-color: @muted-alt;
+@allcp-f m-switcher-color: #c5c6c7;
+@allcp-form-button-disable-bg-color: #c2c3c4;
+
+//Info-block
+@info-block-counter-color: #bdbfc2;
+@info-block-description-color: @muted;
+
+//Footer
+@footer-text-color: #909091;

@@ -1,0 +1,78 @@
+// ====================== Bootstrap Datepicker =======================
+
+.dropdown-menu.bootstrap-datetimepicker-widget {
+	border: 1px solid @allcp-form-border-color;
+}
+
+// today item - bg
+.bootstrap-datetimepicker-widget td.today:before {
+  border-bottom: 7px solid @brand-info;
+}
+// active/:hover item - bg
+.bootstrap-datetimepicker-widget td.active,
+.bootstrap-datetimepicker-widget td.active:hover,
+.bootstrap-datetimepicker-widget td span.active {
+    //background-color: @brand-info;
+	background-color: transparent;
+    color: @brand-info;
+    //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-shadow: none;
+}
+// widget inner links
+.bootstrap-datetimepicker-widget a[data-action] {
+  border-color: transparent;
+  color: @brand-info;
+}
+.bootstrap-datetimepicker-widget a[data-action]:hover span{
+  color: @brand-dark;
+}
+
+.bootstrap-datetimepicker-widget td.old, 
+.bootstrap-datetimepicker-widget td.new {
+	opacity: 0.2;
+}
+
+.bootstrap-datetimepicker-widget td.day {
+	font-size: 14px;
+	font-weight: 600;
+}
+.bootstrap-datetimepicker-widget td.day:hover {
+	opacity: 1;
+}
+
+.bootstrap-datetimepicker-widget.inline {
+	border: 1px solid @allcp-form-border-color;
+}
+
+.bootstrap-datetimepicker-widget td.day:hover, 
+.bootstrap-datetimepicker-widget td.hour:hover, 
+.bootstrap-datetimepicker-widget td.minute:hover, 
+.bootstrap-datetimepicker-widget td.second:hover,
+.bootstrap-datetimepicker-widget thead tr:first-child th:hover,
+.bootstrap-datetimepicker-widget td span:hover {
+	background-color: transparent;
+    color: @brand-info;
+}
+
+.bootstrap-datetimepicker-widget table {
+	position: relative;
+}
+
+.bootstrap-datetimepicker-widget table.table-condensed thead tr{
+	.prev, .next {
+		position: absolute;
+	    top: -2px;
+	    color: @brand-info;
+		width: 30px;
+    	height: 32px;
+	}
+	.prev {
+	    left: 33px;
+	}
+	.next {
+	    right: 33px;
+	}
+	.prev:hover, .next:hover {
+		color: @text-color;
+	}
+}

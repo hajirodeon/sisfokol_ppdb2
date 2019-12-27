@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'codropsicons';
+  src: url('../fonts/codropsicons/codropsicons.eot');
+  src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fallback for browsers that don't support SVG - Generated with http://iconizr.com/ */
+.no-svg .si-icon-clock {
+  background-image: url('assets/fonts/animatedsvgicons/png/clock.png');
+}
+.no-svg .si-icon-contract {
+  background-image: url('assets/fonts/animatedsvgicons/png/contract.png');
+}
+.no-svg .si-icon-down-arrow {
+  background-image: url('assets/fonts/animatedsvgicons/png/down-arrow.png');
+}
+.no-svg .si-icon-equalizer {
+  background-image: url('assets/fonts/animatedsvgicons/png/equalizer.png');
+}
+.no-svg .si-icon-flag {
+  background-image: url('assets/fonts/animatedsvgicons/png/flag.png');
+}
+.no-svg .si-icon-glass-empty {
+  background-image: url('assets/fonts/animatedsvgicons/png/glass.png');
+}
+.no-svg .si-icon-hamburger,
+.no-svg .si-icon-hamburger-cross {
+  background-image: url('assets/fonts/animatedsvgicons/png/hamburger.png');
+}
+.no-svg .si-icon-hourglass {
+  background-image: url('assets/fonts/animatedsvgicons/png/hourglass.png');
+}
+.no-svg .si-icon-mail {
+  background-image: url('assets/fonts/animatedsvgicons/png/mail.png');
+}
+.no-svg .si-icon-maximize,
+.no-svg .si-icon-maximize-rotate {
+  background-image: url('assets/fonts/animatedsvgicons/png/maximize.png');
+}
+.no-svg .si-icon-monitor {
+  background-image: url('assets/fonts/animatedsvgicons/png/monitor.png');
+}
+.no-svg .si-icon-nav-left-arrow {
+  background-image: url('assets/fonts/animatedsvgicons/png/nav-left-arrow.png');
+}
+.no-svg .si-icon-nav-up-arrow {
+  background-image: url('assets/fonts/animatedsvgicons/png/nav-up-arrow.png');
+}
+.no-svg .si-icon-lock {
+  background-image: url('assets/fonts/animatedsvgicons/png/padlock.png');
+}
+.no-svg .si-icon-play {
+  background-image: url('assets/fonts/animatedsvgicons/png/play.png');
+}
+.no-svg .si-icon-plus,
+.no-svg .si-icon-plus-cross {
+  background-image: url('assets/fonts/animatedsvgicons/png/plus.png');
+}
+.no-svg .si-icon-right-arrow {
+  background-image: url('assets/fonts/animatedsvgicons/png/right-arrow.png');
+}
+.no-svg .si-icon-smiley {
+  background-image: url('assets/fonts/animatedsvgicons/png/smiley.png');
+}
+.no-svg .si-icon-trash {
+  background-image: url('assets/fonts/animatedsvgicons/png/trash.png');
+}
+.no-svg .si-icon-volume {
+  background-image: url('assets/fonts/animatedsvgicons/png/volume.png');
+}
+.no-svg .si-icon-zoom {
+  background-image: url('assets/fonts/animatedsvgicons/png/zoom.png');
+}
+/* alternatively you can define that there is no background image when SVG is supported instead of using .no-svg */
+/*# sourceMappingURL=codropsicons.min.css.map */

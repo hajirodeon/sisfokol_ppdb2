@@ -1,0 +1,102 @@
+// ====================== Page Footer =======================
+#content-footer {
+  // color: @main-bg;
+  // font-size: 13px;
+  // font-weight: 500;
+  // overflow: hidden;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // height: 80px;
+  // line-height: 80px;
+  // padding: 0;
+  // background-color: @dark-blue;
+  // border-top: 1px solid @dark-blue;
+  // -webkit-transition: margin 0.2s ease;
+  // transition: margin 0.2s ease;
+  color: @footer-text-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  padding: 0 0 50px 0;
+  a {
+    color: @footer-text-color;
+  }
+  a:hover{
+    color: @brand-info;
+  }
+  b { color: @main-bg; }
+  .footer-meta { padding-right: 30px; }
+  .footer-return-top {
+    -webkit-border-radius: @border-radius-base;
+    border-radius: @border-radius-base;
+    text-align: center;
+    position: fixed;
+    top: 22px;
+    right: 45px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: @brand-dark;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .footer-return-top span {
+    position: relative;
+    color: @light-gray;
+    font-size: 20px;
+    -webkit-transition: all 0.23s ease;
+    transition: all 0.2s ease;
+  }
+  .footer-return-top:not(.affix) {
+    position: absolute;
+  }
+  .footer-return-top:hover {
+    cursor: pointer;
+  }
+  .footer-return-top:hover span {
+  }
+}
+#content-footer:not(.affix) {
+  //bottom: -@navbar-height;
+}
+
+// Fixed Setting
+#content-footer.affix {
+  z-index: 1; 
+  position: fixed;
+  margin-left: @sidebar-open-width;
+}
+// Match Sidebar States
+body.sb-l-c #content-footer.affix {
+  margin-left: @sidebar-closed-width;
+}
+body.sb-l-m #content-footer.affix {
+  margin-left: @sidebar-minified-width;
+}
+
+// Footer Light skin
+#content-footer.footer-light {
+  color: @brand-dark;
+  background-color: @brand-light;
+  border-top: 1px solid @brand-light;
+  a {
+    color: @brand-dark;
+  }
+  b { color: @main-bg; }
+  .footer-return-top {
+    background-color: @light-gray;
+  }
+  .footer-return-top span {
+    color: @brand-dark;
+  }
+}
+
+@media (max-width: 900px) {
+  body.sb-l-m #content-footer.affix {
+    margin-left: 45px;
+  }
+}
+

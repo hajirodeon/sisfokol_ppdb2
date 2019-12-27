@@ -1,0 +1,362 @@
+// ====================== Topbar =======================
+
+/*
+     1. Topbar
+     2. Topbar Alt Style
+     3. Topbar Dropdown Menu
+     4. Topbar Dropdown Menu Alt Style
+     5. Topbar Nav - List
+     6. Topbar Responsive
+*/
+
+// ====================== 1. Topbar =======================
+
+#topbar {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  // min-height: 51px;
+  padding: 10px 45px;
+  background: @main-bg;
+  border-bottom: 1px solid #e0e0e0;
+  &:extend(.clearfix all);
+
+  .topbar-right {
+    float: right;
+
+    .control-label {
+      color: @brand-dark;
+      font-family: @font-family-2nd;
+      font-size:12px;
+      font-weight: 600;
+      padding-right: 20px;
+    }
+
+    .multiselect.dropdown-toggle {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 23px;
+      text-transform: uppercase;
+
+      + .multiselect-container.dropdown-menu {
+        background-color: @brand-light;
+        border-color: @brand-light;
+        padding: 12px 0;
+      }
+      + .multiselect-container.dropdown-menu > li.multiselect-group {
+        display: none;
+      }
+      + .multiselect-container.dropdown-menu > li > a {
+        color: #9b9ead;
+        font-family: @font-family-base;
+      }
+      + .multiselect-container.dropdown-menu > .active > a,
+      + .multiselect-container.dropdown-menu > li > a:hover,
+      + .multiselect-container.dropdown-menu > li > a:focus {
+        color: darken(#9b9ead, 15%);
+        background-color: @brand-light;
+      }
+      + .multiselect-container.dropdown-menu > li > a > label {
+        padding: 4px 27px 6px 27px;
+      }
+      + .multiselect-container.dropdown-menu > li .radio input[type="radio"] {
+        display: none;
+      }
+    }
+  }
+  &.breadcrumb_style_2 {
+
+    border: none;
+
+    .topbar-right {
+      font-family: @font-family-2nd;
+      padding-top: 4px;
+
+      .control-label {
+        color: @muted;
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-right: 5px;
+      }
+      .multiselect.dropdown-toggle {
+        background-color: transparent;
+        color: @brand-dark;
+        padding: 0;
+        font-size: 10px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+      }
+      .btn.multiselect .caret {
+        border-top: 3px solid;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+        margin-left: 2px;
+      }
+    }
+  }
+
+}
+
+// Breadcrumbs
+.breadcrumb {
+  float: left;
+  position: relative;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  border-radius: 0;
+  background-color: transparent;
+
+  > li {
+    color: @brand-dark;
+  }
+
+  > li.breadcrumb-icon {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  > li.breadcrumb-active {
+    //margin-right: 20px;
+    margin-right: 1px;
+  }
+  li.breadcrumb-current-item {
+    color: @breadcrumb-color;
+  }
+
+  > li a {
+    text-decoration: none;
+    color: @brand-dark;
+  }
+
+  > li.breadcrumb-active > a {
+    color: @brand-danger;
+    font-size: 18px;
+  }
+
+  > li > a:hover {
+    color: @brand-dark;
+  }
+}
+
+// Toggle sidemenu button
+#sidebar_right_toggle i.fa,
+#sidebar_right_toggle span.glyphicon,
+#sidebar_right_toggle span.glyphicons {
+  margin-top: 2px;
+}
+
+// toggle sidemenu button (when menu is open)
+body.sb-r-o #sidebar_right_toggle i.fa,
+body.sb-r-o #sidebar_right_toggle span.glyphicon,
+body.sb-r-o #sidebar_right_toggle span.glyphicons {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  color: #999;
+}
+
+// Toggle Right Sidebar - Badge
+.badge.badge-hero {
+  position: relative;
+  top: -12px;
+  margin-left: -10px;
+  padding: 2px 5px;
+  font-size: 11px;
+}
+
+// ====================== 2. Topbar Alt Style =======================
+
+#topbar.alt {
+  font-size: 13px;
+  // min-height: 72px;
+  // padding: 11px 33px;
+  padding: 11px 30px;
+  background: transparent;
+  border-bottom: 0;
+
+  .breadcrumb {
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 0;
+  }
+  & + .table-layout .chute {
+    padding-top: 0;
+  }
+}
+
+// ====================== 3. Topbar Dropdown Menu =======================
+
+#topbar-dropmenu-wrapper {
+  z-index: 999;
+  overflow: hidden;
+  display: none;
+  position: relative;
+  top: 1px;
+  padding: 30px 20px 22px;
+  height: auto;
+  width: 100%;
+  //background: @main-bg;
+}
+
+.navbar[class*='bg-'] + #sidebar_left + #content_wrapper > #topbar-dropmenu-wrapper {
+  top: 6px;
+}
+
+.topbar-menu .service-box {
+  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  color: #FFF;
+  height: 115px;
+  position: relative;
+  padding: 25px 5px 0;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+.topbar-menu .service-box:hover,
+.topbar-menu .service-box:focus,
+.topbar-menu .service-box:active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.topbar-menu .service-box span:first-child {
+  font-size: 44px;
+}
+
+.topbar-menu .service-box .service-title {
+  display: block;
+  font: 600 14px/16px @font-family-base;
+  margin-top: 18px;
+}
+
+// Topbar Service Menu Modal
+.service-modal {
+  z-index: 9998;
+  cursor: pointer;
+  position: fixed;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+// if topbar is fixed - force it relative to avoid scrolling problems
+#topbar-dropmenu-wrapper.topbar-dropmenu-open + #topbar.affix {
+  position: relative !important;
+  margin-left: auto !important;
+}
+
+// ====================== 4. Topbar Dropdown Menu - Alt style =======================
+
+#topbar-dropmenu-wrapper.alt {
+  z-index: 1025;
+  padding: 17px 20px 10px;
+  background: #DDD;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+
+  &:before {
+    display: none;
+  }
+
+  .topbar-menu > div {
+    opacity: 0.85;
+  }
+  .topbar-menu .service-box {
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .topbar-menu .service-box:hover,
+  .topbar-menu .service-box:focus,
+  .topbar-menu .service-box:active {
+    color: #fff;
+    background: inherit;
+  }
+  .topbar-menu .service-box .service-title {
+    bottom: 7px;
+    font-size: 12px;
+  }
+}
+
+// ====================== 5. Topbar Nav - List =======================
+
+#topbar .nav.nav-list-topbar {
+  margin: -10px 15px;
+
+  li a {
+    border: 0;
+    padding: 16px 14px 12px;
+  }
+  li.active a {
+    color: @brand-primary;
+  }
+}
+
+// ======================  boxed layout =======================
+body.boxed-layout #topbar {
+  border-radius: 10px 10px 0 0;
+}
+body.boxed-layout #content_wrapper {
+  border-radius: 0 0 10px 10px;
+}
+// ====================== 6. Topbar Responsive =======================
+
+@media (max-width: 815px) {
+  #topbar {
+    padding: 10px 6px 10px 14px;
+  }
+
+  // Topbar Alt
+  #topbar.alt {
+    min-height: 40px;
+  }
+
+  #topbar .topbar-dropdown {
+    display: none !important;
+  }
+
+  // when fixed
+  #topbar.affix.alt + #content {
+    margin-top: 40px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  #topbar .breadcrumb {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 2px;
+  }
+
+  #topbar .breadcrumb .breadcrumb-active {
+    display: none;
+  }
+
+  #topbar .breadcrumb > li.breadcrumb-active + li:before {
+    display: none;
+  }
+
+}
+
+@media (max-width: 479px) {
+  #topbar .nav.nav-list-topbar {
+    margin: 0;
+
+    li a {
+      line-height: 16px;
+      padding: 8px 4px 6px;
+    }
+  }
+
+}

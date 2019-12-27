@@ -1,0 +1,45 @@
+// ====================== High Charts =======================
+
+.chart-legend {} .legend-item {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.nav.chart-legend > li {
+
+    &> a {
+        background: transparent;
+        color: @brand-dark;
+        font: 700 12px/20px @font-family-base;
+        text-transform: uppercase;
+    }
+    &> a:hover {
+        background: transparent;
+        color: @brand-primary;
+    }
+}
+
+.highcharts-container .highcharts-axis-labels text,
+.highcharts-container .highcharts-legend-item text {
+    color: @brand-dark;
+    fill: @brand-dark;
+    // font-size: 12px !important;
+    // font-family: @font-family-base, sans-serif !important;
+    // font-weight: 400 !important;
+}
+.highcharts-container .highcharts-title {
+    //font-family: @font-family-base, sans-serif;
+    // font-size: 26px !important;
+    // color: @brand-dark !important;
+    // fill: @brand-dark !important;
+}
+
+.highcharts-container .highcharts-axis-labels text,
+.sidebar-stat .highcharts-container .highcharts-legend-item text {
+    color: @muted;
+    fill: @muted;
+    // font-size: 12px !important;
+    // font-family: @font-family-base, sans-serif !important;
+    // font-weight: 400 !important;
+}

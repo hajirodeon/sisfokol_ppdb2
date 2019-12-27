@@ -1,0 +1,136 @@
+// ====================== Сontent container =======================
+.content_container {
+	&:after,
+	#content:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.content-left,
+	.content-right{
+		display: inline-table;
+		vertical-align: top;
+		position: relative;
+	}
+
+
+	.content-left {
+		width: 8%;
+    	// margin-right: -8px;
+    	margin-right: -1px;
+    	z-index: 100;
+	}
+	.nav-content {
+		margin-top: 28px;
+		> li {
+			// width: 107px;
+			height: 100px;
+			-webkit-border-top-left-radius: 4px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+		> li.active,
+		> li:hover,
+		> li:focus {
+			background-color: @cc-nav-bg;
+		    -webkit-box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.75);
+		    -moz-box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.75);
+		    box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.1);
+		}
+		> li + li {
+			margin-top: 2px;
+		}
+
+		> li > a {
+			color: @brand-dark;
+			border-color: transparent;
+		    padding: 30px 15px 19px;
+		    text-align: center;
+		}
+		> li > a > * {
+			display: block;
+		}
+		> li > a > i {
+			font-size: 24px;
+			margin-bottom: 7px;
+		}
+		> li > a > span {
+			font-size: 12px;
+			font-weight: 700;
+		}
+	}
+
+	.content-right{
+		width: 85%;
+		padding: 30px 15px;
+		background-color: @cc-nav-bg;
+	    -webkit-box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.75);
+	    -moz-box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.75);
+	    box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.1);
+	    border-radius: @border-radius-base;
+
+	    .chute-center {
+	    	//padding: 30px;
+	    }
+	}
+
+	.chute-left + .chute-center {
+		padding-left: 30px;
+	}
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+
+@media (max-width: 900px) {
+    .content_container {
+        .content-left {
+            .nav-content {
+                > li {
+        			width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .content_container {
+		#content_wrapper > & {
+        	border-radius: 0 !important;
+		}
+        .content-left {
+            width: 100%;
+            margin-right: 0;
+            text-align: center;
+
+            .nav-content {
+                margin-top: 0;
+
+                > li {
+                	width: 85px;
+                	height: 85px;
+                    display: inline-block;
+                    border-radius: @border-radius-base;
+
+ 					> a {
+ 						padding: 18px 0px 15px;
+ 					}
+                }
+            }
+        }
+
+        .content-right {
+        	margin-top: 20px;
+        	width: 100%;
+        	padding: 20px;
+        	//padding: 30px 17px 30px 30px;
+        }
+    }
+}

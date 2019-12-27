@@ -1,0 +1,117 @@
+// ====================== Circle Graphs =======================
+.info-circle-container{
+  text-align: center;
+}
+.info-circle-container:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+// Traphic Sources Style 1
+// .info-circle-container.style-1 > div {
+//   // float: left;
+//   display: inline-block;
+//   width: 195px;
+//   margin: 0 auto;
+// }
+
+// .info-circle-container.style-2 > div{
+//   display: inline-block;
+//   width: 290px;
+//   margin: 0 auto;
+// }
+
+.info-circle {
+}
+.info-circle + div{
+  font-family: @font-family-2nd;
+}
+
+.circle-text {
+  font-family: @font-family-2nd;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.circle-text h2 {
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.circle-text p {
+  //color: #999;
+  color: @white;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.circle-with-bg .circle-text-value:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -24px;
+  left: 33px;
+  width: 110px;
+  text-align: center;
+  height: 110px;
+  background-color: antiquewhite;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
+}
+
+.circle-with-bg .info-circle-container.style-2 .circle-text-value:before {
+  top: -60px;
+  left: 30px;
+  width: 210px;
+  height: 210px;
+}
+
+.circle-with-bg .info-circle.circle-text-info .circle-text-value:before {
+  background-color: @brand-info;
+}
+.circle-with-bg .info-circle.circle-text-primary .circle-text-value:before {
+  background-color: @brand-primary;
+}
+.circle-with-bg .info-circle.circle-text-system .circle-text-value:before {
+  background-color: @brand-system;
+}
+
+.circle-text-primary h2 {
+  color: @brand-primary;
+}
+
+.circle-text-success h2 {
+  color: @brand-success;
+}
+
+.circle-text-info h2 {
+  color: @brand-info;
+}
+
+.circle-text-info-dr h2 {
+  // color: @brand-info-darker;
+  color: @brand-system;
+}
+.circle-text-warning h2 {
+  color: @brand-warning;
+}
+
+.circle-text-danger h2 {
+  color: @brand-danger;
+}
+
+.circle-text-alert h2 {
+  color: @brand-alert;
+}
+
+.circle-text-system h2 {
+  color: @brand-system;
+}

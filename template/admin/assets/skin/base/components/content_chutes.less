@@ -1,0 +1,792 @@
+// ====================== Content Chutes =======================
+
+/*   1. Chutes
+     2. Chute Sizes
+     3. Chute Bin
+     4. Chute Helpers
+     5. Chute Nav
+     6. Chute Hover
+*/
+
+// ====================== 1. Chutes =======================
+
+//chute table layout
+#content.table-layout {
+    padding: 0;
+}
+
+#content.table-layout > div,
+#content.table-layout > section {
+    vertical-align: top;
+    padding: 13px 18px 50px;
+}
+#content.table-layout > aside {
+    vertical-align: top;
+}
+
+// chutes
+.chute-left,
+.chute-right {
+    position: relative;
+    width: 250px;
+    min-height: 100%;
+    padding: 15px;
+
+    background: @white;
+}
+
+// Right chute
+.chute-right {
+
+}
+
+// Top chute
+.chute-top {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    border-bottom: 1px solid @brand-light;
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+.chute-top.light {
+    background-color: #fafafa;
+}
+
+// ====================== 2. Chute Sizes=======================
+.chute200 {
+    width: 200px;
+}
+.chute240 {
+    width: 240px;
+}
+.chute270 {
+    width: 270px;
+}
+.chute290 {
+    width: 290px;
+}
+.chute300 {
+    width: 300px;
+}
+.chute320 {
+    width: 320px;
+}
+.chute350 {
+    width: 350px;
+}
+.chute400 {
+    width: 400px;
+}
+// chute.affix need 1px less width to display border correctly
+// .chute200 .chute-nav.affix {
+//     width: 199px;
+// }
+// .chute200 .chute-nav.affix {
+//     width: 239px;
+// }
+// .chute270 .chute-nav.affix {
+//     width: 269px;
+// }
+// .chute290 .chute-nav.affix {
+//     width: 289px;
+// }
+// .chute300 .chute-nav.affix {
+//     width: 299px;
+// }
+// .chute320 .chute-nav.affix {
+//     width: 319px;
+// }
+// .chute350 .chute-nav.affix {
+//     width: 349px;
+// }
+// .chute400 .chute-nav.affix {
+//     width: 399px;
+// }
+
+// ====================== 3. Chute Bin =======================
+
+.chute-bin {
+    min-height: 65px;
+    padding: 7px;
+    margin: 0 -15px 15px;
+    border: 1px dashed #F4F7F9;
+    background: #eee;
+}
+.chute-bin.stretch {
+    border-left: 0;
+    border-right: 0
+}
+.chute-bin div[class*='col-'] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.chute-bin .nav-label {
+    text-align: center;
+    font-size: 12px;
+    color: @muted;
+    padding-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+// ====================== 4. Chute Helpers =======================
+
+.chute-title {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 0 5px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.icon-list {
+  margin: 20px 0 30px;
+  font-size: 14px;
+  padding-left: 5px;
+  list-style: none;
+}
+.icon-list li + li {
+  padding-top: 10px;
+}
+
+// ====================== 5. Chute Nav =======================
+
+ul.chute-nav {
+    margin: 10px -15px 15px;
+}
+ul.chute-nav li a {
+    border-top: 0;
+    color: #999;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 0 15px 0 50px;
+    width: 100%;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+ul.chute-nav li a:focus,
+ul.chute-nav li a:hover {
+    background-color: transparent;
+    //color: @brand-primary;
+    color: @brand-info;
+}
+
+ul.chute-nav li.active a {color: #666;}
+
+.chute[class *="bg-"] ul.chute-nav li a {color: @white;}
+.chute[class *="bg-"] ul.chute-nav li a:focus,
+.chute[class *="bg-"] ul.chute-nav li a:hover {color:@brand-dark;}
+//.chute[class *="bg-"] ul.chute-nav li.active a {color:darken(@brand-primary,30%);}
+.chute[class *="bg-"] ul.chute-nav li.active a {color:darken(@brand-info,30%);}
+
+
+ul.chute-nav.chute-nav-arrow li.active:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 1px;
+    left: 0;
+    border-bottom: 1px solid @brand-light;
+}
+ul.chute-nav.chute-nav-arrow li.active a:before,
+ul.chute-nav.chute-nav-arrow li.active a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 20px solid;
+    border-left-color: #fbfbfb;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transition: all 0.3s ease;
+}
+ul.chute-nav.chute-nav-arrow li.active a:before {
+    border-left-color: #888;
+}
+
+ul.chute-nav.chute-nav-arrow li:hover a:after {
+    border-left-color: #f8f8f8;
+}
+
+
+.chute-right ul.chute-nav.chute-nav-arrow li.active:before {
+    width: 100%;
+    left: auto;
+    right: 0;
+}
+.chute-right ul.chute-nav.chute-nav-arrow li.active a:before,
+.chute-right ul.chute-nav.chute-nav-arrow li.active a:after {
+    left: auto;
+    right: 100%;
+    border-right: 20px solid;
+    border-left-color: transparent;
+    border-right-color: #fbfbfb;
+}
+.chute-right ul.chute-nav.chute-nav-arrow li.active a:before {
+    border-left-color: transparent;
+    border-right-color: #888;
+}
+
+.chute-right ul.chute-nav.chute-nav-arrow li:hover a:after {
+    border-left-color: transparent;
+    border-right-color: #f8f8f8;
+}
+
+.chute-nav.chute-nav-border li {
+    position: relative;
+}
+.chute-nav.chute-nav-border li:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: rgba(0,0,0,0.15);
+}
+.chute-nav.chute-nav-border li.active:after {
+    background: @chute-nav-active-border;
+}
+.chute-nav.chute-nav-border li:hover:after {
+    background: rgba(0,0,0,0.3);
+}
+
+.chute-right .chute-nav.chute-nav-border li:after {
+    left: 0;
+    right: auto;
+}
+
+.chute-nav.chute-nav-border li.active.nav-primary:after {
+    background: @brand-primary;
+}
+.chute-nav.chute-nav-border li.active.nav-success:after {
+    background: @brand-success;
+}
+.chute-nav.chute-nav-border li.active.nav-info:after {
+    background: @brand-info;
+}
+.chute-nav.chute-nav-border li.active.nav-warning:after {
+    background: @brand-warning;
+}
+.chute-nav.chute-nav-border li.active.nav-danger:after {
+    background: @brand-danger;
+}
+.chute-nav.chute-nav-border li.active.nav-alert:after {
+    background: @brand-alert;
+}
+.chute-nav.chute-nav-border li.active.nav-system:after {
+    background: @brand-system;
+}
+.chute-nav.chute-nav-border li.active.nav-dark:after {
+    background: @brand-dark;
+}
+
+.chute-nav.affix,
+.chute .chute-affix {
+    top: 55px;
+}
+#topbar.affix + #content .chute-nav.affix,
+#topbar.affix + #content .chute .chute-affix  {
+    top: 115px;
+}
+
+
+.chute-nav[data-nav-animate] li {
+  display: none;
+}
+.chute-nav[data-nav-animate] li.animated {
+  display: block;
+}
+
+
+// ====================== 6. Chute Hover =======================
+
+body.chute-rescale {
+    overflow-x: hidden;
+}
+body.chute-rescale.sb-r-o .chute-center {
+    padding-right: 20px !important;
+}
+body.chute-rescale.sb-r-o .chute-left,
+body.chute-rescale.sb-r-o .chute-right {
+    display: none;
+}
+body.chute-rescale .chute-left,
+body.chute-rescale .chute-right {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+body.chute-rescale .chute-left {left: -275px;}
+body.chute-rescale .chute-right {right: -275px;}
+
+body.chute-rescale .chute-left {
+    border-right: 1px solid @brand-light;
+}
+body.chute-rescale .chute-right {
+    border-left: 1px solid @brand-light;
+}
+
+body.chute-rescale .chute-center {
+    width: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    //padding-right: 32px !important;
+
+    &::-webkit-scrollbar
+    {
+        display: none;
+    }
+}
+body.chute-rescale .chute-top + .chute-center {
+    padding-right: inherit !important;
+}
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute200 { left: -155px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute225 { left: -180px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute250 { left: -205px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute270 { left: -225px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute290 { left: -245px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute300 { left: -255px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute320 { left: -275px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute350 { left: -305px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-left.chute400 { left: -355px; }
+
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute200 { right: -155px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute225 { right: -180px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute250 { right: -205px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute270 { right: -225px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute290 { right: -245px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute300 { right: -255px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute320 { right: -275px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute350 { right: -305px; }
+body.chute-rescale .chute:not(.chute-icon-style).chute-right.chute400 { right: -355px; }
+
+body.chute-rescale .chute-left:not(.chute-icon-style):hover,
+body.chute-rescale .chute-right:not(.chute-icon-style):hover{
+    opacity: 1;
+    z-index: 999;
+}
+body.chute-rescale .chute-left.hover,
+body.chute-rescale .chute-right.hover {
+    opacity: 1;
+    z-index: 999;
+}
+
+body.chute-rescale .chute:not(.chute-icon-style).chute-left:hover {left: 0;}
+body.chute-rescale .chute:not(.chute-icon-style).chute-right:hover {right: 0;}
+
+
+
+@media (max-width: 600px) {
+    body.chute-rescale .chute-left,
+    body.chute-rescale .chute-right {
+        display: none;
+    }
+    body.chute-rescale .chute-center {
+        padding-right: 13px !important;
+    }
+    body.chute-rescale #content.table-layout > div,
+    body.chute-rescale #content.table-layout > section {
+        padding: 10px 13px 40px !important;
+    }
+}
+
+.chute-scroller {
+    min-height: 500px;
+
+    &::-webkit-scrollbar
+    {
+        display: none;
+    }
+}
+.chute-left .chute-scroller { margin-right: -16px; }
+//.chute-center .chute-scroller { margin-right: -20px; padding-right: 5px; }
+.chute-right .chute-scroller { margin-right: -13px; }
+.chute-scroller .scroller-handle {
+ opacity: 0;
+ -webkit-transition: opacity 0.3s ease;
+ transition: opacity 0.3s ease;
+}
+.chute-scroller:hover .scroller-handle {
+  opacity: 1;
+}
+
+.chute-icon-style .chute-scroller {margin-right: 0 !important;}
+
+//chute icon style
+.chute_icon_overflow { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: transparent; z-index: 500; display: none; }
+
+body.chute-rescale .chute-icon-style{
+    &.chute-left,
+    &.chute-right {
+        opacity: 1;
+    }
+}
+
+body.chute-rescale .chute-icon-style {
+    &.chute-left {left: 0;}
+    &.chute-right {right: 0;}
+}
+
+// body.chute-rescale .chute.chute-icon-style {
+
+//     &:hover .chute-nav {opacity: 1;}
+
+//     .chute-nav {
+//         opacity: 0;
+//         -webkit-transition: all 0.8s ease;
+//         transition: all 0.8s ease;
+//     }
+// }
+
+body.chute-rescale .chute.chute-icon-style{
+    &.chute-left { left: 0; overflow: hidden; width: 50px;}
+    &.chute-right { right: 0; overflow: hidden; width: 50px;}
+}
+
+body.chute-rescale .chute.chute-icon-style {
+    // &.chute-left:hover,
+    // &.chute-left.hover {left: 0;}
+    // &.chute-right:hover,
+    // &.chute-right.hover {right: 0;}
+}
+
+
+body.chute-rescale .chute.chute-icon-style[class*="chute-"]{
+    &.chute200.hover { width: 200px; }
+    &.chute225.hover { width: 225px; }
+    &.chute250.hover { width: 250px; }
+    &.chute270.hover { width: 270px; }
+    &.chute290.hover { width: 290px; }
+    &.chute300.hover { width: 300px; }
+    &.chute320.hover { width: 320px; }
+    &.chute350.hover { width: 350px; }
+    &.chute400.hover { width: 400px; }
+}
+
+.chute-icon-style {
+    // chutes
+    &.chute-left,
+    &.chute-right {
+        padding: 0;
+    }
+    // Right chute
+    &.chute-right {
+        padding-left: 20px;
+    }
+
+    ul.chute-nav {
+        margin: 10px 0 15px;
+    }
+    ul.chute-nav li a {
+        padding: 0 15px 0 0px;
+    }
+
+    .chute-scroller {
+        min-height: 400px;
+    }
+
+}
+
+@media (min-width: 1281px) {
+    .chute-icon-style.chute-right {
+        padding: 25px 20px 0 25px !important;
+    }
+
+    .scroller-chute{
+        .mCustomScrollBox,
+        .mCSB_container {
+            overflow: visible;
+        }
+    }
+    .chute-icon-style {
+        &.chute-left,
+        &.chute-right {
+            padding:0 35px !important;
+        }
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    aside.chute.chute-icon-style:not(.hover) {
+        background-color: transparent !important;
+    }
+    aside.chute.chute-icon-style:not(.hover) * {
+        overflow: hidden;
+        width: 0;
+    }
+
+    body.chute-rescale .chute.chute-icon-style{
+        //&.chute-right.chute250:hover,
+        &.chute-right.chute250.hover { width: 220px; }
+    }
+
+    .chute-icon-style {
+        -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+
+        &.hover {
+            padding-top: 80px !important;
+        }
+
+        &.chute-right:not(.hover) {
+            padding-left: 0;
+        }
+        &.chute-left:not(.hover) {
+            padding-right: 0;
+        }
+        .chute-icon {
+            position: absolute;
+            width: 35px !important;
+            height: 35px;
+            top: 180px;
+            //left: 0;
+        }
+        .chute-icon:before {
+            content: "\e178";
+            // top: 170px;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // opacity: 1;
+            position: absolute;
+            cursor: pointer;
+            width: 35px;
+            font-size: 18px;
+            font-family: 'Glyphicons Halflings';
+            height: 35px;
+            padding-top: 1px;
+            text-align: center;
+            background-color: @white;
+            color: @text-color;
+        }
+        &.chute-right .chute-icon {
+            left: -35px;
+        }
+        &.chute-left .chute-icon {
+            right: -35px;
+        }
+
+        // &.hover::before {
+        //     opacity: 0;
+        // }
+
+        .chute-scroller {
+            margin-top: 30px;
+        }
+        .scroller-chute {
+            height: inherit;
+            padding-bottom: 35px;
+            max-height: 400px;
+        }
+        &.hover .scroller-chute {
+            height: 100%;
+            max-height: 100%;
+        }
+        .mCSB_scrollTools:after {
+            content: '';
+            background-color: @brand-light;
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            right: 8px;
+        }
+        .mCSB_scrollTools .mCSB_dragger {height: 30px !important;}
+
+        .chute-nav.affix,
+        .chute-nav.affix-top {
+            top: 0;
+            position: initial;
+        }
+
+    }
+
+    body.chute-rescale .chute.chute-icon-style{
+        &.chute-left,
+        &.chute-right {
+            position: fixed;
+            overflow: visible;
+            z-index: 1000;
+            border-left: none;
+            width: 0;
+            //min-height: 35px;
+            //max-height: 35px;
+            max-height: 100%!important;
+            height: 100% !important;
+            top: 0 !important;
+        }
+        &.chute-right {
+            right: 0;
+        }
+        &.chute-left {
+            left: @sidebar-minified-width;
+        }
+        //&.chute-left:hover,
+        //&.chute-right:hover,
+        &.chute-left.hover,
+        &.chute-right.hover {
+            max-height: 400px !important;
+            padding-right: 35px;
+        }
+
+        &.chute-left .scroller-chute,
+        &.chute-right .scroller-chute{
+            margin-right: -35px !important;
+        }
+    }
+    body.chute-rescale:not(.sb-l-m) .chute.chute-icon-style{
+        &.chute-left {
+            left: @sidebar-open-width;
+        }
+    }
+    body.sb-top.chute-rescale .content_container .content-right .chute.chute-icon-style{
+
+        &.hover{
+            padding-top: 20px !important;
+        }
+
+        &.chute-left,
+        &.chute-right {
+            position: absolute;
+            overflow: visible;
+            z-index: 1000;
+            border-left: none;
+            //min-height: 35px;
+            //max-height: 35px;
+            max-height: initial !important;
+            height: initial !important;
+            top: 0 !important;
+        }
+        &.chute-left:not(.hover),
+        &.chute-right:not(.hover) {
+            width: 0;
+        }
+        &.chute-right {
+            right: 0;
+            border-left: none;
+        }
+        &.chute-left {
+            left: 0;
+            border-right: none;
+        }
+        &.chute-left .scroller-chute,
+        &.chute-right .scroller-chute {
+            margin-right: 0 !important;
+        }
+    }
+    body.chute-rescale:not(.sb-l-m) .chute.chute-icon-style{
+        &.chute-left {
+            left: 0;
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1280px)  {
+    body.chute-rescale .chute.chute-icon-style.chute-right {
+        overflow: visible;
+    }
+    .chute-icon-style {
+        .chute-of-ht,
+        .chute-of-hb {
+            display: block;
+            height: 80px;
+            width: 100%;
+            position: absolute;
+            z-index: 1100;
+            left: 0;
+            top: 0;
+        }
+        .chute-of-hb {
+            bottom: 0;
+        }
+        .chute-of-ht,
+        .chute-of-hb {
+            background-color: #fff;
+        }
+        &.hover{
+            .mCustomScrollBox,
+            .mCSB_container {
+                overflow: visible;
+            }
+        }
+        .chute-nav .affix {
+            position: initial;
+        }
+
+    }
+    body.chute-rescale .chute.chute-icon-style.chute-container-static.chute-left,
+    body.chute-rescale .chute.chute-icon-style.chute-container-static.chute-right {
+        position: absolute;
+    }
+
+    body.chute-rescale .chute.chute-icon-style.chute-container-static.chute-left {
+        left: 0 !important;
+    }
+
+    //body.chute-rescale .chute-icon-style.chute-left:hover,
+    //body.chute-rescale .chute-icon-style.chute-right:hover,
+    body.chute-rescale .chute-icon-style.chute-right.hover {
+        max-height: 100%!important;
+        height: 100% !important;
+        padding-right: 35px;
+    }
+    body.chute-rescale .chute-icon-style.chute-left.hover {
+        max-height: 100%!important;
+        height: 100% !important;
+        padding-left: 35px;
+    }
+    //body.chute-rescale .chute.chute-icon-style.chute-right:hover,
+    body.chute-rescale .chute.chute-icon-style.chute-left.hover,
+    body.chute-rescale .chute.chute-icon-style.chute-right.hover {
+        top: 0 !important;
+    }
+
+}
+@media (max-width: 900px) {
+    body:not(.sb-top) .chute-icon-style{
+        &.chute-left {
+            left: 45px !important;
+        }
+    }
+    body.chute-rescale:not(.sb-l-m):not(.sb-top) .chute-icon-style{
+        &.chute-left {
+            left: @sidebar-open-width !important;
+        }
+    }
+}
+
+@media (min-width: 768px) (max-width: 867px) {
+    .tab-content .fileupload.fileupload-new.allcp-form {
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .chute-icon-style{
+        &.chute-fh-xs {
+            height: auto !important;
+        }
+        .scroller-content {
+            height: auto;
+        }
+    }
+    .scroller-chute{
+        .mCustomScrollBox,
+        .mCSB_container {
+            overflow: visible;
+        }
+    }
+}

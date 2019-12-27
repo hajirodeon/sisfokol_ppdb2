@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThemeREX Email Template - Invoice</title>
+
+  <style type="text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: 'Oxygen', Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #2a3342;
+    }
+
+    td {
+      font-family: 'Oxygen', Arial, sans-serif;
+      font-size: 14px;
+      color: #2a3342;
+      text-align: center;
+      line-height: 24px;
+    }
+
+    a {
+      color: #2a3342;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 25px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      color: #2a2f43;
+      padding: 7px 0 0;
+      margin-bottom: 3px;
+      font-size: 22px;
+      line-height: 24px;
+      display: block;
+    }
+
+    .header-product {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .price {
+      /*color: #f5393d;*/
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 38px;
+      padding: 12px 0 20px;
+    }
+
+    .content-padding {
+      padding: 40px 0 40px;
+    }
+    .content-top {
+      background-color: #47d1af;
+    /*-webkit-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;*/
+      color: #fff;
+      padding: 26px 0 60px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .content-top .btn a {
+      background-color: #2a3342;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      color: #fff;
+      display: inline-block;
+      font:700 14px/16px 'Open Sans';
+      margin-top: 48px;
+      letter-spacing: 0.025em;
+      padding: 15px 35px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .content-top .btn a:hover {
+      background-color: #40444A;
+    }
+
+    .content-top .free-text,
+    .content-top .header-lg {
+      color: #fff;
+      font-family: 'Oxygen';
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 310px;
+      text-align: left;
+      padding-left: 10px;
+      padding-bottom: 8px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 35px 0px;
+    }
+    .fs15 {font-size: 15px;}
+    .ff-alt {font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif' !important;}
+    .fw300{font-weight: 300;}
+    .fw400{font-weight: 400;}
+    .lsn025 {letter-spacing: -0.25px;}
+    .block-rounded {
+      /*border-radius: 5px;*/
+      /*box-shadow: 1px 2px 0 rgba(0,0,0,0.15);*/
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 30px 0;
+    }
+
+    .info-block {
+      padding: 0 15px;
+      /*width: 310px;*/
+    }
+
+    /*.block-rounded {
+      background: #ffffff;
+      width: 310px;
+    }*/
+
+    .info-block > table > tbody > tr > td > table > tbody > tr{
+      /*border: 2px solid #ebebeb;*/
+    }
+    .info-block > table > tbody > tr > td > table > tbody > tr + tr{
+      border-top: none;
+    }
+    .notifivation {
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
+
+    .info-img {
+      position: relative;
+      width: 305px;
+      background-color: #f2f3f5;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .mobile-hide-img {
+      text-align: left;
+      width: 125px;
+    }
+
+    .mobile-hide-img img {
+      border: 1px solid #e6e6e6;
+      border-radius: 4px;
+    }
+
+    .title-dark {
+      text-align: left;
+      border-bottom: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+
+    .item-col {
+      padding-top: 20px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .item-col.price {
+      font-size: 13px;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+    .item-table {
+      padding: 30px 20px !important;
+    }
+
+    .button-width {
+      /*-webkit-border-radius: 3px;
+      border-radius: 3px;*/
+      font: 700 0/57px 'Oxygen';
+      display: block;
+      height: 57px;
+      width: 57px;
+      background: #67d3e0 url('img/btn-bg.png') center center no-repeat;
+      color: #67d3e0;
+      margin: -29px auto 0;
+      z-index: 15;
+      position: relative;
+    }
+    .button-width:hover {background-color: #5bc7d4}
+
+    .footer {
+      background-color: #2a3342;
+      border-radius: 0 0 5px 5px;
+      height: 100px;
+    }
+    .footer-content {
+      padding: 24px 0 45px;
+      line-height:29px;
+      color: #fff;
+    }
+    .footer-content img + img {
+      margin-left: 17px;
+    }
+
+    .footer-content div {
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 18px;
+    }
+    .footer-content div + div {
+      margin-top: 0;
+    }
+
+  </style>
+
+  <style type="text/css" media="screen">
+    @import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300&subset=latin,latin-ext);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,vietnamese,latin-ext,cyrillic);
+  </style>
+
+  <style type="text/css" media="screen">
+    @media screen {
+      /* Thanks Outlook 2013! http://goo.gl/XLxpyl */
+      * {
+        font-family: 'Oxygen', 'Helvetica', 'Arial', 'sans-serif';
+      }
+    }
+  </style>
+
+  <style type="text/css" media="only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*="container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class="w320"] {
+        width: 320px !important;
+      }
+
+      img[class="force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class="button-width"],
+      a[class="button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*="mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*="mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class="header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class="header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class="content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class="button"] {
+        padding: 5px !important;
+      }
+
+      td[class*="free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      td[class="info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class="info-img"],
+      img[class="info-img"] {
+        width: 278px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor="#f9f9f9">
+<table align="center" cellpadding="0" cellspacing="0" class="container-for-gmail-android" width="100%">
+  <tr>
+    <td align="center" valign="top" width="100%" class="content-top">
+      <div align="center">
+        <table cellspacing="0" cellpadding="0" width="600" class="w320">
+          <tr>
+            <td class="header-lg">
+              Thank you for your purchase!
+            </td>
+          </tr>
+          <tr>
+            <td class="free-text">
+              This is an automatically generated message to confirm receipt of your order via the Internet. You do not need to reply to this e-mail, but you may wish to save it for your records.
+            </td>
+          </tr>
+          <tr>
+            <td class="btn">
+              <a href="http://">My account</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="100%" style="background-color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;">
+      <div align="center">
+        <table cellpadding="0" cellspacing="0" width="600" class="w320">
+            <tr>
+              <td class="item-table">
+                <table cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td class="title-dark" width="300">
+                       Item
+                    </td>
+                    <td class="title-dark" width="163">
+                      Qty
+                    </td>
+                    <td class="title-dark" width="97">
+                      Total
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="item-col item">
+                      <table cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                          <td class="mobile-hide-img">
+                            <a href=""><img width="110" src="img/prod2.png" alt="item1"></a>
+                          </td>
+                          <td class="product">
+                            <span style="color: #4d4d4d; font-weight:bold;">Samsung Edge S6</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="item-col quantity">
+                      2
+                    </td>
+                    <td class="item-col price">
+                      $338.00
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="item-col item">
+                      <table cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                          <td class="mobile-hide-img">
+                            <a href=""><img width="110" src="img/prod1.png" alt="item2"></a>
+                          </td>
+                          <td class="product">
+                            <span style="color: #4d4d4d; font-weight: bold;">Iphone 6</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="item-col quantity">
+                      1
+                    </td>
+                    <td class="item-col price">
+                      $169.00
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="item-col item mobile-row-padding"></td>
+                    <td class="item-col quantity"></td>
+                    <td class="item-col price"></td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="item-col item">
+                    </td>
+                    <td class="item-col quantity" style="text-align:right; padding-right: 10px; border-top: 1px solid #cccccc;">
+                      <span class="total-space">Subtotal</span> <br />
+                      <span class="total-space">Tax</span>  <br />
+                      <span class="total-space">Shipping</span> <br />
+                      <span class="total-space" style="font-weight: bold; color: #4d4d4d">Total</span>
+                    </td>
+                    <td class="item-col" style="text-align: left; border-top: 1px solid #cccccc;">
+                      <span class="total-space">$507.00</span> <br />
+                      <span class="total-space">$20.00</span>  <br />
+                      <span class="total-space">$40.00</span>  <br />
+                      <span class="total-space" style="font-weight:bold; color: #4d4d4d">$567.00</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="100%" class="footer">
+      <center>
+        <table cellspacing="0" cellpadding="0" width="600" class="w320">
+          <tr>
+            <td class="footer-content">
+              <img src="img/tw.png" alt="" style="vertical-align: middle;"/>
+              <img src="img/fb.png" alt="" style="vertical-align: middle;"/>
+              <img src="img/inst.png" alt="" style="vertical-align: middle;"/>
+              <div>176 W street name, New York, NY 10014</div>
+              <div>+1(800)123-4566</div>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

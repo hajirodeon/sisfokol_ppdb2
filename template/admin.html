@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta and Title -->
+    <meta charset="utf-8">
+    <title>{judul}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{sumber}/template/favicon.png">
+    
+    
+
+
+    <!-- Angular material -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/skin/css/angular-material.min.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/fonts/icomoon/icomoon.css">
+    <!-- AnimatedSVGIcons -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/fonts/animatedsvgicons/css/codropsicons.css">
+    <!-- c3charts -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/js/plugins/c3charts/c3.min.css">
+    <!-- CSS - allcp forms -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/allcp/forms/css/forms.css">
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/js/utility/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+    <!-- CSS - theme -->
+    <link rel="stylesheet" type="text/css" href="{sumber}/template/admin/assets/skin/default_skin/less/theme.css">
+    
+    
+    
+
+<!-- jQuery 3 -->
+<script src="{sumber}/template/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="{sumber}/template/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="{sumber}/template/adminlte/dist/js/adminlte.min.js"></script>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{sumber}/template/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="{sumber}/template/vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
+
+
+
+<!-- ChartJS -->
+<script src="{sumber}/template/adminlte/bower_components/chart.js/Chart.js"></script>
+
+
+
+<!-- CK Editor -->
+<script src="{sumber}/template/adminlte/bower_components/ckeditor/ckeditor.js"></script>
+
+
+<script>
+
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+</script>
+
+
+
+
+
+    
+
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/dist/css/skins/skins-biasawae.css">
+
+
+
+
+<style>
+	.notification {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification:hover {
+  background: red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+</style>
+
+
+
+
+
+</head>
+<body class="sales-stats-page sb-top sb-top-lg">
+    <!-- Body Wrap -->
+    <div id="main">
+        <!-- Header  -->
+        <header class="navbar navbar-fixed-top bg-system phn">
+            <div class="navbar-logo-wrapper">
+                <div class="logo-widget">
+                    <div class="media">
+                        <a href="{sumber}/adm/index.php"><h3>ADMIN</h3></a>
+                    </div>
+                </div>
+            
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right pr15">
+
+                <li class="dropdown dropdown-fuse">
+                    <div class="navbar-btn btn-group">
+
+							<a href="{sumber}/logout.php" class="notification">
+							  <span><i class="glyphicon glyphicon-log-out"></i></span>
+							</a>
+
+                    </div>
+                </li>
+            </ul>
+
+
+        </header>
+        <!-- /Header -->
+        <!-- Sidebar  -->
+        <aside id="sidebar_left" class="">
+            <!-- Sidebar Left Wrapper  -->
+            <div class="sidebar-left-content nano-content">
+                <!-- Sidebar Menu  -->
+                <ul class="nav sidebar-menu">
+                    <li class="active">
+                        <a class="accordion-toggle" href="#">
+                            <span class="caret"></span>
+                            <span class="sb-menu-icon glyphicon glyphicon-dashboard"></span>
+                            <span class="sidebar-title">BERANDA</span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a href="{sumber}/adm/index.php">
+                                Beranda / Dashboard
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a class="accordion-toggle" href="#">
+                            <span class="caret"></span>
+                            <span class="sb-menu-icon glyphicon glyphicon-wrench"></span>
+                            <span class="sidebar-title">SETTING</span>
+                        </a>
+                        <ul class="nav sub-nav">
+							<li>
+								<a href="{sumber}/adm/s/pass.php" title="Ganti Password"><i class="glyphicon glyphicon-play"></i> Ganti Password</a>
+						    </li>
+						    
+						    
+							<li>
+								<a href="{sumber}/adm/s/profil.php" title="Profil Sekolah"><i class="glyphicon glyphicon-play"></i> Profil Sekolah</a>
+						    </li>
+						    
+                        </ul>
+                    </li>
+
+
+
+
+					<li class="">
+                        <a class="accordion-toggle" href="#">
+                            <span class="caret"></span>
+                            <span class="sb-menu-icon glyphicon glyphicon-user"></span>
+                            <span class="sidebar-title">COMPANY PROFILE</span>
+                        </a>
+                        <ul class="nav sub-nav">
+							<LI>
+							<a href="{sumber}/adm/cp/slideshow.php" title="SlideShow"><i class="glyphicon glyphicon-play"></i> SlideShow</a>
+							</LI>
+							
+							<LI>
+							<a href="{sumber}/adm/cp/g_foto.php" title="Foto"><i class="glyphicon glyphicon-play"></i> Foto</a>
+							</LI>
+						
+							
+							<LI>
+							<a href="{sumber}/adm/cp/g_video.php" title="Video"><i class="glyphicon glyphicon-play"></i> Video</a>
+							</LI>
+	
+
+							<li>
+								<a href="{sumber}/adm/cp/ip.php" title="IP Visitor"><i class="glyphicon glyphicon-play"></i> IP Visitor</a>
+						    </li>
+
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="">
+                        <a class="accordion-toggle" href="#">
+                            <span class="caret"></span>
+                            <span class="sb-menu-icon glyphicon glyphicon-pencil"></span>
+                            <span class="sidebar-title">PPDB</span>
+                        </a>
+                        <ul class="nav sub-nav">
+							
+							<LI>
+							<a href="{sumber}/adm/ppdb/tapel.php" title="Data Tahun Pelajaran"><i class="glyphicon glyphicon-play"></i> Data Tahun Pelajaran</a>
+							</LI>
+							
+							<LI>
+							<a href="{sumber}/adm/ppdb/mapel.php" title="Data Mapel"><i class="glyphicon glyphicon-play"></i> Data Mapel / Jenis Ujian</a>
+							</LI>
+														
+							<LI>
+							<a href="{sumber}/adm/ppdb/ruang.php" title="Data Ruang"><i class="glyphicon glyphicon-play"></i> Data Ruang</a>
+							</LI>
+
+							
+							<LI>
+							<a href="{sumber}/adm/ppdb/calon.php" title="Data Calon"><i class="glyphicon glyphicon-play"></i> Data Calon</a>
+							</LI>
+							
+							<LI>
+							<a href="{sumber}/adm/ppdb/nilai.php" title="Nilai Calon"><i class="glyphicon glyphicon-play"></i> Nilai Calon</a>
+							</LI>
+							
+							<LI>
+							<a href="{sumber}/adm/ppdb/diterima.php" title="Calon Diterima"><i class="glyphicon glyphicon-play"></i> Calon Diterima</a>
+							</LI>
+							
+
+                        </ul>
+                    </li>
+                    
+
+
+                    
+                    
+
+                </ul>
+                <!-- /Sidebar Menu  -->
+            </div>
+            <!-- /Sidebar Left Wrapper  -->
+        </aside>
+        <!-- /Sidebar -->
+        <!-- Main Wrapper -->
+        <section id="content_wrapper">
+            <section class="content_container">
+                <!-- Content -->
+                <section id="content" class="animated fadeIn pt35">
+
+					<div class="row"> 
+						<div class="col-md-12">
+
+							<h3>{judul}</h3>
+							
+                        	{isi}
+                       </div>
+                   </div>
+
+                </section>
+                <!-- /Content -->
+                <!-- Page Footer -->
+                <footer id="content-footer">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span class="footer-legal">© 2019 ADMIN {versi}
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Page Footer -->
+            </section>
+        </section>
+        <!-- /Main Wrapper -->
+    </div>
+    <!-- /Body Wrap  -->
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="{sumber}/template/admin/assets/js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="{sumber}/template/admin/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+    <!-- Scroll -->
+    <script src="{sumber}/template/admin/assets/js/utility/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- HighCharts Plugin -->
+    <script src="{sumber}/template/admin/assets/js/plugins/highcharts/highcharts.js"></script>
+
+    <!-- Theme Scripts -->
+    <script src="{sumber}/template/admin/assets/js/utility/utility.js"></script>
+    <script src="{sumber}/template/admin/assets/js/demo/demo.js"></script>
+    <script src="{sumber}/template/admin/assets/js/main.js"></script>
+    <script src="{sumber}/template/admin/assets/js/demo/widgets_sidebar.js"></script>
+    <script src="{sumber}/template/admin/assets/js/pages/dashboard2.js"></script>
+    <script src="{sumber}/template/admin/assets/js/demo/charts/highcharts.js"></script>
+    <!-- /Scripts -->
+</body>
+</html>

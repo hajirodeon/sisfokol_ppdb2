@@ -1,0 +1,21 @@
+/*===============================================
+  High Charts
+================================================= */
+/* Custom Legend */
+.legend-item {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 2s;
+}
+
+.nav.chart-legend > li > a {
+    text-transform: uppercase;
+}
+
+/* Label Text */
+.highcharts-container .highcharts-axis-labels text {
+    color: #AAA !important;
+    fill: #AAA !important;
+}
+
+/*# sourceMappingURL=../css/highcharts.map */

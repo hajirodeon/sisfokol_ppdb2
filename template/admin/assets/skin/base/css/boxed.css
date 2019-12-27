@@ -1,0 +1,120 @@
+/* ==============================================
+   Boxed Layout - Coming Soon
+=================================================
+  A. Boxed Settings
+================================================= */
+@media (min-width: 1140px) {
+  body.boxed-layout {
+    background-color: transparent !important;
+  }
+  body.boxed-layout .navbar {
+    width: 1140px !important;
+    margin: 0 auto;
+  }
+  body.boxed-layout .navbar .nav > li > a > span:first-child {
+    display: none;
+  }
+  body.boxed-layout .navbar-nav.navbar-right,
+  body.boxed-layout .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+  }
+  body.boxed-layout #main {
+    overflow: hidden;
+    width: 1140px !important;
+    margin: 0 auto;
+  }
+  body.boxed-layout #main:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #eee;
+    margin: 0 auto;
+    width: 1142px;
+    border-right: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+  }
+  body.boxed-layout #main:after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f8f8f8;
+  }
+  body.boxed-layout #content_wrapper {
+    margin-top: 0px;
+  }
+  body.boxed-layout .navbar.navbar-fixed-top + #main > #content_wrapper {
+    margin-top: 60px;
+  }
+  body.boxed-layout.sb-top #sidebar_left.affix {
+    width: 1140px;
+  }
+  body.boxed-layout #sidebar_left.affix {
+    left: auto;
+  }
+  body.boxed-layout #sidebar_left.nano > .nano-content {
+    padding-top: 0;
+  }
+  body.boxed-layout.sb-l-c #sidebar_left,
+  body.boxed-layout.sb-l-c.sb-l-m #sidebar_left {
+    left: -230px;
+  }
+  body.boxed-layout #sidebar_right {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  body.boxed-layout.sb-r-o #sidebar_right {
+    display: block;
+  }
+  body.boxed-layout #topbar.affix {
+    width: 910px !important;
+    margin-left: 0;
+    left: auto;
+    right: auto;
+  }
+  body.boxed-layout.sb-r-o #topbar.affix {
+    width: 780px !important;
+  }
+  body.boxed-layout.sb-l-m #topbar.affix {
+    width: 1080px !important;
+  }
+  body.boxed-layout.sb-l-c #topbar.affix {
+    width: 1140px !important;
+  }
+  body.boxed-layout.sb-l-m.sb-r-o #topbar.affix {
+    width: 780px !important;
+  }
+  body.boxed-layout.sb-l-c.sb-r-o #topbar.affix {
+    width: 840px !important;
+  }
+  body.boxed-layout #topbar-dropmenu-wrapper {
+    top: 0;
+  }
+  body.boxed-layout .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper > #topbar-dropmenu-wrapper {
+    top: 1px;
+  }
+  body.boxed-layout.sb-top .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper > #topbar-dropmenu-wrapper {
+    top: 0;
+  }
+}
+@media (max-width: 1140px) {
+  body.boxed-layout .navbar.navbar-fixed-top + #main {
+    margin-top: 60px;
+  }
+  body.boxed-layout.sb-l-o .navbar + #main > #sidebar_left.nano > .nano-content {
+    padding-top: 60px;
+  }
+  body.boxed-layout.sb-l-m .navbar + #main > #sidebar_left.nano > .nano-content {
+    padding-top: 0;
+  }
+}
+/*# sourceMappingURL=../css/boxed.map */

@@ -1,0 +1,170 @@
+.allcp-form .bg-dark {
+  background-color: #2a2f43;
+}
+.allcp-form .bg-dark.light {
+  background-color: #424759;
+}
+.allcp-form .bg-dark.lighter {
+  background-color: #51566c;
+}
+.allcp-form .bg-dark.dark {
+  background-color: #222636;
+}
+.allcp-form .bg-dark.darker {
+  background-color: #1e2028;
+}
+.allcp-form .panel-dark > .panel-heading {
+  border-top-color: #424759;
+}
+.allcp-form .panel-dark > .panel-heading:before {
+  background-color: #2a2f43;
+}
+.allcp-form .panel-dark.heading-border:before,
+.allcp-form .panel-dark .heading-border:before {
+  background-color: #2a2f43;
+}
+.allcp-form .option-dark input:hover + .checkbox,
+.allcp-form .option-dark input:hover + .radio {
+  border-color: #424759;
+}
+.allcp-form .option-dark input:checked + .checkbox,
+.allcp-form .option-dark input:focus + .checkbox,
+.allcp-form .option-dark input:checked + .radio,
+.allcp-form .option-dark input:focus + .radio {
+  border-color: #2a2f43;
+}
+.allcp-form .option-dark input:checked + .radio:before,
+.allcp-form .option-dark input:focus + .radio:before {
+  background: #2a2f43;
+}
+.allcp-form .option-dark input:checked + .checkbox:before,
+.allcp-form .option-dark input:focus + .checkbox:before {
+  border-color: #2a2f43;
+}
+.allcp-form .btn-dark {
+  background-color: #2a2f43;
+}
+.allcp-form .btn-dark:hover,
+.allcp-form .btn-dark:focus {
+  background-color: #424759;
+  border-color: #424759;
+}
+.allcp-form .btn-dark:active {
+  background-color: #222636;
+}
+.allcp-form .btn-dark,
+.allcp-form .btn-dark:hover,
+.allcp-form .btn-dark:focus,
+.allcp-form .btn-dark:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.allcp-form .switch-dark > input:checked + label {
+  background: transparent;
+  border-color: #2a2f43;
+  color: #2a2f43;
+}
+.allcp-form .switch-dark > input:checked + label:after {
+  background: #2a2f43;
+  color: #2a2f43;
+}
+.allcp-form .switch-dark > input:checked:focus + label {
+  background: #fff;
+  border-color: #2a2f43;
+}
+.allcp-form .slider-wrapper.slider-dark .ui-slider .ui-slider-range {
+  background-color: #2a2f43;
+}
+.allcp-form .slider-wrapper.slider-dark .ui-slider .ui-slider-handle {
+  border-color: #2a2f43;
+}
+.allcp-form .slider-wrapper.slider-dark .ui-slider .ui-slider-handle:before {
+  background-color: #2a2f43;
+}
+.allcp-form.theme-dark .tagline span {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .theme-link {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .section-divider span {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .gui-input:hover,
+.allcp-form.theme-dark .gui-textarea:hover,
+.allcp-form.theme-dark .select > select:hover,
+.allcp-form.theme-dark .select-multiple select:hover,
+.allcp-form.theme-dark .gui-input:hover ~ .input-footer,
+.allcp-form.theme-dark .file .gui-file:hover + .gui-input,
+.allcp-form.theme-dark .gui-textarea:hover ~ .input-footer {
+  border-color: #424759;
+}
+.allcp-form.theme-dark .gui-input:focus,
+.allcp-form.theme-dark .gui-textarea:focus,
+.allcp-form.theme-dark .select > select:focus,
+.allcp-form.theme-dark .select-multiple select:focus {
+  border-color: #424759;
+  color: #3C3C3C;
+}
+.allcp-form.theme-dark .gui-textarea:focus {
+  height: 120px;
+}
+.allcp-form.theme-dark .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.allcp-form.theme-dark .gui-input:focus ~ .field-icon i,
+.allcp-form.theme-dark .gui-textarea:focus ~ .field-icon i {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .select-multiple select:focus,
+.allcp-form.theme-dark .gui-input:focus ~ .input-footer,
+.allcp-form.theme-dark .gui-textarea:focus ~ .input-footer,
+.allcp-form.theme-dark .file .gui-file:focus + .gui-input {
+  border-color: #424759;
+}
+.allcp-form.theme-dark .select > select:focus + .arrow {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .ui-datepicker .ui-datepicker-prev,
+.allcp-form.theme-dark .ui-datepicker .ui-datepicker-next,
+.allcp-form.theme-dark .ui-datepicker .ui-datepicker-title {
+  color: #2a2f43;
+}
+.allcp-form.theme-dark .ui-datepicker-today a,
+.allcp-form.theme-dark .ui-datepicker-calendar a:hover,
+.allcp-form.theme-dark .ui-datepicker-today a:hover,
+.allcp-form.theme-dark .ui-datepicker .ui-state-highlight {
+  background-color: #ffffff !important;
+  color: #2a2f43 !important;
+}
+.allcp-form.theme-dark .ui-datepicker .ui-state-active {
+  background-color: #ffffff !important;
+  color: #2a2f43 !important;
+}
+.allcp-form.theme-dark .rating:hover .rating-star:hover,
+.allcp-form.theme-dark .rating:hover .rating-star:hover ~ .rating-star,
+.allcp-form.theme-dark .rating-input:checked ~ .rating-star {
+  color: #67d3e0;
+}
+.allcp-form.theme-dark .rating-star,
+.allcp-form.theme-dark .rating:hover .rating-star {
+  color: #b9bbc5;
+}
+.allcp-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.allcp-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #2a2f43;
+}
+.allcp-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #2a2f43;
+}
+.allcp-form.theme-dark .wizard .steps li a,
+.allcp-form.theme-dark .wizard .actions li a {
+  background-color: #2a2f43;
+}
+.allcp-form.theme-dark .wizard .steps li.current a {
+  background-color: #222636;
+}
+/*# sourceMappingURL=../css/theme-dark.map */

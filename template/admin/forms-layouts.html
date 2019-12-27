@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta and Title -->
+    <meta charset="utf-8">
+    <title>MicroOffice - A Responsive Bootstrap 3 Admin Dashboard Template</title>
+    <meta name="keywords" content="HTML5, Bootstrap 3, Admin Template, UI Theme" />
+    <meta name="description" content="AdminK - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="ThemeREX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <!-- Angular material -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/css/angular-material.min.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/icomoon/icomoon.css">
+    <!-- AnimatedSVGIcons -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/animatedsvgicons/css/codropsicons.css">
+    <!-- CSS - allcp forms -->
+    <link rel="stylesheet" type="text/css" href="assets/allcp/forms/css/forms.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href="assets/js/utility/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+    <!-- CSS - theme -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/less/theme.css">
+</head>
+<body class="forms-layouts">
+    <!-- Body Wrap -->
+    <div id="main">
+        <!-- Header  -->
+        <header class="navbar navbar-fixed-top bg-dark">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown dropdown-fuse hidden-xs">
+                    <div class="navbar-btn btn-group phn">
+                        <button class="btn-hover-effects dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false">
+                        <span class="fa fa-chevron-down"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hidden-xs">
+                    <div class="navbar-btn btn-group">
+                        <button class="btn-hover-effects navbar-fullscreen toggle-active btn si-icons si-icons-default">
+                        <span class="fa fa-arrows-alt"></span>
+                    </button>
+                    </div>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left search-form square" role="search">
+                <div class="input-group add-on">
+                    <input type="text" class="form-control btn-hover-effects" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+                    <button class="btn btn-default text-info-darker hidden-xs hidden-sm" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-xs">
+                    <div class="navbar-btn btn-group phn">
+                        <button class="btn-hover-effects topbar-dropmenu-toggle btn">
+                        <span class="fa fa-magic fs20 text-dark"></span>
+                    </button>
+                    </div>
+                </li>
+                <li class="dropdown dropdown-fuse">
+                    <div class="navbar-btn btn-group">
+                        <button class="dropdown-toggle btn btn-hover-effects" data-toggle="dropdown">
+                        <span class="fa fa-envelope fs20 text-danger"></span>
+                        <span class="fs14 visible-xl">
+                            6
+                        </span>
+                    </button>
+                        <div class="navbar-activity dropdown-menu keep-dropdown w375" role="menu">
+                            <div class="panel mbn">
+                                <div class="panel-menu">
+                                    <div class="btn-group btn-group-justified btn-group-nav" role="tablist">
+                                        <a href="#nav-tab1" data-toggle="tab" class="btn btn-sm active">Activity</a>
+                                        <a href="#nav-tab2" data-toggle="tab" class="btn btn-sm br-l-n br-r-n">Messages</a>
+                                        <a href="#nav-tab3" data-toggle="tab" class="btn btn-sm">Notifications</a>
+                                    </div>
+                                </div>
+                                <div class="panel-body pn">
+                                    <div class="tab-content br-n pn">
+                                        <div id="nav-tab1" class="tab-pane active" role="tabpanel">
+                                            <ul class="media-list" role="menu">
+                                                <li class="media">
+                                                    <a class="media-left" href="#">
+                                                        <img src="assets/img/avatars/1.png" class="br3" alt="avatar">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">New post
+                                                        <span class="text-muted">- 09/01/16</span>
+                                                    </h5> Last Updated 5 days ago by
+                                                        <a class="" href="#"> Anna Smith </a>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <a class="media-left" href="#">
+                                                        <img src="assets/img/avatars/2.png" class="br3" alt="avatar">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">New post
+                                                        <span class="text-muted">- 09/01/16</span>
+                                                    </h5> Last Updated 5 days ago by
+                                                        <a class="" href="#"> John Doe </a>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <a class="media-left" href="#">
+                                                        <img src="assets/img/avatars/3.png" class="br3" alt="avatar">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h5 class="media-heading">New post
+                                                        <span class="text-muted">- 09/01/16</span>
+                                                    </h5> Last Updated 5 days ago by
+                                                        <a class="" href="#"> John Doe </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="nav-tab2" class="tab-pane chat-widget" role="tabpanel">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="64x64" src="assets/img/avatars/1.png">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="media-status online"></span>
+                                                    <h5 class="media-heading">Anna Smith
+                                                    <span> - 3:16 am</span>
+                                                </h5> Sed egestas ligula eget dictum posuere. Maecenas feugiat in enim.
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <span class="media-status offline"></span>
+                                                    <h5 class="media-heading">Mike Adams
+                                                    <span> - 3:36 am</span>
+                                                </h5> Etiam facilisis ultrices fringilla. Vivamus sit amet elementum ipsum
+                                                </div>
+                                                <div class="media-right">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="64x64" src="assets/img/avatars/3.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="64x64" src="assets/img/avatars/1.png">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="media-status online"></span>
+                                                    <h5 class="media-heading">Anna Smith
+                                                    <span> - 4:27 am</span>
+                                                </h5> Sed egestas ligula eget dictum posuere. Maecenas feugiat in enim.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nav-tab3" class="tab-pane alerts-widget" role="tabpanel">
+                                            <div class="media">
+                                                <a class="media-left" href="#">
+                                                    <span class="fa fa-shopping-cart"></span>
+                                                </a>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading">New Product Order
+                                                    <span class="text-muted"></span>
+                                                </h5>
+                                                    <a href="#">iPad Air</a>
+                                                    <span class="text-muted-alt">- 3 hours ago</span>
+                                                </div>
+                                                <div class="media-right">
+                                                    <div class="media-response"> Confirm?</div>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-info btn-sm">
+                                                        <i class="fa fa-check"></i>
+                                                    </button>
+                                                        <button type="button" class="btn btn-default btn-sm">
+                                                        <i class="fa fa-cog"></i>
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <a class="media-left" href="#"> <span class="fa fa-comments"></span>
+                                                </a>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading">New User Comment
+                                                    <span class="text-muted"></span>
+                                                </h5>
+                                                    <span class="text-muted-alt">Sam Fisher - I'd like to read more!</span>
+                                                </div>
+                                                <div class="media-right">
+                                                    <div class="media-response text-right"> Moderate?</div>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-info btn-sm">
+                                                        <i class="fa fa-check "></i>
+                                                    </button>
+                                                        <button type="button" class="btn btn-default btn-sm">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <a class="media-left" href="#">
+                                                    <span class="fa fa-eye"></span>
+                                                </a>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading">New User Review
+                                                    <span class="text-muted"></span>
+                                                </h5>
+                                                    <span class="text-muted-alt">Sebastian Jones - 5 hours ago</span>
+                                                </div>
+                                                <div class="media-right">
+                                                    <div class="media-response"> Approve?</div>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-info btn-sm">
+                                                        <i class="fa fa-check"></i>
+                                                    </button>
+                                                        <button type="button" class="btn btn-default btn-sm">
+                                                        <i class="fa fa-remove"></i>
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a href="#" class="btn btn-alert"> View All </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown dropdown-fuse">
+                    <div class="navbar-btn btn-group">
+                        <button class="dropdown-toggle btn btn-hover-effects" data-toggle="dropdown">
+                        <span class="fa fa-bell fs20 text-info-darker"></span>
+                        <span class="fs14 visible-xl">
+                            8
+                        </span>
+                    </button>
+                        <div class="navbar-activity dropdown-menu keep-dropdown w375" role="menu">
+                            <div class="panel mbn">
+                                <div class="panel-menu">
+                                    <div class="btn-group btn-group-nav" role="tablist">
+                                        <a href="#nav-tab4" data-toggle="tab" class="btn btn-primary btn-sm active">Activity</a>
+                                    </div>
+                                    <button class="btn btn-xs" type="button"><i
+                                        class="fa fa-refresh"></i>
+                                </button>
+                                </div>
+                                <div class="panel-body pn">
+                                    <div class="tab-content br-n pn">
+                                        <div id="nav-tab4" class="tab-pane active" role="tabpanel">
+                                            <ol class="timeline-list">
+                                                <li class="timeline-item">
+                                                    <div class="timeline-icon light">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </div>
+                                                    <div class="timeline-desc">
+                                                        <b>John Doe <span>-</span> <span class="timeline-date">3:16 am</span></b> Sent you a message.
+                                                        <a href="#">View now</a>
+                                                    </div>
+                                                </li>
+                                                <li class="timeline-item">
+                                                    <div class="timeline-icon">
+                                                        <span class="fa fa-info-circle"></span>
+                                                    </div>
+                                                    <div class="timeline-desc">
+                                                        <b>Admin <span>-</span> <span class="timeline-date">6:26 pm</span></b> Сreated invoice for:
+                                                        <a href="#">iPad Air</a>
+                                                    </div>
+                                                </li>
+                                                <li class="timeline-item">
+                                                    <div class="timeline-icon">
+                                                        <span class="fa fa-info-circle"></span>
+                                                    </div>
+                                                    <div class="timeline-desc">
+                                                        <b>Admin <span>-</span> <span class="timeline-date">11:45 am</span></b> Сreated invoice for:
+                                                        <a href="#">iPhone 5s</a>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a href="#" class="btn btn-warning btn-sm"> View All </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown dropdown-fuse">
+                    <div class="navbar-btn btn-group">
+                        <button class="btn-hover-effects dropdown-toggle btn" data-toggle="dropdown">
+                        <img src="assets/img/sprites/uk.png" alt="">
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="javascript:void(0);"> English </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Spanish </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Italian </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown dropdown-fuse navbar-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="btn-hover-effects" src="assets/img/avatars/profile_avatar.jpg" alt="avatar">
+                        <span class="hidden-xs">
+                        <span class="name">Doug Adams</span>
+                        </span>
+                        <span class="fa fa-caret-down hidden-xs"></span>
+                    </a>
+                    <ul class="dropdown-menu list-group keep-dropdown w230" role="menu">
+                        <li class="dropdown-header clearfix">
+                            <div class="pull-left">
+                                <select id="user-status">
+                                <optgroup label="Current Status:">
+                                    <option value="1-1">Away</option>
+                                    <option value="1-2">Busy</option>
+                                    <option value="1-3" selected="selected">Online</option>
+                                    <option value="1-4">Offline</option>
+                                </optgroup>
+                            </select>
+                            </div>
+                            <div class="pull-right">
+                                <select id="user-role">
+                                <optgroup label="Logged in As:">
+                                    <option value="1-1" selected="selected">Admin</option>
+                                    <option value="1-2">Editor</option>
+                                    <option value="1-3">User</option>
+                                </optgroup>
+                            </select>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fa fa-envelope"></span>
+                            <a href="#" class="">
+                            Messages
+                            <span class="label label-info">3</span>
+                        </a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fa fa-user"></span>
+                            <a href="#" class="">
+                            Friends
+                            <span class="label label-info">6</span>
+                        </a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fa fa-cog"></span>
+                            <a href="#" class="">
+                            Account Settings
+                        </a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fa fa-bell"></span>
+                            <a href="#" class="">
+                             Activity
+                        </a>
+                        </li>
+                        <li class="dropdown-footer text-center">
+                            <a href="#" class="btn btn-warning">
+                            logout
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <!-- /Header -->
+        <!-- Sidebar  -->
+        <aside id="sidebar_left" class="nano affix">
+            <!-- Sidebar Left Wrapper  -->
+            <div class="sidebar-left-content nano-content">
+                <!-- Sidebar Header -->
+                <header class="sidebar-header">
+                    <!-- Sidebar - Logo -->
+                    <div class="sidebar-widget logo-widget">
+                        <div class="media">
+                            <a class="logo-image" href="index.html">
+                                <img src="assets/img/logo.png" alt="" class="img-responsive">
+                            </a>
+                            <div class="logo-slogan">
+                                <div>MicroOffice<span class="text-info"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- /Sidebar Header -->
+                <!-- Sidebar Menu  -->
+                <ul class="nav sidebar-menu">
+                    <li class="sidebar-label pt30">Navigation</li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Dashboard</span>
+                            <span class="sb-menu-icon fa fa-home"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="index.html">
+                                Layout 1
+                            </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                Layout 2
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-label pt25">Tools</li>
+                    <li>
+                        <a class="accordion-toggle" href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Sales Statistics</span>
+                            <span class="sb-menu-icon fa fa-share-square-o"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a href="index2.html">
+                                Overview
+                            </a>
+                            </li>
+                            <li>
+                                <a href="sales-stats-products.html">
+                                Products
+                            </a>
+                            </li>
+                            <li>
+                                <a href="sales-stats-purchases.html">
+                                Purchases
+                            </a>
+                            </li>
+                            <li>
+                                <a href="sales-stats-clients.html">
+                                Clients
+                            </a>
+                            </li>
+                            <li>
+                                <a href="sales-stats-general-settings.html">
+                                General Settings
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Layout Templates</span>
+                            <span class="sb-menu-icon fa fa-desktop"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Sidebars</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="sidebar-left-static.html">
+                                        Left Static
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="sidebar-left-fixed.html">
+                                        Left Fixed
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="sidebar-left-minified.html">
+                                        Left Minified
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Navigation</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="navigation-static.html">
+                                        Static
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="navigation-fixed.html">
+                                        Fixed
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Top Panel</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="top-panel.html">
+                                        Default
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="top-panel-menu.html">
+                                        With Menu
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Content</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="content-blank.html">
+                                        Blank
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="content-fixed.html">
+                                        Fixed
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="content-hero.html">
+                                        Hero Content
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Content Chutes</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="chute-left.html">
+                                        Left Static
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="chute-left-fixed.html">
+                                        Left Fixed
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="chute-right.html">
+                                        Right Static
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="chute-right-fixed.html">
+                                        Right Fixed
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="chute-both.html">
+                                        Left &amp; Right Static
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="chute-both-fixed.html">
+                                        Left &amp; Right Fixed
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Boxed Frontpage</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="boxed-default.html">
+                                        Default
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-boxed.html">
+                                        Optional Navigation
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle" href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Horizontal Navigation</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li>
+                                        <a href="horizontal-navigation-small-menu.html">
+                                        Small Menu
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-medium-menu.html">
+                                        Medium Menu
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-large-menu.html">
+                                        Large Menu
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-top-panel.html">
+                                        With Top panel
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-collapsing-top-panel.html">
+                                        Collapsing Top panel
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="horizontal-navigation-boxed.html">
+                                        Boxed Layout
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Management Tools</span>
+                            <span class="sb-menu-icon fa fa-wrench"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="management-tools-panels.html">
+                                Panels
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="management-tools-modals.html">
+                                Modals
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="management-tools-dock.html">
+                                Dock
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle menu-open" href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Forms</span>
+                            <span class="sb-menu-icon fa fa-list-ul"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="forms-elements.html">
+                                Elements
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="forms-widgets.html">
+                                Widgets
+                            </a>
+                            </li>
+                            <li class="active">
+                                <a href="forms-layouts.html">
+                                Layouts
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="forms-wizard.html">
+                                 Wizard
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="forms-validation.html">
+                                Validation
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-label pt25">Elements</li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Widgets</span>
+                            <span class="sb-menu-icon fa fa-cogs"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="widgets-panels.html">
+                                Panels
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="widgets-scrollers-tiles.html">
+                                Scrollers &amp; Tiles
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="widgets-tools.html">
+                                Tools
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="email-layouts.html">
+                            <span class="sidebar-title">Email Layouts</span>
+                            <span class="sb-menu-icon fa fa-envelope"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">User Interface</span>
+                            <span class="sb-menu-icon fa fa-star-half-full "></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="user-interface-alerts.html">
+                                Alerts
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-buttons.html">
+                                Buttons
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-typography.html">
+                                Typography
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-panels.html">
+                                Panels
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-progress-bars.html">
+                                Progress Bars
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-tabs.html">
+                                Tabs
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-icons.html">
+                                Icons
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-grid.html">
+                                Grid
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-interface-progress-loader.html">
+                                Page Progress Loader
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">User Forms</span>
+                            <span class="sb-menu-icon fa fa-tasks"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li class="">
+                                <a href="user-forms-standart-inputs.html">
+                                Standart Inputs
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-additional-inputs.html">
+                                Additional Inputs
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-editors.html">
+                                Editors
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-treeview.html">
+                                Treeview
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-nestable.html">
+                                Nestable
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-image-tools.html">
+                                Image Tools
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-file-uploaders.html">
+                                File Uploaders
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-notifications.html">
+                                Notifications
+                            </a>
+                            </li>
+                            <li class="">
+                                <a href="user-forms-content-sliders.html">
+                                Content Sliders
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Plugins</span>
+                            <span class="sb-menu-icon fa fa-crop"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Maps</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="maps-basic.html">
+                                        Basic
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="maps-vector.html">
+                                        Vector
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="maps-full.html">
+                                        Full
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Charts</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="charts-highcharts.html">
+                                        Highcharts
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="charts-d3.html">
+                                        D3 Charts
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="charts-flot.html">
+                                        Flot Charts
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Tables</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="tables-basic.html">
+                                        Basic
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="tables-datatables.html">
+                                        Data
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="tables-sortable.html">
+                                        Sortable
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="tables-pricing.html">
+                                        Pricing
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle " href="#">
+                            <span class="caret"></span>
+                            <span class="sidebar-title">Pages</span>
+                            <span class="sb-menu-icon fa fa-file-text-o"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Utility</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li>
+                                        <a href="utility-confirmation.html" target="_blank">
+                                        Confirmation
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="utility-login.html" target="_blank">
+                                        Login
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="utility-register.html" target="_blank">
+                                        Register
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="utility-forgot-password.html" target="_blank">
+                                        Forgot Password
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="utility-coming-soon.html" target="_blank">
+                                        Coming Soon
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="utility-404-error.html">
+                                        404 Error
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="accordion-toggle " href="#">
+                                    <span class="caret"></span>
+                                    <span class="sidebar-title">Basic</span>
+                                </a>
+                                <ul class="nav sub-nav">
+                                    <li class="">
+                                        <a href="basic-search-results.html">
+                                        Search Results
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-profile.html">
+                                        Profile
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-calendar.html">
+                                        Calendar
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-timeline.html">
+                                        Timeline
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-faq-page.html">
+                                        FAQ Page
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-messages.html">
+                                        Messages
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-gallery.html">
+                                        Gallery
+                                    </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="basic-invoice.html">
+                                        Invoice
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="doc/index.html">
+                            <span class="sidebar-title">Documentation</span>
+                            <span class="sb-menu-icon fa fa-book"></span>
+                        </a>
+                    </li>
+                    <!-- Sidebar Progress Bars -->
+                    <li class="sidebar-label pt25 pb20">Stats</li>
+                    <li class="sidebar-stat">
+                        <a href="#" class="fs11 pln">
+                            <span class="fs13 pl35 fa fa-calendar-o text-info"></span>
+                            <span class="sidebar-title text-muted text-uppercase">September earnings</span>
+                            <span class="pull-right mr30 text-muted">$1158</span>
+                            <div id="high-column4" class="mt10 pl5 pr10" style="height: 150px;"></div>
+                        </a>
+                    </li>
+                    <li class="sidebar-stat pt10">
+                        <a href="#" class="fs11 pln">
+                            <span class="fs13 pl35 fa fa-calendar text-info"></span>
+                            <span class="sidebar-title text-muted text-uppercase">August earnings</span>
+                            <span class="pull-right mr30 text-muted">$1001</span>
+                            <div id="high-column5" class="mt10 pl5 pr10" style="height: 150px;"></div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu  -->
+            </div>
+            <!-- /Sidebar Left Wrapper  -->
+        </aside>
+        <!-- /Sidebar -->
+        <!-- Main Wrapper -->
+        <section id="content_wrapper">
+            <!-- Topbar Menu Wrapper -->
+            <div id="topbar-dropmenu-wrapper">
+                <div class="topbar-menu row">
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-danger">
+                            <span class="fa fa-music"></span>
+                            <span class="service-title">Audio</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-success">
+                            <span class="fa fa-picture-o"></span>
+                            <span class="service-title">Images</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-primary">
+                            <span class="fa fa-video-camera"></span>
+                            <span class="service-title">Videos</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-alert">
+                            <span class="fa fa-envelope"></span>
+                            <span class="service-title">Messages</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-system">
+                            <span class="fa fa-cog"></span>
+                            <span class="service-title">Settings</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="service-box bg-dark">
+                            <span class="fa fa-user"></span>
+                            <span class="service-title">Users</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Topbar Menu Wrapper -->
+            <!-- Content -->
+            <section id="content" class="table-layout animated fadeIn">
+                <!-- Column Left -->
+                <aside class="chute chute-left chute290 chute-icon-style bg-system" data-chute-height="match">
+                    <div class="chute-icon"></div>
+                    <div class="chute-container">
+                        <div class="chute-bin1 stretch1 btn-dimmer mt20">
+                            <div class="tab-content pn br-n bg-none allcp-form-list">
+                                <ul class="nav list-unstyled" role="tablist">
+                                    <li class="nav-label">General</li>
+                                    <li><a class="btn btn-primary btn-gradient btn-alt btn-block item-active br-n" href="#login" role="tab" data-toggle="tab"> Login Form </a></li>
+                                    <li><a class="btn btn-danger btn-gradient btn-alt btn-block br-n" href="#register" role="tab" data-toggle="tab"> Registration Form </a></li>
+                                    <li><a class="btn btn-info btn-gradient btn-alt btn-block br-n" href="#contact" role="tab" data-toggle="tab"> Contact Form </a></li>
+                                    <li><a class="btn btn-primary btn-gradient btn-alt btn-block br-n" href="#comment" role="tab" data-toggle="tab"> Comment Form </a></li>
+                                    <li class="nav-label mt20">Ecommerce</li>
+                                    <li><a class="btn btn-success btn-gradient btn-alt btn-block br-n" href="#order" role="tab" data-toggle="tab"> Checkout </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- /Column Left -->
+                <!-- Column Center -->
+                <div class="chute chute-center">
+                    <div class="">
+                      <!-- Topbar -->
+                      <header id="topbar" class="alt">
+                          <div class="topbar-left">
+                              <ol class="breadcrumb">
+                                  <li class="breadcrumb-link">
+                                      <a href="index.html">Home</a>
+                                  </li>
+                                  <li class="breadcrumb-current-item">Form Layouts</li>
+                              </ol>
+                          </div>
+                      </header>
+                      <!-- /Topbar -->
+                        <div class="tab-content mw900 mt10 center-block center-children">
+                            <!-- Comment Form -->
+                            <div class="allcp-form theme-primary tab-pane mw600" id="comment" role="tabpanel">
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <span class="panel-title pn">Leave a comment</span>
+                                    </div>
+                                    <!-- /Panel Heading -->
+                                    <form method="post" action="/" id="form-comment">
+                                        <div class="panel-body pn">
+                                            <div class="section">
+                                                <label for="names" class="field prepend-icon">
+                                                <input type="text" name="names" id="names" class="gui-input"
+                                                       placeholder="Name">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="email" class="field prepend-icon">
+                                                <input type="email" name="email" id="email" class="gui-input"
+                                                       placeholder="Email">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="website" class="field prepend-icon">
+                                                <input type="url" name="website" id="website" class="gui-input"
+                                                       placeholder="Website url (optional)...">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-external-link"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="comment1" class="field prepend-icon">
+                                              <textarea class="gui-textarea br-b-l-r0 br-b-r-r0" id="comment1" name="comment1" placeholder="Comment text"></textarea>
+                                                <span class="field-icon">
+                                                    <i class="fa fa-align-justify"></i>
+                                                </span>
+                                                <span class="input-footer br-b-l-r3 br-b-r-r3">
+                                                    <strong>USE HTML TAGS:</strong>&lt;blockquote&gt;, &lt;strong&gt;&lt;a&gt;, &lt;b&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;code&gt;
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section text-right">
+                                                <button type="submit" class="ph40 btn btn-primary fs14">Post
+                                                Comment
+                                            </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- /Form -->
+                                </div>
+                                <!-- /Panel -->
+                            </div>
+                            <!-- /Comment Form -->
+                            <!-- Contact Form -->
+                            <div class="allcp-form theme-info tab-pane mw600" id="contact" role="tabpanel">
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <span class="panel-title pn">Contact us</span>
+                                    </div>
+                                    <!-- /Panel Heading -->
+                                    <form method="post" action="/" id="form-contact1">
+                                        <div class="panel-body pn">
+                                            <div class="section">
+                                                <label for="names2" class="field prepend-icon">
+                                                <input type="text" name="names2" id="names2" class="gui-input"
+                                                       placeholder="Name">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="email2" class="field prepend-icon">
+                                                <input type="email" name="email2" id="email2" class="gui-input"
+                                                       placeholder="Email">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="subject" class="field prepend-icon">
+                                                <input type="text" name="subject" id="subject" class="gui-input"
+                                                       placeholder="Subject...">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-exclamation"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="comment2" class="field prepend-icon">
+                                             <textarea class="gui-textarea" id="comment2" name="comment2" placeholder="Your message"></textarea>
+                                                <span class="field-icon">
+                                                    <i class="fa fa-align-justify"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <div class="smart-widget sm-left sml-95">
+                                                    <label for="verify" class="field prepend-icon">
+                                                    <input type="text" name="verify" id="verify" class="gui-input"
+                                                           placeholder="Math captcha">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-lock"></i>
+                                                    </span>
+                                                </label>
+                                                    <label for="verify" class="button">3 + 3</label>
+                                                </div>
+                                                <!-- /Block Widget -->
+                                            </div>
+                                            <!-- /section -->
+                                        </div>
+                                        <!-- /Form -->
+                                        <div class="section text-right">
+                                            <button type="submit" class="btn btn-primary fs14 ph40">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /Panel -->
+                            </div>
+                            <!-- /Contact Form -->
+                            <!-- Login Form -->
+                            <div class="allcp-form theme-primary tab-pane active mw320" id="login" role="tabpanel">
+                                <div class="bg-primary mw600 text-center mb20 br3 pt15 pb10">
+                                  <div class="sidebar-widget logo-widget">
+                                    <a class="logo-image mtn" href="index.html"></a>
+                                    <div class="logo-slogan mtn">MicroOffice<span class="text-info"></span></div>
+                                  </div>
+                                </div>
+                                <div class="panel fluid-width">
+                                    <form method="post" action="/" id="form-login">
+                                        <div class="panel-body pn mv10">
+                                            <div class="section">
+                                                <label for="username" class="field prepend-icon">
+                                                <input type="text" name="username" id="username" class="gui-input"
+                                                       placeholder="Username">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="password" class="field prepend-icon">
+                                                <input type="text" name="password" id="password" class="gui-input"
+                                                       placeholder="Password">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-lock"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <div class="pull-left pt5">
+                                                    <div class="radio-custom radio-primary mb5 lh25">
+                                                        <input type="radio" id="remember" name="remember">
+                                                        <label for="remember" class="fs14">Remember me</label>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn fs14 btn-primary pull-right">Log
+                                                in
+                                            </button>
+                                            </div>
+                                            <!-- /section -->
+                                        </div>
+                                        <!-- /Form -->
+                                    </form>
+                                </div>
+                                <!-- /Panel -->
+                            </div>
+                            <!-- /Login Form -->
+                            <!-- Order Form -->
+                            <div class="allcp-form theme-primary tab-pane mw700" id="order" role="tabpanel">
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <span class="panel-title pn">Checkout</span>
+                                    </div>
+                                    <form method="post" action="/" id="form-order">
+                                        <div class="panel-body pn">
+                                            <h6 class="mb20">Personal Information</h6>
+                                            <div class="section row">
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="firstname" class="field prepend-icon">
+                                                    <input type="text" name="firstname" id="firstname" class="gui-input"
+                                                           placeholder="First name...">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="lastname" class="field prepend-icon">
+                                                    <input type="text" name="lastname" id="lastname" class="gui-input"
+                                                           placeholder="Last name...">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section row">
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="email4" class="field prepend-icon">
+                                                    <input type="email" name="email4" id="email4" class="gui-input"
+                                                           placeholder="Email address">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="mobile" class="field prepend-icon">
+                                                    <input type="tel" name="mobile" id="mobile" class="gui-input"
+                                                           placeholder="Telephone / moble number">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-phone-square"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <!-- /section -->
+                                            <h6 class="mb20 mt40">Payment Details</h6>
+                                            <p class="small-text text-muted mb20">Please choose a preferred method of payment below</p>
+                                            <div class="section">
+                                                <label class="field option mb5">
+                                                <input type="radio" name="payment" checked>
+                                                <span class="radio"></span>Credit Card</label>
+                                                <label class="field option mb5">
+                                                <input type="radio" name="payment">
+                                                <span class="radio"></span>Paypal</label>
+                                                <label class="field option mb5">
+                                                <input type="radio" name="payment">
+                                                <span class="radio"></span>Wire transfer</label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="cardname" class="field prepend-icon">
+                                                <input type="text" name="cardname" id="cardname" class="gui-input"
+                                                       placeholder="Name on the card...">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </label>
+                                                <!-- /section -->
+                                            </div>
+                                            <div class="section row mh10m">
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="cardnum" class="field prepend-icon">
+                                                    <input type="text" name="cardno" id="cardnum" class="gui-input"
+                                                           placeholder="Card number...">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-credit-card"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="monthpicker2" class="field prepend-icon">
+                                                    <input type="text" id="monthpicker2" name="monthpicker2"
+                                                           class="gui-input"
+                                                           placeholder="Month/Year">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                            </div>
+                                            <h6 class="mb20 mt40">Shipping Address</h6>
+                                            <div class="section">
+                                                <label for="firstaddr" class="field prepend-icon">
+                                                <input type="text" name="firstaddr" id="firstaddr" class="gui-input"
+                                                       placeholder="Street address">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-home"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="lastaddr" class="field prepend-icon">
+                                                <input type="text" name="lastaddr" id="lastaddr" class="gui-input"
+                                                       placeholder="Street address 2">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-home"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label class="field select">
+                                                <select id="location" name="location">
+                                                    <option value="">Select country...</option>
+                                                    <option value="AL">Albania</option>
+                                                    <option value="DZ">Algeria</option>
+                                                    <option value="AD">Andorra</option>
+                                                    <option value="AO">Angola</option>
+                                                    <option value="AI">Anguilla</option>
+                                                    <option value="AG">Antigua and Barbuda</option>
+                                                    <option value="AR">Argentina</option>
+                                                    <option value="AM">Armenia</option>
+                                                    <option value="AW">Aruba</option>
+                                                    <option value="AU">Australia</option>
+                                                    <option value="AT">Austria</option>
+                                                    <option value="AZ">Azerbaijan Republic</option>
+                                                    <option value="BS">Bahamas</option>
+                                                    <option value="BH">Bahrain</option>
+                                                    <option value="BB">Barbados</option>
+                                                    <option value="BE">Belgium</option>
+                                                    <option value="BZ">Belize</option>
+                                                    <option value="BJ">Benin</option>
+                                                    <option value="BM">Bermuda</option>
+                                                    <option value="BT">Bhutan</option>
+                                                    <option value="BO">Bolivia</option>
+                                                    <option value="BA">Bosnia and Herzegovina</option>
+                                                    <option value="BW">Botswana</option>
+                                                    <option value="BR">Brazil</option>
+                                                    <option value="BN">Brunei</option>
+                                                    <option value="BG">Bulgaria</option>
+                                                    <option value="BF">Burkina Faso</option>
+                                                    <option value="BI">Burundi</option>
+                                                    <option value="KH">Cambodia</option>
+                                                    <option value="CA">Canada</option>
+                                                    <option value="CV">Cape Verde</option>
+                                                    <option value="KY">Cayman Islands</option>
+                                                    <option value="TD">Chad</option>
+                                                    <option value="CL">Chile</option>
+                                                    <option value="C2">China Worldwide</option>
+                                                    <option value="CO">Colombia</option>
+                                                    <option value="KM">Comoros</option>
+                                                    <option value="CK">Cook Islands</option>
+                                                    <option value="CR">Costa Rica</option>
+                                                    <option value="HR">Croatia</option>
+                                                    <option value="CY">Cyprus</option>
+                                                    <option value="CZ">Czech Republic</option>
+                                                    <option value="CD">Democratic Republic of the Congo</option>
+                                                    <option value="DK">Denmark</option>
+                                                    <option value="DJ">Djibouti</option>
+                                                    <option value="DM">Dominica</option>
+                                                    <option value="DO">Dominican Republic</option>
+                                                    <option value="EC">Ecuador</option>
+                                                    <option value="EG">Egypt</option>
+                                                    <option value="SV">El Salvador</option>
+                                                    <option value="ER">Eritrea</option>
+                                                    <option value="EE">Estonia</option>
+                                                    <option value="ET">Ethiopia</option>
+                                                    <option value="FK">Falkland Islands</option>
+                                                    <option value="FO">Faroe Islands</option>
+                                                    <option value="FJ">Fiji</option>
+                                                    <option value="FI">Finland</option>
+                                                    <option value="FR">France</option>
+                                                    <option value="GF">French Guiana</option>
+                                                    <option value="PF">French Polynesia</option>
+                                                    <option value="GA">Gabon Republic</option>
+                                                    <option value="GM">Gambia</option>
+                                                    <option value="GE">Georgia</option>
+                                                    <option value="DE">Germany</option>
+                                                    <option value="GI">Gibraltar</option>
+                                                    <option value="GR">Greece</option>
+                                                    <option value="GL">Greenland</option>
+                                                    <option value="GD">Grenada</option>
+                                                    <option value="GP">Guadeloupe</option>
+                                                    <option value="GT">Guatemala</option>
+                                                    <option value="GN">Guinea</option>
+                                                    <option value="GW">Guinea Bissau</option>
+                                                    <option value="GY">Guyana</option>
+                                                    <option value="HN">Honduras</option>
+                                                    <option value="HK">Hong Kong</option>
+                                                    <option value="HU">Hungary</option>
+                                                    <option value="IS">Iceland</option>
+                                                    <option value="IN">India</option>
+                                                    <option value="ID">Indonesia</option>
+                                                    <option value="IE">Ireland</option>
+                                                    <option value="IL">Israel</option>
+                                                    <option value="IT">Italy</option>
+                                                    <option value="JM">Jamaica</option>
+                                                    <option value="JP">Japan</option>
+                                                    <option value="JO">Jordan</option>
+                                                    <option value="KZ">Kazakhstan</option>
+                                                    <option value="KE">Kenya</option>
+                                                    <option value="KI">Kiribati</option>
+                                                    <option value="KW">Kuwait</option>
+                                                    <option value="KG">Kyrgyzstan</option>
+                                                    <option value="LA">Laos</option>
+                                                    <option value="LV">Latvia</option>
+                                                    <option value="LS">Lesotho</option>
+                                                    <option value="LI">Liechtenstein</option>
+                                                    <option value="LT">Lithuania</option>
+                                                    <option value="LU">Luxembourg</option>
+                                                    <option value="MG">Madagascar</option>
+                                                    <option value="MW">Malawi</option>
+                                                    <option value="MY">Malaysia</option>
+                                                    <option value="MV">Maldives</option>
+                                                    <option value="ML">Mali</option>
+                                                    <option value="MT">Malta</option>
+                                                    <option value="MH">Marshall Islands</option>
+                                                    <option value="MQ">Martinique</option>
+                                                    <option value="MR">Mauritania</option>
+                                                    <option value="MU">Mauritius</option>
+                                                    <option value="YT">Mayotte</option>
+                                                    <option value="MX">Mexico</option>
+                                                    <option value="FM">Micronesia</option>
+                                                    <option value="MN">Mongolia</option>
+                                                    <option value="MS">Montserrat</option>
+                                                    <option value="MA">Morocco</option>
+                                                    <option value="MZ">Mozambique</option>
+                                                    <option value="NA">Namibia</option>
+                                                    <option value="NR">Nauru</option>
+                                                    <option value="NP">Nepal</option>
+                                                    <option value="NL">Netherlands</option>
+                                                    <option value="AN">Netherlands Antilles</option>
+                                                    <option value="NC">New Caledonia</option>
+                                                    <option value="NZ">New Zealand</option>
+                                                    <option value="NI">Nicaragua</option>
+                                                    <option value="NE">Niger</option>
+                                                    <option value="NU">Niue</option>
+                                                    <option value="NF">Norfolk Island</option>
+                                                    <option value="NO">Norway</option>
+                                                    <option value="OM">Oman</option>
+                                                    <option value="PW">Palau</option>
+                                                    <option value="PA">Panama</option>
+                                                    <option value="PG">Papua New Guinea</option>
+                                                    <option value="PE">Peru</option>
+                                                    <option value="PH">Philippines</option>
+                                                    <option value="PN">Pitcairn Islands</option>
+                                                    <option value="PL">Poland</option>
+                                                    <option value="PT">Portugal</option>
+                                                    <option value="QA">Qatar</option>
+                                                    <option value="CG">Republic of the Congo</option>
+                                                    <option value="RE">Reunion</option>
+                                                    <option value="RO">Romania</option>
+                                                    <option value="RU">Russia</option>
+                                                    <option value="RW">Rwanda</option>
+                                                    <option value="KN">Saint Kitts and Nevis Anguilla</option>
+                                                    <option value="PM">Saint Pierre and Miquelon</option>
+                                                    <option value="VC">Saint Vincent and Grenadines</option>
+                                                    <option value="WS">Samoa</option>
+                                                    <option value="SM">San Marino</option>
+                                                    <option value="ST">São Tomé and Príncipe</option>
+                                                    <option value="SA">Saudi Arabia</option>
+                                                    <option value="SN">Senegal</option>
+                                                    <option value="RS">Serbia</option>
+                                                    <option value="SC">Seychelles</option>
+                                                    <option value="SL">Sierra Leone</option>
+                                                    <option value="SG">Singapore</option>
+                                                    <option value="SK">Slovakia</option>
+                                                    <option value="SI">Slovenia</option>
+                                                    <option value="SB">Solomon Islands</option>
+                                                    <option value="SO">Somalia</option>
+                                                    <option value="ZA">South Africa</option>
+                                                    <option value="KR">South Korea</option>
+                                                    <option value="ES">Spain</option>
+                                                    <option value="LK">Sri Lanka</option>
+                                                    <option value="SH">St. Helena</option>
+                                                    <option value="LC">St. Lucia</option>
+                                                    <option value="SR">Suriname</option>
+                                                    <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                                    <option value="SZ">Swaziland</option>
+                                                    <option value="SE">Sweden</option>
+                                                    <option value="CH">Switzerland</option>
+                                                    <option value="TW">Taiwan</option>
+                                                    <option value="TJ">Tajikistan</option>
+                                                    <option value="TZ">Tanzania</option>
+                                                    <option value="TH">Thailand</option>
+                                                    <option value="TG">Togo</option>
+                                                    <option value="TO">Tonga</option>
+                                                    <option value="TT">Trinidad and Tobago</option>
+                                                    <option value="TN">Tunisia</option>
+                                                    <option value="TR">Turkey</option>
+                                                    <option value="TM">Turkmenistan</option>
+                                                    <option value="TC">Turks and Caicos Islands</option>
+                                                    <option value="TV">Tuvalu</option>
+                                                    <option value="UG">Uganda</option>
+                                                    <option value="UA">Ukraine</option>
+                                                    <option value="AE">United Arab Emirates</option>
+                                                    <option value="GB">United Kingdom</option>
+                                                    <option value="US">United States</option>
+                                                    <option value="UY">Uruguay</option>
+                                                    <option value="VU">Vanuatu</option>
+                                                    <option value="VA">Vatican City State</option>
+                                                    <option value="VE">Venezuela</option>
+                                                    <option value="VN">Vietnam</option>
+                                                    <option value="VG">Virgin Islands (British)</option>
+                                                    <option value="WF">Wallis and Futuna Islands</option>
+                                                    <option value="YE">Yemen</option>
+                                                    <option value="ZM">Zambia</option>
+                                                </select>
+                                                <i class="arrow double"></i>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section row mh10m">
+                                                <div class="col-md-3 ph10 mb5">
+                                                    <label for="zip" class="field prepend-icon">
+                                                    <input type="text" name="zip" id="zip" class="gui-input"
+                                                           placeholder="Zip">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-list-ol"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                                <div class="col-md-4 ph10 mb5">
+                                                    <label for="city" class="field prepend-icon">
+                                                    <input type="text" name="city" id="city" class="gui-input"
+                                                           placeholder="City">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-home"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                                <div class="col-md-5 ph10 mb5">
+                                                    <label for="states" class="field select">
+                                                    <select id="states" name="states">
+                                                        <option value="">Choose state</option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="AR">Arkansas</option>
+                                                        <option value="CA">California</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="CT">Connecticut</option>
+                                                        <option value="DE">Delaware</option>
+                                                        <option value="DC">District Of Columbia</option>
+                                                        <option value="FL">Florida</option>
+                                                        <option value="GA">Georgia</option>
+                                                        <option value="HI">Hawaii</option>
+                                                        <option value="ID">Idaho</option>
+                                                        <option value="IL">Illinois</option>
+                                                        <option value="IN">Indiana</option>
+                                                        <option value="IA">Iowa</option>
+                                                        <option value="KS">Kansas</option>
+                                                        <option value="KY">Kentucky</option>
+                                                        <option value="LA">Louisiana</option>
+                                                        <option value="ME">Maine</option>
+                                                        <option value="MD">Maryland</option>
+                                                        <option value="MA">Massachusetts</option>
+                                                        <option value="MI">Michigan</option>
+                                                        <option value="MN">Minnesota</option>
+                                                        <option value="MS">Mississippi</option>
+                                                        <option value="MO">Missouri</option>
+                                                        <option value="MT">Montana</option>
+                                                        <option value="NE">Nebraska</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="NH">New Hampshire</option>
+                                                        <option value="NJ">New Jersey</option>
+                                                        <option value="NM">New Mexico</option>
+                                                        <option value="NY">New York</option>
+                                                        <option value="NC">North Carolina</option>
+                                                        <option value="ND">North Dakota</option>
+                                                        <option value="OH">Ohio</option>
+                                                        <option value="OK">Oklahoma</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="PA">Pennsylvania</option>
+                                                        <option value="RI">Rhode Island</option>
+                                                        <option value="SC">South Carolina</option>
+                                                        <option value="SD">South Dakota</option>
+                                                        <option value="TN">Tennessee</option>
+                                                        <option value="TX">Texas</option>
+                                                        <option value="UT">Utah</option>
+                                                        <option value="VT">Vermont</option>
+                                                        <option value="VA">Virginia</option>
+                                                        <option value="WA">Washington</option>
+                                                        <option value="WV">West Virginia</option>
+                                                        <option value="WI">Wisconsin</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                    <i class="arrow double"></i>
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <div class="section text-right">
+                                                <button type="submit" class="btn fs14 btn-primary">Checkout</button>
+                                            </div>
+                                        </div>
+                                        <!-- /Panel Body -->
+                                    </form>
+                                </div>
+                                <!-- /Panel -->
+                            </div>
+                            <!-- /Order Form -->
+                            <!-- Registration -->
+                            <div class="allcp-form theme-primary tab-pane mw600" id="register" role="tabpanel">
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <span class="panel-title pn">Registration form</span>
+                                    </div>
+                                    <!-- /Panel Heading -->
+                                    <form method="post" action="/" id="form-register">
+                                        <div class="panel-body pn">
+                                            <div class="section row mh10m">
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="firstname2" class="field prepend-icon">
+                                                    <input type="text" name="firstname2" id="firstname2"
+                                                           class="gui-input"
+                                                           placeholder="First name...">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                                <div class="col-md-6 ph10 mb5">
+                                                    <label for="lastname2" class="field prepend-icon">
+                                                    <input type="text" name="lastname2" id="lastname2" class="gui-input"
+                                                           placeholder="Last name...">
+                                                    <span class="field-icon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                </label>
+                                                </div>
+                                                <!-- /section -->
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="email5" class="field prepend-icon">
+                                                <input type="email" name="email5" id="email5" class="gui-input"
+                                                       placeholder="Email address">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="username2" class="field prepend-icon">
+                                                <input type="text" name="username2" id="username2" class="gui-input"
+                                                       placeholder="Nickname">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="password2" class="field prepend-icon">
+                                                <input type="text" name="password2" id="password2" class="gui-input"
+                                                       placeholder="Create a password">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-lock"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <label for="confirmPassword" class="field prepend-icon">
+                                                <input type="text" name="confirmPassword" id="confirmPassword"
+                                                       class="gui-input"
+                                                       placeholder="Retype your password">
+                                                <span class="field-icon">
+                                                    <i class="fa fa-unlock-alt"></i>
+                                                </span>
+                                            </label>
+                                            </div>
+                                            <!-- /section -->
+                                            <div class="section">
+                                                <div class="bs-component pull-left mt10">
+                                                    <div class="checkbox-custom checkbox-primary mb10">
+                                                        <input type="checkbox" checked="" id="agree">
+                                                        <label for="agree" class="fs14">I agree to the
+                                                        <a href="#"> terms of use. </a></label>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <button type="submit" class="btn btn-primary fs14">I Agree -
+                                                    Create Account
+                                                </button>
+                                                </div>
+                                            </div>
+                                            <!-- /section -->
+                                        </div>
+                                        <!-- /Form -->
+                                        <div class="panel-footer"></div>
+                                    </form>
+                                </div>
+                                <!-- /Panel -->
+                            </div>
+                            <!-- /Registration -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /Column Center -->
+            </section>
+            <!-- /Content -->
+            <footer id="content-footer">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        &copy; 2016 All Rights Reserved. <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
+                    </div>
+                    <a href="#content" class="footer-return-top">
+                        <span class="fa fa-angle-up"></span>
+                    </a>
+                </div>
+            </footer>
+        </section>
+        <!-- /Main Wrapper -->
+    </div>
+    <!-- /Body Wrap  -->
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+    <!-- AnimatedSVGIcons -->
+    <script src="assets/fonts/animatedsvgicons/js/snap.svg-min.js"></script>
+    <script src="assets/fonts/animatedsvgicons/js/svgicons-config.js"></script>
+    <script src="assets/fonts/animatedsvgicons/js/svgicons.js"></script>
+    <script src="assets/fonts/animatedsvgicons/js/svgicons-init.js"></script>
+    <!-- Scroll -->
+    <script src="assets/js/utility/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- HighCharts Plugin -->
+    <script src="assets/js/plugins/highcharts/highcharts.js"></script>
+    <!-- Date/Month - Pickers -->
+    <script src="assets/allcp/forms/js/jquery-ui-monthpicker.min.js"></script>
+    <!-- Theme Scripts -->
+    <script src="assets/js/utility/utility.js"></script>
+    <script src="assets/js/demo/demo.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demo/widgets_sidebar.js"></script>
+    <script src="assets/js/pages/forms-layouts.js"></script>
+    <!-- /Scripts -->
+</body>
+</html>

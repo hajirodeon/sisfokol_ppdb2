@@ -1,0 +1,62 @@
+// ====================== Breadcrumbs =======================
+
+.breadcrumb {
+  //padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  //margin-bottom: @line-height-computed;
+  list-style: none;
+  //background-color: @breadcrumb-bg;
+  //border-radius: @border-radius-base;
+
+  > li {
+    display: inline-block;
+
+    &:not(.breadcrumb-active) + li:before {
+      content: "@{breadcrumb-separator}"; //unicode
+      //font: normal normal normal 14px/1 FontAwesome;
+      padding: 0 13px 0 10px;
+      color: @breadcrumb-color;
+    }
+  }
+
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}
+
+
+// Breadcrumbs Style 2
+#topbar.breadcrumb_style_2 {
+  background: transparent;
+  // padding: 36px 9.3% 0 9.8%;
+  padding: 36px 9.3% 0 9.8%;
+  .breadcrumb {
+    > li,
+    > li > a {
+      // font-size: 18px;
+    }
+    > li {
+      &:not(.breadcrumb-active) + li:before {
+        // content: "@{breadcrumb-separator-alt}"; //unicode
+        // font-size: 20px;
+        // padding: 0 5px 0 2px;
+      }
+    }
+    > li:first-child span {
+      color: @breadcrumb-icon-color;
+      font-size: 22px;
+    }
+    li.breadcrumb-icon {
+      margin: 0;
+    }
+    li.breadcrumb-active {
+      margin-right: 5px;
+    }
+  }
+  .multiselect-container.dropdown-menu > li {
+    padding: 0;
+  }
+  .multiselect.dropdown-toggle + .multiselect-container.dropdown-menu > li > a > label {
+    padding: 5px 20px !important;
+  }
+
+}

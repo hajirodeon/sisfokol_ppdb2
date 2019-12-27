@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <title>{judul}</title>
+    <meta name="author" content="{x_author}">
+	<meta name="description" content="{x_description}">
+	<meta name="url" content="{x_url}">
+	<meta name="keywords" content="{x_keywords}">
+	
+	<meta property="og:title" content="{judul}"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="{judul}"/>
+	<meta property="og:url" content="{ke}"/>
+	<meta property="og:site_name" content="{sek_nama}"/>
+
+
+
+    <link rel="icon" href="{sumber}/template/favicon.ico">
+    <link rel="stylesheet" href="{sumber}/template/mag/style.css">
+
+
+
+
+
+
+<!-- jQuery 3 -->
+<script src="{sumber}/template/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="{sumber}/template/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="{sumber}/template/adminlte/dist/js/adminlte.min.js"></script>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{sumber}/template/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="{sumber}/template/vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
+
+
+
+<!-- ChartJS -->
+<script src="{sumber}/template/adminlte/bower_components/chart.js/Chart.js"></script>
+
+
+    
+
+
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{sumber}/template/adminlte/dist/css/skins/skins-biasawae.css">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  
+
+<script type="text/javascript">
+    $(document).ready(function() {
+		
+
+ $( ".owl-prev").html('<i class="glyphicon glyphicon-chevron-left"></i>');
+ $( ".owl-next").html('<i class="glyphicon glyphicon-chevron-right"></i>');
+
+
+    });
+</script>   
+   
+   
+   
+   
+   
+   
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Navbar Area -->
+        <div class="mag-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="magNav">
+
+                    <!-- Nav brand -->
+                    <a href="{sumber}" class="nav-brand"><img src="{sumber}/filebox/logo/logo.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Nav Content -->
+                    <div class="nav-content d-flex align-items-center">
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                            	
+    							{i_menu}                        	
+	                                
+
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+
+    <!-- ##### Hero Area Start ##### -->
+    <div class="hero-area owl-carousel">
+    	
+		{i_slideshow}    	
+
+    </div>
+    <!-- ##### Hero Area End ##### -->
+
+
+	<br>
+
+
+
+
+    <section class="post-details-area">
+        <div class="container">
+            <div class="row justify-content-center">
+				
+
+
+                <!-- Post Details Content Area -->
+                <div class="col-12 col-xl-12">
+                    <div class="post-details-content bg-white mb-30 p-30 box-shadow">
+
+			
+			            <!-- Sports Videos -->
+			            <div class="sports-videos-area">
+			                <!-- Section Title -->
+			                <div class="section-heading">
+			                    <h5>FOTO</h5>
+			                </div>
+			
+			
+			
+							{i_foto}
+			
+							<br>
+							<br>				
+							
+			
+			            </div>
+
+
+
+
+
+
+
+			            <!-- Sports Videos -->
+			            <div class="sports-videos-area">
+			                <!-- Section Title -->
+			                <div class="section-heading">
+			                    <h5>VIDEO</h5>
+			                </div>
+			
+			
+			
+							{i_video}
+			
+							<br>
+							<br>				
+							
+			
+			            </div>
+
+
+
+
+                    	
+					</div>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Post Details Area End ##### -->
+
+
+
+
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+
+		{i_footer}
+
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+
+	 <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{sumber}/template/css/bootstrap.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{sumber}/template/css/font-awesome.min.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+    
+    
+
+
+
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{sumber}/template/mag/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="{sumber}/template/mag/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="{sumber}/template/mag/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="{sumber}/template/mag/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="{sumber}/template/mag/js/active.js"></script>
+</body>
+
+</html>

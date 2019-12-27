@@ -1,0 +1,81 @@
+@media print {
+  .basic-invoice header.navbar,
+  .basic-invoice #sidebar_left,
+  .basic-invoice #sidebar_right,
+  .basic-invoice #topbar,
+  .basic-invoice #customizer,
+  .basic-invoice .panel-heading,
+  .basic-invoice .basic-invoice-buttons {
+    display: none !important;
+    visibility: hidden;
+    width: 0 !important;
+    height: 0 !important;
+    outline: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+  }
+  .basic-invoice #content_wrapper {
+    background: 0;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transition: none;
+  }
+  .basic-invoice #content {
+    padding: 0;
+    background: none;
+  }
+  .basic-invoice #content_wrapper:after {
+    margin: 0;
+    display: none;
+  }
+  .basic-invoice #main {
+    width: 1100px !important;
+    margin: 0 auto !important;
+  }
+  .basic-invoice .panel,
+  .basic-invoice .panel-body {
+    border: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+  .basic-invoice .invoice-logo {
+    display: none !important;
+  }
+  .basic-invoice .invoice-logo-text {
+    display: block !important;
+    visibility: visible !important;
+  }
+  .basic-invoice .table-layout > .col-md-10 {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .basic-invoice #invoice-info {
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+    background-color: #ddd;
+  }
+  .basic-invoice #invoice-info > .col-md-4 {
+    float: none;
+    display: inline-block;
+    width: 32%;
+    padding: 0;
+    margin: 0;
+  }
+  .basic-invoice #invoice-info > .col-md-4:nth-child(2) {
+    text-align: center;
+  }
+  .basic-invoice #invoice-info > .col-md-4:last-child {
+    text-align: right;
+    position: relative;
+    top: 8px;
+  }
+  .basic-invoice #invoice-info > .col-md-4 .panel-body {
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=../css/print.map */

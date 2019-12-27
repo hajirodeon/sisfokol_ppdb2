@@ -1,0 +1,394 @@
+// ====================== Tabs =======================
+.nav-tabs {
+    padding-bottom: 5px;
+}
+
+.tab-block { position: relative }
+
+// Tabs Content
+.tab-block .tab-content {
+    overflow: auto;
+    position: relative;
+    z-index: 10;
+    min-height: 125px;
+    padding: 16px 12px;
+    // color: @muted;
+    //margin-top: 5px;
+    //border-top: 1px solid @gray;
+    background-color: #FFF;
+}
+.tab-block .tab-content h6{
+    color: @muted;
+}
+
+// Tab Navigation
+.tab-block .nav-tabs {
+    position: relative;
+    border: 0;
+}
+
+// Tab nav item
+.tab-block .nav-tabs > li {
+    float: left;
+    margin-bottom: 0;
+}
+// Tab nav link
+.tab-block .nav-tabs > li > a {
+    //background: @white;
+    border: none;
+    border-radius: @border-radius-base;
+    color: @nav-tabs-color;
+    font: 700 16px @font-family-base;
+    background-color: @nav-tabs-bg-color;
+    //margin-right: -1px;
+    padding: 23px 46px;
+    position: relative;
+    //text-transform: uppercase;
+    z-index: 9;
+
+}
+
+.tab-block .nav-tabs > li > a:hover {
+  //background-color: @brand-light;
+  background-color: @nav-tabs-active-bg-color;
+  //border-color: @panel-border-color;
+}
+
+.tab-block .nav-tabs > li.active > a,
+.tab-block .nav-tabs > li.active > a:hover,
+.tab-block .nav-tabs > li.active > a:focus {
+    cursor: default;
+    position: relative;
+    z-index: 12;
+    background-color: @nav-tabs-active-bg-color;
+    //background: @brand-primary;
+    //border-color: @panel-border-color;
+}
+
+.nav-tabs:not(.nav-tabs-right) > li + li {
+  margin-left: 5px;
+}
+
+//  Tab Nav - Tabs Left
+.tabs-left { float: left; margin-right: 5px; }
+.tabs-left > li {
+    float: none;
+    margin: 0 -1px 0 0;
+}
+.tabs-left > li + li {
+    margin-top: 5px;
+}
+.tabs-left > li > a {
+    padding: 14px 16px;
+    color: @nav-tabs-color;
+    border-radius: @border-radius-base;
+    background-color: @nav-tabs-bg-color;
+    font-weight: 700;
+    //border: 1px solid transparent;
+    //border-left: 3px solid @brand-dark2;
+    //border-color: #DDD;
+    //background: #fff;
+}
+.tab-block .tabs-left > li > a:hover { }
+.tab-block .tabs-left > li.active > a,
+.tab-block .tabs-left > li.active > a:hover,
+.tab-block .tabs-left > li.active > a:focus {
+    //border-color: @panel-border-color;
+    background-color: @nav-tabs-active-bg-color;
+    cursor: default;
+    position: relative;
+    z-index: 12;
+    //background: #FFF;
+}
+
+.tabs-left + .tab-content {
+  //border-top: none;
+  //border-left: 1px solid @gray;
+}
+
+//Tab Nav - Tabs Right
+.tabs-right { float: right; margin-left: 5px; }
+
+.tabs-right + .tab-content {
+    // border-top: none;
+    // border-right: 1px solid @gray;
+}
+
+.tabs-right > li {
+    float: none;
+    margin: 0 0 0 -1px;
+}
+.tabs-right > li + li {
+  margin-top: 5px;
+}
+.tabs-right > li > a {
+    padding: 14px 16px;
+    font-weight: 700;
+    color: @nav-tabs-color;
+    border-radius: @border-radius-base;
+    background-color: @nav-tabs-bg-color;
+}
+.tab-block .tabs-right > li > a:hover {
+    background-color: @nav-tabs-active-bg-color;
+}
+.tab-block .tabs-right > li.active > a,
+.tab-block .tabs-right > li.active > a:hover,
+.tab-block .tabs-right > li.active > a:focus {
+    cursor: default;
+    position: relative;
+    z-index: 12;
+    background-color: @nav-tabs-active-bg-color;
+}
+
+    // border-radius: @border-radius-base;
+    // color: @nav-tabs-color;
+    // font: 700 16px @font-family-base;
+    // background-color: @nav-tabs-bg-color;
+    // //margin-right: -1px;
+    // padding: 23px 46px;
+
+
+//  Tab Nav - Tabs Right
+.tabs-below {
+    position: relative;
+}
+.tabs-below > li {
+    float: left;
+    margin-top: -1px;
+}
+.tabs-below > li > a {
+    position: relative;
+    z-index: 9;
+    margin-right: -1px;
+    padding: 11px 16px;
+    color: #777;
+    font-weight: 600;
+    border: 1px solid #DDD;
+      background: #fafafa;
+}
+.tab-block .tabs-below > li > a:hover { }
+.tab-block .tabs-below > li.active > a,
+.tab-block .tabs-below > li.active > a:hover,
+.tab-block .tabs-below > li.active > a:focus {
+    cursor: default;
+    position: relative;
+    z-index: 12;
+    color: #555555;
+    background: #FFF;
+    border-color: #DDD;
+    //border-top: 1px solid #FFF;
+}
+
+
+//  Tab Nav - Panel Based
+.panel-heading .panel-tabs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+// #content .panel-heading .nav.panel-tabs {bottom: -26px;}
+// #content .panel-heading .panel-title + .nav.panel-tabs {bottom: -11px;}
+#content .panel-heading .nav.panel-tabs {top: 0;}
+#content .panel-heading .panel-title + .nav.panel-tabs {top: -10px;}
+
+
+#content .panel-heading .nav.panel-tabs > li.active > a {border-color: @panel-border-color;}
+.panel-tabs > li {
+    position: relative;
+    float: left;
+    margin-bottom: -1px;
+}
+.panel-tabs > li + li {
+    margin-left: 5px;
+}
+.panel-tabs > li > a {
+    color: @nav-tabs-color;
+    border-radius: @border-radius-base;
+    background-color: @nav-tabs-bg-color;
+    font-size: 14px;
+    font-weight: 700;
+    //letter-spacing: 0.2px;
+    //line-height: 30px;
+    //padding: 9px 20px 11px;
+    //border-left: 1px solid transparent;
+    //border-right: 1px solid transparent;
+    //border-top: 3px solid @brand-dark2;
+}
+
+.panel-tabs > li > a:hover {
+  //color: #444;
+  //background-color: transparent !important;
+  background-color: @nav-tabs-bg;
+}
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    background-color: @nav-tabs-bg;
+    cursor: default;
+    border-radius: @border-radius-base !important;
+    //background: #ffffff;
+}
+
+.panel-tabs > li.active > a {
+    z-index: 1;
+    //background-color: @white !important;
+    // border-left-color: #DDD;
+    // border-right-color: #DDD;
+}
+// .panel-tabs > li.active:last-child > a { border-right-color: transparent; }
+
+
+.panel-tabs-left {
+    left: 0;
+}
+// .panel-tabs-left > li.active:first-child > a  { border-left-color: transparent; }
+// .panel-tabs-left > li.active:last-child > a  { border-right-color: #DDD; }
+
+
+
+
+//  Tab Nav - Justified
+.tab-block .nav-tabs.nav-justified {
+    // margin-top: -1px;
+    // right: 1px;
+    // top: 1px;
+}
+
+.tab-block .nav-tabs.nav-justified > li { float: none; }
+
+.tab-block .nav-tabs.nav-justified > li + li a{ margin-left: 5px; }
+
+.tab-block .nav-tabs.nav-justified > li > a {
+    padding: 14px 10px;
+    border: none;
+}
+.tab-block .nav-tabs.nav-justified > li > a:hover,
+.tab-block .nav-tabs.nav-justified > li > a:focus {
+    //border-color: @panel-border-color;
+}
+.tab-block .nav-tabs.nav-justified > li.active > a,
+.tab-block .nav-tabs.nav-justified > li.active > a:hover,
+.tab-block .nav-tabs.nav-justified > li.active > a:focus {
+  border: none;
+  //border-top: 3px solid @panel-border-color;
+}
+
+
+.tab-block .tab-content + .nav-tabs.nav-justified {
+    top: 0;
+    margin-top: 5px;
+}
+.tab-block .tab-content + .nav-tabs.nav-justified > li.active > a {
+    //border-top-color: #fff;
+    //border-bottom-color: #DDD;
+
+}
+
+
+//  Tab Nav - Float Right
+.nav-tabs.nav-tabs-right > li { float: right; }
+.nav-tabs.nav-tabs-right > li + li {margin-right: 5px;}
+.nav-tabs.nav-tabs-right > li:first-child > a { margin-right: 0; }
+
+
+
+//  Tab Nav - Active Item Border
+.tab-block .tabs-border.nav-tabs > li.active > a {}
+.tab-block .tabs-border.tabs-left > li.active > a {}
+.tab-block .tabs-border.tabs-right > li.active > a {}
+.tab-block .tabs-border.tabs-below > li.active > a {}
+.panel-tabs.panel-tabs-border > li.active > a {}
+
+// Justified
+.tab-block .tab-content + .tabs-border.nav-justified > li > a {
+  //border-top: none;
+  //border-bottom: 3px solid @brand-dark2;
+}
+
+.tab-block .tab-content + .nav-tabs.nav-justified > li > a:hover,
+.tab-block .tab-content + .nav-tabs.nav-justified > li > a:focus {
+  //border: none;
+  //border-bottom: 3px solid @panel-border-color;
+}
+
+
+.tab-block .tab-content + .tabs-border.nav-justified > li.active > a {
+  //border-color: @panel-border-color;
+}
+
+.tab-block .tab-content + .nav-tabs.nav-justified > li.active > a,
+.tab-block .tab-content + .nav-tabs.nav-justified > li.active > a:hover,
+.tab-block .tab-content + .nav-tabs.nav-justified > li.active > a:focus {
+  // border: none;
+  // border-bottom: 3px solid @panel-border-color;
+}
+
+//  Tab Nav - Active Item Inversed Border
+
+.tab-block .tabs-border-bottom.nav-tabs > li.active > a,
+.tab-block .tabs-border-bottom .nav-tabs > li.active > a {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: -1px;
+    background: #f7f7f7;
+    //border-color: #DDD;
+    //border-bottom: 2px solid @tab-block-active-item;
+}
+
+
+//  Tab Nav - Background
+.tabs-bg.nav-tabs {
+    background: @nav-tabs-bg;
+    border: 1px solid @nav-tabs-bg-border;
+    border-bottom: none;
+    padding: 10px 10px;
+}
+.tabs-bg.tabs-below {
+    background: @nav-tabs-bg;
+    border: 1px solid @nav-tabs-bg-border;
+    border-top: none;
+    padding: 6px 10px 6px;
+}
+
+
+
+//  Tab Nav - Unstyled Tab Block
+.tab-block.sidebar-block .nav-tabs > li > a {
+   background: #f0f0f0;
+   padding: 16px 8px;
+}
+
+.tab-block.sidebar-block .nav-tabs > li:first-child > a {
+   //border-left: 0;
+}
+.tab-block.sidebar-block .nav-tabs > li:last-child > a {
+   //border-right: 0;
+}
+
+.tab-block.sidebar-block .tabs-border.nav-tabs > li.active > a {
+  background: #f8f8f8;
+  // border-top-width: 0;
+  // border-bottom-color: #f8f8f8;
+}
+
+.tab-block.sidebar-block .tab-content {
+   //border: 0;
+   background: transparent;
+}
+
+//  Tab Nav - Tab Merge
+.panel-tabs.panel-tabs-merge > li.active > a,
+.panel-tabs.panel-tabs-merge > li.active > a:hover,
+.panel-tabs.panel-tabs-merge > li.active > a:focus {
+    background: #FAFAFA;
+}
+
+// Responsive styles
+@media (max-width: 479px) {
+  .tab-block .tab-content p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

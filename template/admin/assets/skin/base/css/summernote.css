@@ -1,0 +1,36 @@
+.note-editor {
+  border: none;
+}
+.note-editor .note-toolbar {
+  background: #fafafa;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 10px 11px;
+  margin: 0;
+}
+.note-editor .note-toolbar > .btn-group {
+  margin-top: 11px;
+}
+.note-editor .btn-sm,
+.note-editor .btn-group-sm > .btn {
+  padding: 5px 9px 5px;
+}
+.note-editor .btn-default {
+  background-color: #FFF;
+  border-color: #DDD;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.note-editor .note-editable {
+  overflow: auto;
+}
+.note-editor .note-statusbar {
+  background: none;
+}
+.note-editor .note-statusbar .note-resizebar {
+  border: none;
+}
+.note-dialog .modal-dialog {
+  padding-top: 50px;
+}
+/*# sourceMappingURL=../css/summernote.map */

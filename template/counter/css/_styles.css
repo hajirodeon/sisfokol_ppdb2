@@ -1,0 +1,76 @@
+body{
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+}
+#container{
+	background-color: #000;
+	margin: 0 auto;
+	width: 100%;
+}
+h1, h4{
+	font-family: 'Press Start 2P', cursive;
+	color: #fff;
+	text-align: center;
+}
+h1{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+.profile{
+	padding: 15px;
+}
+.profile img{
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+}
+.profile-photo{
+	background-color: #D1C2BA;
+	width: 70%;
+	border-radius: 50%;
+	border: 5px solid white;
+}
+.counting-container{
+	display: flex;
+}
+.counting-box{
+	border: 1px solid #D1C2BA;
+	text-align: center;
+	width: 25%;
+	margin: 10px;
+	padding: 12px;
+	flex: auto;
+}
+.counting-box img{
+	width: 40%;
+}
+.counting-box p{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #525252;
+}
+#encounter{
+	border-bottom: 2px solid #3185E8;
+}
+#battles{
+	border-bottom: 2px solid #D9884D;
+}
+#locations{
+	border-bottom: 2px solid #D95E4D;
+}
+@media (min-width: 600px) {
+	body{
+		padding-top: 5px;
+		background-color: #fff;
+		background-image: url(https://ak7.picdn.net/shutterstock/videos/16119847/thumb/1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#container{
+		background-color: rgba(13, 24, 33, 0.84);
+		padding: 15px;
+		border-radius: 10px;
+		width: 360px;
+	}
+}
