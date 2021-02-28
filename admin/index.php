@@ -41,11 +41,11 @@ if ($_POST['btnOK'])
 	else
 		{
 		//query
-		$q = mysql_query("SELECT * FROM adminx ".
+		$q = mysqli_query($koneksi, "SELECT * FROM adminx ".
 							"WHERE usernamex = '$username' ".
 							"AND passwordx = '$password' LIMIT 0,1");
-		$row = mysql_fetch_assoc($q);
-		$total = mysql_num_rows($q);
+		$row = mysqli_fetch_assoc($q);
+		$total = mysqli_num_rows($q);
 	
 		//cek login
 		if (!empty($total))

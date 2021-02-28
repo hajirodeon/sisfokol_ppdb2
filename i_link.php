@@ -1,8 +1,8 @@
 <?php
 //link
-$qyuk2 = mysql_query("SELECT * FROM cp_m_link ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_m_link ".
 						"ORDER BY nama ASC");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 
 
 
@@ -20,7 +20,7 @@ do
     <a href="http://'.$yuk2_urlnya.'" target="_blank"><img src="'.$sumber.'/filebox/link/'.$yuk2_kd.'/'.$yuk2_filex.'" width="100%" height="100"></a>
     </p>';
 	}
-while ($ryuk2 = mysql_fetch_assoc($qyuk2));
+while ($ryuk2 = mysqli_fetch_assoc($qyuk2));
 
 
 ?>

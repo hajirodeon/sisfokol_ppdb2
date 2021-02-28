@@ -122,18 +122,18 @@ if ($_POST['btnSMP'])
 	else
 		{
 		//query
-		$q = mysql_query("SELECT * FROM psb_calon ".
+		$q = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 							"WHERE kd = '$kd6_session' ".
 							"AND usernamex = '$username6_session' ".
 							"AND passwordx = '$passlama'");
-		$row = mysql_fetch_assoc($q);
-		$total = mysql_num_rows($q);
+		$row = mysqli_fetch_assoc($q);
+		$total = mysqli_num_rows($q);
 
 		//cek
 		if ($total != 0)
 			{
 			//perintah SQL
-			mysql_query("UPDATE psb_calon SET passwordx = '$passbaru' ".
+			mysqli_query($koneksi, "UPDATE psb_calon SET passwordx = '$passbaru' ".
 							"WHERE kd = '$kd6_session' ".
 							"AND usernamex = '$username6_session'");
 
@@ -179,9 +179,9 @@ ob_start();
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -194,9 +194,9 @@ $e_dt_sma = nosql($rku['dayatampung_sma']);
 
 
 //profil
-$qx = mysql_query("SELECT * FROM psb_calon ".
+$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 					"WHERE kd = '$kdx'");
-$rowx = mysql_fetch_assoc($qx);
+$rowx = mysqli_fetch_assoc($qx);
 $e_sekolah = balikin($rowx['sekolah']);
 $e_tapel_nama = balikin($rowx['tapel_nama']);
 $e_jalur = balikin($rowx['c_jalur']);

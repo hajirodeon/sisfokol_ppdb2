@@ -30,9 +30,9 @@ $ku_judul = $judulku;
 
 
 //ketahui tapel terakhir
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"ORDER BY round(tahun1) DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $tapel_kd = nosql($rku['kd']);
 $tapel_nama = nosql($rku['tahun1']);
 
@@ -49,12 +49,12 @@ if ($_POST['btnKRM'])
 	
 
 	//update ////////////////////////////////////////////////////////////////////////////////////////////
-	$qcc = mysql_query("SELECT * FROM psb_calon ".
+	$qcc = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 							"WHERE usernamex = '$c_user' ".
 							"AND passwordx = '$c_pass' ".
 							"AND aktif = 'true'");
-	$rcc = mysql_fetch_assoc($qcc);
-	$tcc = mysql_num_rows($qcc);
+	$rcc = mysqli_fetch_assoc($qcc);
+	$tcc = mysqli_num_rows($qcc);
 	$memberkd = nosql($rcc['kd']);
 	$c_nama = balikin($rcc['c_nama']);
 	
@@ -81,7 +81,7 @@ if ($_POST['btnKRM'])
 
 
 		//update
-		mysql_query("UPDATE psb_calon SET passwordx2 = '$c_pass2', ".
+		mysqli_query($koneksi, "UPDATE psb_calon SET passwordx2 = '$c_pass2', ".
 						"last_login = '$today' ".
 						"WHERE kd = '$memberkd'");
 
@@ -214,10 +214,10 @@ ob_start();
 
 
 //foto random
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"WHERE filex <> '' ".
 						"ORDER BY RAND()");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 $yuk2_kd = nosql($ryuk2['kd']);
 $yuk2_nama = balikin($ryuk2['nama']);
 $yuk2_filex = balikin($ryuk2['filex']);

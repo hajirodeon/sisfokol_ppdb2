@@ -85,7 +85,7 @@ if ($_POST['btnSMP'])
 		if ($s == "baru")
 			{
 			//insert
-			mysql_query("INSERT INTO psb_m_mapel(kd, sekolah, sesi, jam, ".
+			mysqli_query($koneksi, "INSERT INTO psb_m_mapel(kd, sekolah, sesi, jam, ".
 							"nama, postdate) VALUES ".
 							"('$e_kd', '$e_sekolah', '$e_sesi', '$e_jam', ".
 							"'$e_mapel', '$today')");
@@ -102,7 +102,7 @@ if ($_POST['btnSMP'])
 		//jika update
 		if ($s == "edit")
 			{
-			mysql_query("UPDATE psb_m_mapel SET sekolah = '$e_sekolah', ".
+			mysqli_query($koneksi, "UPDATE psb_m_mapel SET sekolah = '$e_sekolah', ".
 							"sesi = '$e_sesi', ".
 							"jam = '$e_jam', ".
 							"nama = '$e_mapel', ".
@@ -138,7 +138,7 @@ if ($_POST['btnHPS'])
 		$kd = nosql($_POST["$yuhu"]);
 
 		//del
-		mysql_query("DELETE FROM psb_m_mapel ".
+		mysqli_query($koneksi, "DELETE FROM psb_m_mapel ".
 						"WHERE kd = '$kd'");
 		}
 
@@ -189,9 +189,9 @@ echo '<form action="'.$filenya.'" enctype="multipart/form-data" method="post" na
 if (($s == "baru") OR ($s == "edit"))
 	{
 	//edit
-	$qx = mysql_query("SELECT * FROM psb_m_mapel ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_m_mapel ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_kd = nosql($rowx['kd']);
 	$e_sesi = balikin($rowx['sesi']);
 	$e_jam = balikin($rowx['jam']);
@@ -255,11 +255,11 @@ else
 					"ORDER BY round(sesi) ASC";
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 	
 	echo '<div class="table-responsive">          
@@ -311,7 +311,7 @@ else
 			<td>'.$e_mapel.'</td>
 	        </tr>';
 			}
-		while ($data = mysql_fetch_assoc($result));
+		while ($data = mysqli_fetch_assoc($result));
 		}
 	
 	

@@ -16,9 +16,9 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'lihat1'))
 	$kd = nosql($_GET['kd']);
 	
 	//edit
-	$qx = mysql_query("SELECT * FROM cp_g_foto ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_filex1 = balikin($rowx['filex']);
 
 

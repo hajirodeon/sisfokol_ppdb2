@@ -63,7 +63,7 @@ if($_POST['btnSMP'])
 			$kdku = $x;
 			
 			//query
-			mysql_query("INSERT INTO cp_g_video(kd, judul, filex, postdate) VALUES ".
+			mysqli_query($koneksi, "INSERT INTO cp_g_video(kd, judul, filex, postdate) VALUES ".
 							"('$kdku', '$e_judul', '$e_urlnya', '$today')");
 
 
@@ -75,7 +75,7 @@ if($_POST['btnSMP'])
 		else 
 			{
 			//query
-			mysql_query("UPDATE cp_g_video SET judul = '$e_judul', ".
+			mysqli_query($koneksi, "UPDATE cp_g_video SET judul = '$e_judul', ".
 							"filex = '$e_urlnya', ".
 							"postdate = '$today' ".
 							"WHERE kd = '$kdku'");
@@ -108,7 +108,7 @@ if($_POST['btnHPS'])
 		$kd = nosql($_POST["$yuhu"]);
 
 		//del
-		mysql_query("DELETE FROM cp_g_video ".
+		mysqli_query($koneksi, "DELETE FROM cp_g_video ".
 						"WHERE kd = '$kd'");
 
 		}
@@ -170,9 +170,9 @@ echo '<form action="'.$filenya.'" enctype="multipart/form-data" method="post" na
 if (($s == 'baru') OR ($s == 'edit'))
 	{
 	//query
-	$qx = mysql_query("SELECT * FROM cp_g_video ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM cp_g_video ".
 						"WHERE kd = '$kdku'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_judul = balikin($rowx['judul']);
 	$e_filex = balikin($rowx['filex']);
 	$e_postdate = $rowx['postdate'];
@@ -216,11 +216,11 @@ else
 					"ORDER BY postdate DESC";
 	$sqlresult = $sqlcount;
 
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 	
 	
@@ -287,7 +287,7 @@ else
 			<td>'.$i_postdate.'</td>
     		</tr>';
 			}
-		while ($data = mysql_fetch_assoc($result));
+		while ($data = mysqli_fetch_assoc($result));
 
 		echo '</tbody>
 		  </table>

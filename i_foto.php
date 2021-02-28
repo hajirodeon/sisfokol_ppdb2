@@ -153,9 +153,9 @@
 
 <?php
 //foto
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"ORDER BY postdate DESC LIMIT 0,15");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 
 do
 	{
@@ -175,7 +175,7 @@ do
     </div>';
 
 	}
-while ($ryuk2 = mysql_fetch_assoc($qyuk2));
+while ($ryuk2 = mysqli_fetch_assoc($qyuk2));
 
 
 

@@ -13,8 +13,8 @@ nocache;
 if ((isset($_GET['aksi']) && $_GET['aksi'] == 'lihat1'))
 	{
 	//edit
-	$qx = mysql_query("SELECT * FROM cp_profil");
-	$rowx = mysql_fetch_assoc($qx);
+	$qx = mysqli_query($koneksi, "SELECT * FROM cp_profil");
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_filex1 = balikin($rowx['filex']);
 
 

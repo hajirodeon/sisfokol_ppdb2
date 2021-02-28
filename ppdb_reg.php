@@ -47,9 +47,9 @@ if (empty($memberkd))
 
 
 //ketahui tapel terakhir
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"ORDER BY round(tahun1) DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $tapel_kd = nosql($rku['kd']);
 $tapel_nama = nosql($rku['tahun1']);
 $tapel_status = nosql($rku['status']);
@@ -134,23 +134,23 @@ if ($_POST['btnKRM'])
 			
 			
 			//deteksi query
-			$qcc = mysql_query("SELECT * FROM $tabelnya ".
+			$qcc = mysqli_query($koneksi, "SELECT * FROM $tabelnya ".
 									"WHERE calon_kd = '$memberkd'");
-			$tcc = mysql_num_rows($qcc);
+			$tcc = mysqli_num_rows($qcc);
 			
 			//jika null, insert
 			if (empty($tcc))
 				{
-				mysql_query("INSERT INTO $tabelnya(calon_kd, tapel_kd, tapel_nama, jalur, postdate) VALUES ".
+				mysqli_query($koneksi, "INSERT INTO $tabelnya(calon_kd, tapel_kd, tapel_nama, jalur, postdate) VALUES ".
 								"('$memberkd', '$tapel_kd', '$tapel_nama', '$jalur', '$today')");
 				}
 			
 			
 			
 			//ketahui noid
-			$qcc = mysql_query("SELECT * FROM $tabelnya ".
+			$qcc = mysqli_query($koneksi, "SELECT * FROM $tabelnya ".
 									"WHERE calon_kd = '$memberkd'");
-			$rcc = mysql_fetch_assoc($qcc);
+			$rcc = mysqli_fetch_assoc($qcc);
 			$cc_noid = nosql($rcc['noid']);
 			
 			
@@ -186,7 +186,7 @@ if ($_POST['btnKRM'])
 			
 			
 			//update noreg
-			mysql_query("UPDATE $tabelnya SET calon_noreg = '$nomernya' ".
+			mysqli_query($koneksi, "UPDATE $tabelnya SET calon_noreg = '$nomernya' ".
 							"WHERE calon_kd = '$memberkd'");
 		
 		//bikin nomor /////////////////////////////////////////////////////////////////////////////////////		
@@ -201,16 +201,16 @@ if ($_POST['btnKRM'])
 	
 		
 		//ketahui noid //////////////////////////////////////////////////////////////////////////////////////
-		$qcc = mysql_query("SELECT * FROM $tabelnya ".
+		$qcc = mysqli_query($koneksi, "SELECT * FROM $tabelnya ".
 							"WHERE calon_kd = '$memberkd'");
-		$rcc = mysql_fetch_assoc($qcc);
+		$rcc = mysqli_fetch_assoc($qcc);
 		$cc_noreg = cegah($rcc['calon_noreg']);
 	
 	
 		
 	
 		//insert ////////////////////////////////////////////////////////////////////////////////////////////
-		mysql_query("INSERT INTO psb_calon(kd, tapel_kd, tapel_nama, noreg, sekolah, ".
+		mysqli_query($koneksi, "INSERT INTO psb_calon(kd, tapel_kd, tapel_nama, noreg, sekolah, ".
 						"c_jalur, c_sekolah_asal, c_nisn, c_nama, ".
 						"c_tmp_lahir, c_tgl_lahir, c_kelamin, c_agama, ".
 						"c_anak_status, c_anak_ke, c_alamat, c_telp, ".
@@ -232,7 +232,7 @@ if ($_POST['btnKRM'])
 	
 	
 		//update
-		mysql_query("UPDATE psb_calon SET usernamex = '$e_user', ".
+		mysqli_query($koneksi, "UPDATE psb_calon SET usernamex = '$e_user', ".
 						"passwordx = '$e_passx' ".
 						"WHERE kd = '$memberkd'");
 			
@@ -254,7 +254,7 @@ if ($_POST['btnKRM'])
 	
 	
 		//update
-		mysql_query("UPDATE psb_calon SET filex = '$namabaru' ".
+		mysqli_query($koneksi, "UPDATE psb_calon SET filex = '$namabaru' ".
 						"WHERE kd = '$memberkd'");
 			
 	
@@ -759,9 +759,9 @@ else
 	
 	<?php
 	//ketahui noid //////////////////////////////////////////////////////////////////////////////////////
-	$qcc = mysql_query("SELECT * FROM psb_calon ".
+	$qcc = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE kd = '$memberkd'");
-	$rcc = mysql_fetch_assoc($qcc);
+	$rcc = mysqli_fetch_assoc($qcc);
 	$cc_noreg = cegah($rcc['noreg']);
 
 											
@@ -856,10 +856,10 @@ ob_start();
 
 
 //foto random
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"WHERE filex <> '' ".
 						"ORDER BY RAND()");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 $yuk2_kd = nosql($ryuk2['kd']);
 $yuk2_nama = balikin($ryuk2['nama']);
 $yuk2_filex = balikin($ryuk2['filex']);

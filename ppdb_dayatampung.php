@@ -75,9 +75,9 @@ echo '<h4 class="post-title">'.$judul.'</h4>
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -93,16 +93,16 @@ Tahun Pelajaran $e_dt_tahun1/$e_dt_tahun2
 
 
 //reg ///////////////////////////////////////////////////////
-$qmboh = mysql_query("SELECT * FROM psb_calon ".
+$qmboh = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE tapel_kd = '$e_tapelkd'");
-$tmboh = mysql_num_rows($qmboh);
+$tmboh = mysqli_num_rows($qmboh);
 $jml_tk = $tmboh;
 
 //aktif
-$qmboh = mysql_query("SELECT * FROM psb_calon ".
+$qmboh = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE tapel_kd = '$e_tapelkd' ".
 						"AND aktif = 'true'");
-$tmboh = mysql_num_rows($qmboh);
+$tmboh = mysqli_num_rows($qmboh);
 $jml_tk_aktif = $tmboh;
 $persen_tk_aktif = round(($jml_tk_aktif / $jml_tk) * 100);
 
@@ -201,11 +201,11 @@ $start = $p->findStart($limit);
 
 $sqlresult = $sqlcount;
 
-$count = mysql_num_rows(mysql_query($sqlcount));
+$count = mysqli_num_rows(mysqli_query($sqlcount));
 $pages = $p->findPages($count, $limit);
-$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 $pagelist = $p->pageList($_GET['page'], $pages, $target);
-$data = mysql_fetch_array($result);
+$data = mysqli_fetch_array($result);
 
 
 
@@ -261,7 +261,7 @@ echo '<form action="'.$filenya.'" method="post" name="formxx">
 		<td>'.$i_sekolah_asal.'</td>
         </tr>';
 		}
-	while ($data = mysql_fetch_assoc($result));
+	while ($data = mysqli_fetch_assoc($result));
 
 	echo '</tbody>
 	  </table>
@@ -362,10 +362,10 @@ ob_start();
 
 
 //foto random
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"WHERE filex <> '' ".
 						"ORDER BY RAND()");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 $yuk2_kd = nosql($ryuk2['kd']);
 $yuk2_nama = balikin($ryuk2['nama']);
 $yuk2_filex = balikin($ryuk2['filex']);

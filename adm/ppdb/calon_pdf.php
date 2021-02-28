@@ -37,9 +37,9 @@ $pdf->SetKeywords($keywords);
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -52,9 +52,9 @@ $e_dt_sma = nosql($rku['dayatampung_sma']);
 
 
 //profil
-$qx = mysql_query("SELECT * FROM psb_calon ".
+$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 					"WHERE kd = '$kdx'");
-$rowx = mysql_fetch_assoc($qx);
+$rowx = mysqli_fetch_assoc($qx);
 $e_sekolah = balikin($rowx['sekolah']);
 $e_sekolah2 = cegah($e_sekolah);
 $e_tapel_nama = balikin($rowx['tapel_nama']);
@@ -132,9 +132,9 @@ ob_start();
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -144,9 +144,9 @@ $e_dt_tk = nosql($rku['dayatampung']);
 
 
 //profil
-$qx = mysql_query("SELECT * FROM psb_calon ".
+$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 					"WHERE kd = '$kdx'");
-$rowx = mysql_fetch_assoc($qx);
+$rowx = mysqli_fetch_assoc($qx);
 $e_sekolah = balikin($rowx['sekolah']);
 $e_tapel_nama = balikin($rowx['tapel_nama']);
 $e_jalur = balikin($rowx['c_jalur']);
@@ -195,9 +195,9 @@ $nil_foto2 = "$sumber/filebox/calon/$kd/$kd-bayar.jpg";
 echo '<b>DATA DIRI</b>';
 
 //detail
-$qx2 = mysql_query("SELECT * FROM siswa ".
+$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 					"WHERE kd = '$kdx'");
-$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 
 echo '<p>
 	Nama Lengkap : 
@@ -437,9 +437,9 @@ echo '<p>
 
 
 //detail
-$qx2 = mysql_query("SELECT * FROM siswa_ayah ".
+$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa_ayah ".
 					"WHERE siswa_kd = '$kdx'");
-$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 
 
 echo '<p>
@@ -493,9 +493,9 @@ echo '<p>
 
 
 //detail
-$qx2 = mysql_query("SELECT * FROM siswa_ibu ".
+$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa_ibu ".
 					"WHERE siswa_kd = '$kdx'");
-$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 
 
 
@@ -553,9 +553,9 @@ echo '<p>
 <b>DATA WALI</b>';
         
 //detail
-$qx3 = mysql_query("SELECT * FROM siswa_wali ".
+$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_wali ".
 					"WHERE siswa_kd = '$kdx'");
-$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 
 echo '<p>
@@ -612,9 +612,9 @@ echo '<p>
 <b>KONTAK</b>';
 
 //detail
-$qx3 = mysql_query("SELECT * FROM siswa ".
+$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 				"WHERE kd = '$kdx'");
-$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 
 echo '<p>
@@ -643,9 +643,9 @@ E-Mail :
 <b>DATA PRIODIK</b>';
 
 //detail
-$qx3 = mysql_query("SELECT * FROM siswa_priodik ".
+$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_priodik ".
 					"WHERE siswa_kd = '$kdx'");
-$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 
 echo '<p>
@@ -731,10 +731,10 @@ $pdf->Ln();
 for ($k=1;$k<=3;$k++)
 	{
 	//detail
-	$qx3 = mysql_query("SELECT * FROM siswa_prestasi ".
+	$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_prestasi ".
 						"WHERE siswa_kd = '$kdx' ".
 						"AND no = '$k'");
-	$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+	$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 		  
 	$pdf->Cell(7,5,$k,1,0,'L');
@@ -785,10 +785,10 @@ $pdf->Ln();
 for ($k=1;$k<=3;$k++)
 	{
 	//detail
-	$qx3 = mysql_query("SELECT * FROM siswa_beasiswa ".
+	$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_beasiswa ".
 						"WHERE siswa_kd = '$kdx' ".
 						"AND no = '$k'");
-	$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+	$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
   	$pdf->Cell(7,5,$k,1,0,'L');
 	$pdf->Cell(30,5,balikin($rowx3[5]),1,0,'L');
@@ -820,9 +820,9 @@ echo '<br>
 
 
 //detail
-$qx3 = mysql_query("SELECT * FROM siswa ".
+$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 					"WHERE kd = '$kdx'");
-$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 
 echo '<p>
@@ -847,9 +847,9 @@ echo '<p>
 <b>JIKA MENGUNDURKAN DIRI</b>
 <br>';
 //detail
-$qx3 = mysql_query("SELECT * FROM siswa ".
+$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 					"WHERE kd = '$kdx'");
-$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 
 
 echo '<p>

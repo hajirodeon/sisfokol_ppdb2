@@ -43,8 +43,8 @@ echo '<div class="section-heading">
 
 
 //detail
-$qku = mysql_query("SELECT * FROM cp_profil");
-$rku = mysql_fetch_assoc($qku);
+$qku = mysqli_query($koneksi, "SELECT * FROM cp_profil");
+$rku = mysqli_fetch_assoc($qku);
 $ku_nama = balikin($rku['judul']);
 $ku_isi = balikin($rku['isi']);
 $ku_telp = balikin($rku['telp']);

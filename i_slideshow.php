@@ -1,8 +1,8 @@
 <?php
 //slideshow
-$qyuk2 = mysql_query("SELECT * FROM cp_m_slideshow ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_m_slideshow ".
 						"ORDER BY RAND()");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 
 do
 	{
@@ -31,5 +31,5 @@ do
         </div>';
 
 	}
-while ($ryuk2 = mysql_fetch_assoc($qyuk2));
+while ($ryuk2 = mysqli_fetch_assoc($qyuk2));
 ?>

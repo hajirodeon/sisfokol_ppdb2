@@ -52,13 +52,13 @@ if ($_POST['btnRESET'])
 	{
 						
 	//hapus table nomor, reset awal lagi...
-	mysql_query("DROP TABLE nomerku");
+	mysqli_query($koneksi, "DROP TABLE nomerku");
 		
 		
 	
 	
 	//bikin baru... TK /////////////////////////////////////////////////////
-	mysql_query("CREATE TABLE `nomerku` (
+	mysqli_query($koneksi, "CREATE TABLE `nomerku` (
 				  `noid` int(50) NOT NULL,
 				  `calon_kd` varchar(50) NOT NULL,
 				  `tapel_kd` varchar(50) NOT NULL,
@@ -69,12 +69,12 @@ if ($_POST['btnRESET'])
 				  `jalur` varchar(100) NOT NULL
 				) ENGINE=MyISAM;");
 				
-	mysql_query("ALTER TABLE `nomerku`
+	mysqli_query($koneksi, "ALTER TABLE `nomerku`
 				  ADD PRIMARY KEY (`calon_kd`),
 				  ADD UNIQUE KEY `noid` (`noid`);");
 				  
 				  
-	mysql_query("ALTER TABLE `nomerku`
+	mysqli_query($koneksi, "ALTER TABLE `nomerku`
 				  MODIFY `noid` int(50) NOT NULL AUTO_INCREMENT;");
 		
 
@@ -130,7 +130,7 @@ if ($_POST['btnSMP'])
 	else
 		{
 		//netralkan semua dulu
-		mysql_query("UPDATE psb_m_tapel SET status = 'false'");
+		mysqli_query($koneksi, "UPDATE psb_m_tapel SET status = 'false'");
 		
 		
 		
@@ -138,7 +138,7 @@ if ($_POST['btnSMP'])
 		if ($s == "baru")
 			{
 			//insert
-			mysql_query("INSERT INTO psb_m_tapel(kd, tahun1, tahun2, status, ".
+			mysqli_query($koneksi, "INSERT INTO psb_m_tapel(kd, tahun1, tahun2, status, ".
 							"dayatampung, postdate) VALUES ".
 							"('$e_kd', '$e_tahun1', '$e_tahun2', '$e_status', ".
 							"'$e_dt_tk', '$today')");
@@ -155,7 +155,7 @@ if ($_POST['btnSMP'])
 		//jika update
 		if ($s == "edit")
 			{
-			mysql_query("UPDATE psb_m_tapel SET tahun1 = '$e_tahun1', ".
+			mysqli_query($koneksi, "UPDATE psb_m_tapel SET tahun1 = '$e_tahun1', ".
 							"tahun2 = '$e_tahun2', ".
 							"status = '$e_status', ".
 							"dayatampung = '$e_dt_tk', ".
@@ -191,12 +191,12 @@ if ($_POST['btnHPS'])
 		$kd = nosql($_POST["$yuhu"]);
 
 		//del
-		mysql_query("DELETE FROM psb_m_tapel ".
+		mysqli_query($koneksi, "DELETE FROM psb_m_tapel ".
 						"WHERE kd = '$kd'");
 						
 		
 		//hapus daftar calon
-		mysql_query("DELETE FROM psb_calon ".
+		mysqli_query($koneksi, "DELETE FROM psb_calon ".
 						"WHERE tapel_kd = '$kd'");
 		
 		}
@@ -250,9 +250,9 @@ echo '<form action="'.$filenya.'" enctype="multipart/form-data" method="post" na
 if (($s == "baru") OR ($s == "edit"))
 	{
 	//edit
-	$qx = mysql_query("SELECT * FROM psb_m_tapel ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_kd = nosql($rowx['kd']);
 	$e_tahun1 = nosql($rowx['tahun1']);
 	$e_tahun2 = nosql($rowx['tahun2']);
@@ -338,11 +338,11 @@ else
 					"ORDER BY tahun1 ASC";
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 	
 	echo '<div class="table-responsive">          
@@ -406,7 +406,7 @@ else
 			<td>'.$e_dt_tk.'</td>
 	        </tr>';
 			}
-		while ($data = mysql_fetch_assoc($result));
+		while ($data = mysqli_fetch_assoc($result));
 		}
 	
 	

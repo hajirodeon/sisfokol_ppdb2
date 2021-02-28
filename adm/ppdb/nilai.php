@@ -15,9 +15,9 @@ nocache;
 
 
 //ketahui tapel terakhir
-$qmboh = mysql_query("SELECT * FROM psb_m_tapel ".
+$qmboh = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"ORDER BY tahun1 DESC");
-$rmboh = mysql_fetch_assoc($qmboh);
+$rmboh = mysqli_fetch_assoc($qmboh);
 $tapelkd = nosql($rmboh['kd']);
 $tahun1 = nosql($rmboh['tahun1']);
 $tahun2 = nosql($rmboh['tahun2']);
@@ -163,18 +163,18 @@ if ($_POST['btnIMX'])
 				      $i_nilai = cegah2($sheet['F']);
 					  
 						//cek
-						$qcc = mysql_query("SELECT * FROM psb_calon ".
+						$qcc = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 												"WHERE tapel_kd = '$tapelkd' ".
 												"AND aktif = 'true' ".
 												"AND c_jalur = '$jalur' ".
 												"AND noreg = '$i_noreg'");
-						$rcc = mysql_fetch_assoc($qcc);
-						$tcc = mysql_num_rows($qcc);
+						$rcc = mysqli_fetch_assoc($qcc);
+						$tcc = mysqli_num_rows($qcc);
 		
 						//jika ada, update				
 						if (!empty($tcc))
 							{
-							mysql_query("UPDATE psb_calon SET nilai = '$i_nilai', ".
+							mysqli_query($koneksi, "UPDATE psb_calon SET nilai = '$i_nilai', ".
 											"nilai_postdate = '$today' ".
 											"WHERE tapel_kd = '$tapelkd' ".
 											"AND aktif = 'true' ".
@@ -282,12 +282,12 @@ if ($_POST['btnEX'])
 
 
 	//data
-	$qdt = mysql_query("SELECT * FROM psb_calon ".
+	$qdt = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 							"WHERE aktif = 'true' ".
 							"AND tapel_kd = '$tapelkd' ".
 							"AND c_jalur = '$jalur' ".
 							"ORDER BY noreg ASC");
-	$rdt = mysql_fetch_assoc($qdt);
+	$rdt = mysqli_fetch_assoc($qdt);
 
 	do
 		{
@@ -307,7 +307,7 @@ if ($_POST['btnEX'])
 		$worksheet1->write_string($dt_nox,4,$dt_c_sekolah_asal);
 		$worksheet1->write_string($dt_nox,5,$e_nilai);
 		}
-	while ($rdt = mysql_fetch_assoc($qdt));
+	while ($rdt = mysqli_fetch_assoc($qdt));
 
 
 	//close
@@ -450,12 +450,12 @@ else
 	
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$target = "$filenya?jalur=$jalur";
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 	
 	
 	
@@ -564,7 +564,7 @@ else
 				<td>'.$i_nilai_postdate.'</td>
 		        </tr>';
 				}
-			while ($data = mysql_fetch_assoc($result));
+			while ($data = mysqli_fetch_assoc($result));
 			}
 		
 		

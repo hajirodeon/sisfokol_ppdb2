@@ -83,7 +83,7 @@ if ($_POST['btnSMP'])
 		if ($s == "baru")
 			{
 			//insert
-			mysql_query("INSERT INTO psb_m_ruangan(kd, kode, nama, postdate) VALUES ".
+			mysqli_query($koneksi, "INSERT INTO psb_m_ruangan(kd, kode, nama, postdate) VALUES ".
 							"('$e_kd', '$e_kode', '$e_nama', '$today')");
 
 
@@ -98,7 +98,7 @@ if ($_POST['btnSMP'])
 		//jika update
 		if ($s == "edit")
 			{
-			mysql_query("UPDATE psb_m_ruangan SET kode = '$e_kode', ".
+			mysqli_query($koneksi, "UPDATE psb_m_ruangan SET kode = '$e_kode', ".
 							"nama = '$e_nama', ".
 							"postdate = '$today' ".
 							"WHERE kd = '$e_kd'");
@@ -132,7 +132,7 @@ if ($_POST['btnHPS'])
 		$kd = nosql($_POST["$yuhu"]);
 
 		//del
-		mysql_query("DELETE FROM psb_m_ruangan ".
+		mysqli_query($koneksi, "DELETE FROM psb_m_ruangan ".
 						"WHERE kd = '$kd'");
 		}
 
@@ -183,9 +183,9 @@ echo '<form action="'.$filenya.'" enctype="multipart/form-data" method="post" na
 if (($s == "baru") OR ($s == "edit"))
 	{
 	//edit
-	$qx = mysql_query("SELECT * FROM psb_m_ruangan ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_m_ruangan ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_kd = nosql($rowx['kd']);
 	$e_kode = balikin($rowx['kode']);
 	$e_nama = balikin($rowx['nama']);
@@ -240,11 +240,11 @@ else
 					"nama ASC";
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 	
 	echo '<div class="table-responsive">          
@@ -293,7 +293,7 @@ else
 			<td>'.$e_nama.'</td>
 	        </tr>';
 			}
-		while ($data = mysql_fetch_assoc($result));
+		while ($data = mysqli_fetch_assoc($result));
 		}
 	
 	

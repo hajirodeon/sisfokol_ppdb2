@@ -131,9 +131,9 @@ ol#vid-list li a:hover {
   		    
   		<?php
   		//terpilih
-		$qkuy = mysql_query("SELECT * FROM cp_g_video ".
+		$qkuy = mysqli_query($koneksi, "SELECT * FROM cp_g_video ".
 								"ORDER BY postdate DESC");
-		$rkuy = mysql_fetch_assoc($qkuy);
+		$rkuy = mysqli_fetch_assoc($qkuy);
 		$kuy_judul = balikin($rkuy['judul']);
 		$kuy_url1 = balikin($rkuy['filex']);
 					
@@ -153,9 +153,9 @@ ol#vid-list li a:hover {
             	
 				<?php 
 				//tampilkan daftar video youtube
-				$qkuy = mysql_query("SELECT * FROM cp_g_video ".
+				$qkuy = mysqli_query($koneksi, "SELECT * FROM cp_g_video ".
 										"ORDER BY postdate DESC");
-				$rkuy = mysql_fetch_assoc($qkuy);
+				$rkuy = mysqli_fetch_assoc($qkuy);
 				
 				do
 					{
@@ -175,7 +175,7 @@ ol#vid-list li a:hover {
 		              </li>';
 	              
 					}
-				while ($rkuy = mysql_fetch_assoc($qkuy))
+				while ($rkuy = mysqli_fetch_assoc($qkuy))
               
 				?>
 

@@ -40,9 +40,9 @@ $pdf->SetKeywords($keywords);
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -52,9 +52,9 @@ $e_dt_tk = nosql($rku['dayatampung']);
 
 
 //profil
-$qx = mysql_query("SELECT * FROM psb_calon ".
+$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 					"WHERE kd = '$kdx'");
-$rowx = mysql_fetch_assoc($qx);
+$rowx = mysqli_fetch_assoc($qx);
 $e_sekolah = balikin($rowx['sekolah']);
 $e_sekolah2 = cegah($e_sekolah);
 $e_tapel_nama = balikin($rowx['tapel_nama']);
@@ -178,10 +178,10 @@ $pdf->Ln();
 
 
 //daftar mapel
-$qyuk = mysql_query("SELECT * FROM psb_m_mapel ".
+$qyuk = mysqli_query($koneksi, "SELECT * FROM psb_m_mapel ".
 						"WHERE sekolah = '$e_sekolah2' ".
 						"ORDER BY round(sesi) ASC");
-$ryuk = mysql_fetch_assoc($qyuk);
+$ryuk = mysqli_fetch_assoc($qyuk);
 
 do
 	{
@@ -199,7 +199,7 @@ do
 	$pdf->Cell(25,5,$yuk_jam,1,0,'L');
 	$pdf->Ln();
 	}
-while ($ryuk = mysql_fetch_assoc($qyuk));
+while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 
 //output-kan ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -15,9 +15,9 @@ nocache;
 
 
 //ketahui tapel terakhir
-$qmboh = mysql_query("SELECT * FROM psb_m_tapel ".
+$qmboh = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"ORDER BY tahun1 DESC");
-$rmboh = mysql_fetch_assoc($qmboh);
+$rmboh = mysqli_fetch_assoc($qmboh);
 $tapelkd = nosql($rmboh['kd']);
 $tahun1 = nosql($rmboh['tahun1']);
 $tahun2 = nosql($rmboh['tahun2']);
@@ -81,15 +81,15 @@ if ($_POST['btnSMP'])
 	
 	
 	//detail
-	$qjuk = mysql_query("SELECT * FROM psb_m_ruangan ".
+	$qjuk = mysqli_query($koneksi, "SELECT * FROM psb_m_ruangan ".
 							"WHERE kd = '$e_ruang'");
-	$rjuk = mysql_fetch_assoc($qjuk);
+	$rjuk = mysqli_fetch_assoc($qjuk);
 	$juk_kode = cegah($rjuk['kode']);
 	$juk_nama = cegah($rjuk['nama']);
 	
 	
 	//update
-	mysql_query("UPDATE psb_calon SET ruangan_kd = '$e_ruang', ".
+	mysqli_query($koneksi, "UPDATE psb_calon SET ruangan_kd = '$e_ruang', ".
 					"ruangan_kode = '$juk_kode', ".
 					"ruangan_nama = '$juk_nama' ".
 					"WHERE kd = '$kd'");
@@ -176,11 +176,11 @@ if ($_POST['btnEX'])
 
 
 	//data
-	$qdt = mysql_query("SELECT * FROM psb_calon ".
+	$qdt = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 							"WHERE tapel_kd = '$tapelkd' ".
 							"AND c_jalur = '$jalur' ".
 							"ORDER BY noreg ASC");
-	$rdt = mysql_fetch_assoc($qdt);
+	$rdt = mysqli_fetch_assoc($qdt);
 
 	do
 		{
@@ -243,7 +243,7 @@ if ($_POST['btnEX'])
 		$worksheet1->write_string($dt_nox,19,$o_alamat);
 		$worksheet1->write_string($dt_nox,20,$o_telp);
 		}
-	while ($rdt = mysql_fetch_assoc($qdt));
+	while ($rdt = mysqli_fetch_assoc($qdt));
 
 
 	//close
@@ -269,9 +269,9 @@ if ($s == "verifikasi")
 	$kd = nosql($_REQUEST['kd']);
 
 	//detail
-	$qx = mysql_query("SELECT * FROM psb_calon ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_noreg = balikin($rowx['noreg']);
 	$e_nama = balikin($rowx['c_nama']);
 
@@ -280,7 +280,7 @@ if ($s == "verifikasi")
 
 	
 	//update
-	mysql_query("UPDATE psb_calon SET aktif = 'true', ".
+	mysqli_query($koneksi, "UPDATE psb_calon SET aktif = 'true', ".
 					"aktif_postdate = '$nilku' ".
 					"WHERE kd = '$kd'");
 	
@@ -307,9 +307,9 @@ if ($s == "reset")
 	
 
 	//detail
-	$qx = mysql_query("SELECT * FROM psb_calon ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_noreg = balikin($rowx['noreg']);
 	$e_nama = balikin($rowx['c_nama']);
 
@@ -320,7 +320,7 @@ if ($s == "reset")
 	
 	
 	//update
-	mysql_query("UPDATE psb_calon SET passwordx = '$passbarux', ".
+	mysqli_query($koneksi, "UPDATE psb_calon SET passwordx = '$passbarux', ".
 					"passwordx2 = '$passbaru' ".
 					"WHERE kd = '$kd'");
 	
@@ -393,9 +393,9 @@ if ($s == "detail")
 	{
 	$kdx = nosql($_REQUEST['kd']);
 
-	$qx = mysql_query("SELECT * FROM psb_calon ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE kd = '$kdx'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_sekolah = balikin($rowx['sekolah']);
 	$e_tapel_nama = balikin($rowx['tapel_nama']);
 	$e_jalur = balikin($rowx['c_jalur']);
@@ -618,9 +618,9 @@ else if ($s == "kartu")
 	{
 	$kdx = nosql($_REQUEST['kd']);
 
-	$qx = mysql_query("SELECT * FROM psb_calon ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE kd = '$kdx'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_sekolah = balikin($rowx['sekolah']);
 	$e_tapel_nama = balikin($rowx['tapel_nama']);
 	$e_jalur = balikin($rowx['c_jalur']);
@@ -713,9 +713,9 @@ else if ($s == "kartu")
 						<option value="<?php echo $e_ruangkd;?>"><?php echo $e_ruang_ket;?></option>
 						<?php
 						//list ruang
-						$qyuk = mysql_query("SELECT * FROM psb_m_ruangan ".
+						$qyuk = mysqli_query($koneksi, "SELECT * FROM psb_m_ruangan ".
 												"ORDER BY kode ASC");
-						$ryuk = mysql_fetch_assoc($qyuk);
+						$ryuk = mysqli_fetch_assoc($qyuk);
 						
 						do
 							{
@@ -726,7 +726,7 @@ else if ($s == "kartu")
 								
 							echo '<option value="'.$yuk_kd.'">'.$yuk_kode.'. '.$yuk_nama.'</option>';
 							}
-						while ($ryuk = mysql_fetch_assoc($qyuk));
+						while ($ryuk = mysqli_fetch_assoc($qyuk));
 						?>
 						
 						</select>
@@ -839,12 +839,12 @@ else
 	
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$target = "$filenya?jalur=$jalur";
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 
 	
@@ -871,20 +871,20 @@ else
 	else
 		{
 		//ketahui jumlahnya
-		$qyo = mysql_query("SELECT * FROM psb_calon ". 
+		$qyo = mysqli_query($koneksi, "SELECT * FROM psb_calon ". 
 								"WHERE tapel_kd = '$tapelkd' ".
 								"AND c_jalur = '$jalur'");
-		$ryo = mysql_fetch_assoc($qyo);
-		$tyo = mysql_num_rows($qyo);
+		$ryo = mysqli_fetch_assoc($qyo);
+		$tyo = mysqli_num_rows($qyo);
 		
 		
 		//yg belum aktif / belum verifikasi
-		$qyo2 = mysql_query("SELECT * FROM psb_calon ". 
+		$qyo2 = mysqli_query($koneksi, "SELECT * FROM psb_calon ". 
 								"WHERE tapel_kd = '$tapelkd' ".
 								"AND c_jalur = '$jalur' ".
 								"AND aktif = 'false'");
-		$ryo2 = mysql_fetch_assoc($qyo2);
-		$tyo2 = mysql_num_rows($qyo2);
+		$ryo2 = mysqli_fetch_assoc($qyo2);
+		$tyo2 = mysqli_num_rows($qyo2);
 		
 		
 		//sudah aktif
@@ -1125,7 +1125,7 @@ else
 				<td>'.$i_telp.'</td>
 		        </tr>';
 				}
-			while ($data = mysql_fetch_assoc($result));
+			while ($data = mysqli_fetch_assoc($result));
 			}
 		
 		

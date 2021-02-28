@@ -84,7 +84,7 @@ if ($_POST['btnSMP'])
 		if ($s == "baru")
 			{
 			//insert
-			mysql_query("INSERT INTO cp_m_slideshow(kd, nama, isi, filex, urlnya, postdate) VALUES ".
+			mysqli_query($koneksi, "INSERT INTO cp_m_slideshow(kd, nama, isi, filex, urlnya, postdate) VALUES ".
 							"('$e_kd', '$e_nama', '$e_isi', '$namabaru', '$e_urlnya', '$today')");
 
 
@@ -99,7 +99,7 @@ if ($_POST['btnSMP'])
 		//jika update
 		if ($s == "edit")
 			{
-			mysql_query("UPDATE cp_m_slideshow SET nama = '$e_nama', ".
+			mysqli_query($koneksi, "UPDATE cp_m_slideshow SET nama = '$e_nama', ".
 							"isi = '$e_isi', ".
 							"urlnya = '$e_urlnya', ".
 							"filex = '$namabaru', ".
@@ -135,7 +135,7 @@ if ($_POST['btnHPS'])
 		$kd = nosql($_POST["$yuhu"]);
 
 		//del
-		mysql_query("DELETE FROM cp_m_slideshow ".
+		mysqli_query($koneksi, "DELETE FROM cp_m_slideshow ".
 						"WHERE kd = '$kd'");
 		}
 
@@ -175,9 +175,9 @@ require("../../template/js/swap.js");
 if (($s == "baru") OR ($s == "edit"))
 	{
 	//edit
-	$qx = mysql_query("SELECT * FROM cp_m_slideshow ".
+	$qx = mysqli_query($koneksi, "SELECT * FROM cp_m_slideshow ".
 						"WHERE kd = '$kd'");
-	$rowx = mysql_fetch_assoc($qx);
+	$rowx = mysqli_fetch_assoc($qx);
 	$e_kd = nosql($rowx['kd']);
 	$e_nama = balikin($rowx['nama']);
 	$e_urlnya = balikin($rowx['urlnya']);
@@ -395,11 +395,11 @@ else
 					"ORDER BY postdate DESC";
 	$sqlresult = $sqlcount;
 	
-	$count = mysql_num_rows(mysql_query($sqlcount));
+	$count = mysqli_num_rows(mysqli_query($sqlcount));
 	$pages = $p->findPages($count, $limit);
-	$result = mysql_query("$sqlresult LIMIT ".$start.", ".$limit);
+	$result = mysqli_query($koneksi, "$sqlresult LIMIT ".$start.", ".$limit);
 	$pagelist = $p->pageList($_GET['page'], $pages, $target);
-	$data = mysql_fetch_array($result);
+	$data = mysqli_fetch_array($result);
 
 
 
@@ -473,7 +473,7 @@ else
 			<td>'.$e_postdate.'</td>
 	        </tr>';
 			}
-		while ($data = mysql_fetch_assoc($result));
+		while ($data = mysqli_fetch_assoc($result));
 		}
 	
 	

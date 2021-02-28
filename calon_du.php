@@ -111,9 +111,9 @@ ob_start();
 
 
 //list
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 					"ORDER BY tahun1 DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $e_tapelkd = nosql($rku['kd']);
 $e_dt_tahun1 = nosql($rku['tahun1']);
 $e_dt_tahun2 = nosql($rku['tahun2']);
@@ -126,9 +126,9 @@ $e_dt_sma = nosql($rku['dayatampung_sma']);
 
 
 //profil
-$qx = mysql_query("SELECT * FROM psb_calon ".
+$qx = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 					"WHERE kd = '$kdx'");
-$rowx = mysql_fetch_assoc($qx);
+$rowx = mysqli_fetch_assoc($qx);
 $e_sekolah = balikin($rowx['sekolah']);
 $e_tapel_nama = balikin($rowx['tapel_nama']);
 $e_jalur = balikin($rowx['c_jalur']);
@@ -488,9 +488,9 @@ echo '<form name="formx_e" id="formx_e">
         <div class="box-body">';
 
 			//detail
-			$qx2 = mysql_query("SELECT * FROM siswa ".
+			$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 								"WHERE kd = '$kdx'");
-			$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+			$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 
 			echo '<div class="row">
 			    <div class="col-4">
@@ -560,9 +560,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[10]).'" selected>'.balikin($rowx2[10]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_kebutuhan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_kebutuhan ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -572,7 +572,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -654,9 +654,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[21]).'" selected>'.balikin($rowx2[21]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_tempat_tinggal ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_tempat_tinggal ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -666,7 +666,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -680,9 +680,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option  value="'.balikin($rowx2[22]).'"selected>'.balikin($rowx2[22]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_moda ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_moda ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -692,7 +692,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -785,9 +785,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[32]).'" selected>'.balikin($rowx2[32]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_alasan_pip ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_alasan_pip ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -797,7 +797,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -859,9 +859,9 @@ echo '<form name="formx_e" id="formx_e">
 
 
 			//detail
-			$qx2 = mysql_query("SELECT * FROM siswa_ayah ".
+			$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa_ayah ".
 								"WHERE siswa_kd = '$kdx'");
-			$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+			$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 
 		
 			echo '<div class="row">
@@ -892,9 +892,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[8]).'" selected>'.balikin($rowx2[7]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pendidikan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pendidikan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -904,7 +904,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -922,9 +922,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.$o_ayah_kerja.'" selected>'.$o_ayah_kerja.'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pekerjaan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pekerjaan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -934,7 +934,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -950,9 +950,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[10]).'" selected>'.balikin($rowx2[9]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_penghasilan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_penghasilan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -962,7 +962,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -977,9 +977,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[11]).'" selected>'.balikin($rowx2[10]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_kebutuhan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_kebutuhan ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -989,7 +989,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1032,9 +1032,9 @@ echo '<form name="formx_e" id="formx_e">
         <div class="box-body">';
         
 			//detail
-			$qx2 = mysql_query("SELECT * FROM siswa_ibu ".
+			$qx2 = mysqli_query($koneksi, "SELECT * FROM siswa_ibu ".
 								"WHERE siswa_kd = '$kdx'");
-			$rowx2 = mysql_fetch_assoc($qx2, MYSQL_NUM);
+			$rowx2 = mysqli_fetch_assoc($qx2, MYSQL_NUM);
 		
 
 
@@ -1068,9 +1068,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[7]).'" selected>'.balikin($rowx2[7]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pendidikan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pendidikan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1080,7 +1080,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1098,9 +1098,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.$o_ibu_kerja.'" selected>'.$o_ibu_kerja.'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pekerjaan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pekerjaan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1110,7 +1110,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1126,9 +1126,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[8]).'" selected>'.balikin($rowx2[8]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_penghasilan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_penghasilan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1138,7 +1138,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1153,9 +1153,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx2[9]).'" selected>'.balikin($rowx2[9]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_kebutuhan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_kebutuhan ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1165,7 +1165,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1203,9 +1203,9 @@ echo '<form name="formx_e" id="formx_e">
         <div class="box-body">';
         
 			//detail
-			$qx3 = mysql_query("SELECT * FROM siswa_wali ".
+			$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_wali ".
 								"WHERE siswa_kd = '$kdx'");
-			$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+			$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 
 			echo '<div class="row">
@@ -1235,9 +1235,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx3[7]).'" selected>'.balikin($rowx3[7]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pendidikan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pendidikan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1247,7 +1247,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1265,9 +1265,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx3[8]).'" selected>'.balikin($rowx3[8]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_pekerjaan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_pekerjaan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1277,7 +1277,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1293,9 +1293,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option  value="'.balikin($rowx3[9]).'" selected>'.balikin($rowx3[9]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_penghasilan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_penghasilan ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1305,7 +1305,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1320,9 +1320,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx3[10]).'" selected>'.balikin($rowx3[10]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_kebutuhan ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_kebutuhan ".
 											"ORDER BY nama ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1332,7 +1332,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>
@@ -1371,9 +1371,9 @@ echo '<form name="formx_e" id="formx_e">
         <div class="box-body">';
         
 			//detail
-			$qx3 = mysql_query("SELECT * FROM siswa ".
+			$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 								"WHERE kd = '$kdx'");
-			$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+			$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 
 			echo '<div class="row">
@@ -1434,9 +1434,9 @@ echo '<form name="formx_e" id="formx_e">
         <div class="box-body">';
         
 			//detail
-			$qx3 = mysql_query("SELECT * FROM siswa_priodik ".
+			$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_priodik ".
 								"WHERE siswa_kd = '$kdx'");
-			$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+			$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 
 			echo '<div class="row">
@@ -1545,10 +1545,10 @@ echo '<form name="formx_e" id="formx_e">
 					for ($k=1;$k<=3;$k++)
 						{
 						//detail
-						$qx3 = mysql_query("SELECT * FROM siswa_prestasi ".
+						$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_prestasi ".
 											"WHERE siswa_kd = '$kdx' ".
 											"AND no = '$k'");
-						$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+						$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 							
 					      echo '<tr>
@@ -1560,9 +1560,9 @@ echo '<form name="formx_e" id="formx_e">
 								<option value="'.balikin($rowx3[5]).'"selected>'.balikin($rowx3[5]).'</option>';
 								
 								//list
-								$qyuk = mysql_query("SELECT * FROM m_jenis ".
+								$qyuk = mysqli_query($koneksi, "SELECT * FROM m_jenis ".
 														"ORDER BY round(no) ASC");
-								$ryuk = mysql_fetch_assoc($qyuk);
+								$ryuk = mysqli_fetch_assoc($qyuk);
 								
 								do
 									{
@@ -1572,7 +1572,7 @@ echo '<form name="formx_e" id="formx_e">
 									
 									echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 									}
-								while ($ryuk = mysql_fetch_assoc($qyuk));
+								while ($ryuk = mysqli_fetch_assoc($qyuk));
 			
 							
 							echo '</select>
@@ -1582,9 +1582,9 @@ echo '<form name="formx_e" id="formx_e">
 								<option value="'.balikin($rowx3[6]).'" selected>'.balikin($rowx3[6]).'</option>';
 								
 								//list
-								$qyuk = mysql_query("SELECT * FROM m_tingkat ".
+								$qyuk = mysqli_query($koneksi, "SELECT * FROM m_tingkat ".
 														"ORDER BY round(no) ASC");
-								$ryuk = mysql_fetch_assoc($qyuk);
+								$ryuk = mysqli_fetch_assoc($qyuk);
 								
 								do
 									{
@@ -1594,7 +1594,7 @@ echo '<form name="formx_e" id="formx_e">
 									
 									echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 									}
-								while ($ryuk = mysql_fetch_assoc($qyuk));
+								while ($ryuk = mysqli_fetch_assoc($qyuk));
 			
 							
 							echo '</select>
@@ -1664,10 +1664,10 @@ echo '<form name="formx_e" id="formx_e">
 					for ($k=1;$k<=3;$k++)
 						{
 						//detail
-						$qx3 = mysql_query("SELECT * FROM siswa_beasiswa ".
+						$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa_beasiswa ".
 											"WHERE siswa_kd = '$kdx' ".
 											"AND no = '$k'");
-						$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+						$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 					      echo '<tr>
 					        <td>'.$k.'</td>
@@ -1677,9 +1677,9 @@ echo '<form name="formx_e" id="formx_e">
 								<option value="'.balikin($rowx3[5]).'" selected>'.balikin($rowx3[5]).'</option>';
 								
 								//list
-								$qyuk = mysql_query("SELECT * FROM m_jenis2 ".
+								$qyuk = mysqli_query($koneksi, "SELECT * FROM m_jenis2 ".
 														"ORDER BY round(no) ASC");
-								$ryuk = mysql_fetch_assoc($qyuk);
+								$ryuk = mysqli_fetch_assoc($qyuk);
 								
 								do
 									{
@@ -1689,7 +1689,7 @@ echo '<form name="formx_e" id="formx_e">
 									
 									echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 									}
-								while ($ryuk = mysql_fetch_assoc($qyuk));
+								while ($ryuk = mysqli_fetch_assoc($qyuk));
 			
 							
 							echo '</select>
@@ -1738,9 +1738,9 @@ echo '<form name="formx_e" id="formx_e">
         </div>
         <div class="box-body">';
 			//detail
-			$qx3 = mysql_query("SELECT * FROM siswa ".
+			$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 								"WHERE kd = '$kdx'");
-			$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+			$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 
 			echo '<div class="row">
@@ -1790,9 +1790,9 @@ echo '<form name="formx_e" id="formx_e">
         </div>
         <div class="box-body">';
 			//detail
-			$qx3 = mysql_query("SELECT * FROM siswa ".
+			$qx3 = mysqli_query($koneksi, "SELECT * FROM siswa ".
 								"WHERE kd = '$kdx'");
-			$rowx3 = mysql_fetch_assoc($qx3, MYSQL_NUM);
+			$rowx3 = mysqli_fetch_assoc($qx3, MYSQL_NUM);
 		
 
 			echo '<div class="row">
@@ -1806,9 +1806,9 @@ echo '<form name="formx_e" id="formx_e">
 					<option value="'.balikin($rowx3[42]).'" selected>'.balikin($rowx3[42]).'</option>';
 					
 					//list
-					$qyuk = mysql_query("SELECT * FROM m_karena ".
+					$qyuk = mysqli_query($koneksi, "SELECT * FROM m_karena ".
 											"ORDER BY round(no) ASC");
-					$ryuk = mysql_fetch_assoc($qyuk);
+					$ryuk = mysqli_fetch_assoc($qyuk);
 					
 					do
 						{
@@ -1818,7 +1818,7 @@ echo '<form name="formx_e" id="formx_e">
 						
 						echo '<option value="'.$yuk_nama.'">'.$yuk_nama2.'</option>';
 						}
-					while ($ryuk = mysql_fetch_assoc($qyuk));
+					while ($ryuk = mysqli_fetch_assoc($qyuk));
 
 				
 				echo '</select>

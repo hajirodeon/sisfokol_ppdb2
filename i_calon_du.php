@@ -69,12 +69,12 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpane'))
 	else
 		{
 		//hapus dulu, lalu insert...
-		mysql_query("DELETE FROM siswa ".
+		mysqli_query($koneksi, "DELETE FROM siswa ".
 						"WHERE kd = '$kd'");
 		
 		
 		//insert
-		mysql_query("INSERT INTO siswa(kd, nisn, nama, kelamin, ".
+		mysqli_query($koneksi, "INSERT INTO siswa(kd, nisn, nama, kelamin, ".
 						"nik, tmp_lahir, tgl_lahir, noreg_akta_lahir, ".
 						"agama, warga, kebutuhan_khusus, alamat_jalan, ".
 						"rt, rw, dusun, kelurahan, ".
@@ -140,12 +140,12 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanf'))
 	else
 		{
 		//hapus dulu, lalu insert...
-		mysql_query("DELETE FROM siswa_ayah ".
+		mysqli_query($koneksi, "DELETE FROM siswa_ayah ".
 						"WHERE siswa_kd = '$kd'");
 		
 		
 		//insert
-		mysql_query("INSERT INTO siswa_ayah(kd, siswa_kd, nama, nik, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_ayah(kd, siswa_kd, nama, nik, ".
 						"tahun_lahir, pendidikan, pekerjaan, ".
 						"penghasilan_bulanan, kebutuhan_khusus, postdate) VALUES ".
 						"('$x', '$kd', '$f_nama', '$f_nik', ".
@@ -200,12 +200,12 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpang'))
 	else
 		{
 		//hapus dulu, lalu insert...
-		mysql_query("DELETE FROM siswa_ibu ".
+		mysqli_query($koneksi, "DELETE FROM siswa_ibu ".
 						"WHERE siswa_kd = '$kd'");
 		
 		
 		//insert
-		mysql_query("INSERT INTO siswa_ibu(kd, siswa_kd, nama, nik, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_ibu(kd, siswa_kd, nama, nik, ".
 						"tahun_lahir, pendidikan, pekerjaan, ".
 						"penghasilan_bulanan, kebutuhan_khusus, postdate) VALUES ".
 						"('$x', '$kd', '$f_nama', '$f_nik', ".
@@ -259,12 +259,12 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanh'))
 	else
 		{
 		//hapus dulu, lalu insert...
-		mysql_query("DELETE FROM siswa_wali ".
+		mysqli_query($koneksi, "DELETE FROM siswa_wali ".
 						"WHERE siswa_kd = '$kd'");
 		
 		
 		//insert
-		mysql_query("INSERT INTO siswa_wali(kd, siswa_kd, nama, nik, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_wali(kd, siswa_kd, nama, nik, ".
 						"tahun_lahir, pendidikan, pekerjaan, ".
 						"penghasilan_bulanan, kebutuhan_khusus, postdate) VALUES ".
 						"('$x', '$kd', '$f_nama', '$f_nik', ".
@@ -311,7 +311,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpani'))
 	else
 		{
 		//update
-		mysql_query("UPDATE siswa SET telp = '$f_telp', ".
+		mysqli_query($koneksi, "UPDATE siswa SET telp = '$f_telp', ".
 						"hp = '$f_hp', ".
 						"email = '$f_email' ".
 						"WHERE kd = '$kd'");
@@ -361,12 +361,12 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanj'))
 	else
 		{
 		//hapus dulu, lalu insert...
-		mysql_query("DELETE FROM siswa_priodik ".
+		mysqli_query($koneksi, "DELETE FROM siswa_priodik ".
 						"WHERE siswa_kd = '$kd'");
 		
 		
 		//insert
-		mysql_query("INSERT INTO siswa_priodik(kd, siswa_kd, tb, bb, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_priodik(kd, siswa_kd, tb, bb, ".
 						"jarak, jarak2, waktu_jam, waktu_menit, jml_saudara, postdate) VALUES ".
 						"('$x', '$kd', '$j_tb', '$j_bb', ".
 						"'$j_jarak', '$j_jarak2', '$j_jam', '$j_menit', '$j_jml_saudara', '$today')");
@@ -399,7 +399,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpank'))
 
 
 	//hapus dulu, lalu insert...
-	mysql_query("DELETE FROM siswa_prestasi ".
+	mysqli_query($koneksi, "DELETE FROM siswa_prestasi ".
 					"WHERE siswa_kd = '$kd'");
 		
 		
@@ -437,7 +437,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpank'))
 
 
 		//insert
-		mysql_query("INSERT INTO siswa_prestasi(kd, no, siswa_kd, jenis, tingkat, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_prestasi(kd, no, siswa_kd, jenis, tingkat, ".
 						"nama, tahun, penyelenggara, peringkat, postdate) VALUES ".
 						"('$xyz', '$i', '$kd', '$k_jenis', '$k_tingkat', ".
 						"'$k_nama', '$k_tahun', '$k_penyelenggara', '$k_peringkat', '$today')");
@@ -470,7 +470,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanl'))
 
 
 	//hapus dulu, lalu insert...
-	mysql_query("DELETE FROM siswa_beasiswa ".
+	mysqli_query($koneksi, "DELETE FROM siswa_beasiswa ".
 					"WHERE siswa_kd = '$kd'");
 		
 		
@@ -500,7 +500,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanl'))
 
 
 		//insert
-		mysql_query("INSERT INTO siswa_beasiswa(kd, no, siswa_kd, jenis, ket, ".
+		mysqli_query($koneksi, "INSERT INTO siswa_beasiswa(kd, no, siswa_kd, jenis, ket, ".
 						"mulai, selesai, postdate) VALUES ".
 						"('$xyz', '$i', '$kd', '$l_jenis', '$l_ket', ".
 						"'$l_mulai', '$l_selesai', '$today')");
@@ -544,7 +544,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpanm'))
 	else
 		{
 		//update
-		mysql_query("UPDATE siswa SET berkas_ijazah = '$f_ijazah', ".
+		mysqli_query($koneksi, "UPDATE siswa SET berkas_ijazah = '$f_ijazah', ".
 						"berkas_skhun = '$f_skhun' ".
 						"WHERE kd = '$kd'");
 
@@ -586,7 +586,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'simpann'))
 	else
 		{
 		//update
-		mysql_query("UPDATE siswa SET keluar_karena = '$f_karena', ".
+		mysqli_query($koneksi, "UPDATE siswa SET keluar_karena = '$f_karena', ".
 						"keluar_tgl = '$f_tanggal', ".
 						"keluar_alasan = '$f_alasan' ".
 						"WHERE kd = '$kd'");

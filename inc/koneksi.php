@@ -1,14 +1,23 @@
 <?php
 //KONEKSI ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$koneksi = mysql_connect($xhostname, $xusername, $xpassword) or die(mysql_error());
-mysql_select_db($xdatabase);
+$koneksi = mysqli_connect($xhostname, $xusername, $xpassword, $xdatabase);
+
+
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Koneksi ERROR: " . mysqli_connect_error();
+  exit();
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+
+
+
 //Detail Sekolah ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$qdti = mysql_query("SELECT * FROM cp_profil");
-$rdti = mysql_fetch_assoc($qdti);
+$qdti = mysqli_query($koneksi, "SELECT * FROM cp_profil");
+$rdti = mysqli_fetch_assoc($qdti);
 $sek_nama = balikin($rdti['judul']);
 $sek_alamat = balikin($rdti['isi']);
 $sek_kontak = balikin($rdti['telp']);

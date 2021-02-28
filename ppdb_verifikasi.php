@@ -32,9 +32,9 @@ $mbkd = nosql($_REQUEST['mbkd']);
 
 
 //ketahui tapel terakhir
-$qku = mysql_query("SELECT * FROM psb_m_tapel ".
+$qku = mysqli_query($koneksi, "SELECT * FROM psb_m_tapel ".
 						"ORDER BY round(tahun1) DESC");
-$rku = mysql_fetch_assoc($qku);
+$rku = mysqli_fetch_assoc($qku);
 $tapel_kd = nosql($rku['kd']);
 $tapel_nama = nosql($rku['tahun1']);
 
@@ -63,11 +63,11 @@ if ($_POST['btnKRM'])
 	
 
 	//update ////////////////////////////////////////////////////////////////////////////////////////////
-	$qcc = mysql_query("SELECT * FROM psb_calon ".
+	$qcc = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 							"WHERE usernamex = '$c_user' ".
 							"AND passwordx = '$c_pass'");
-	$rcc = mysql_fetch_assoc($qcc);
-	$tcc = mysql_num_rows($qcc);
+	$rcc = mysqli_fetch_assoc($qcc);
+	$tcc = mysqli_num_rows($qcc);
 	$memberkd = nosql($rcc['kd']);
 	
 	
@@ -96,7 +96,7 @@ if ($_POST['btnKRM'])
 	else
 		{
 		//update...
-		mysql_query("UPDATE psb_calon SET reg_bayar_tgl = '$e_tgl_bayar' ".
+		mysqli_query($koneksi, "UPDATE psb_calon SET reg_bayar_tgl = '$e_tgl_bayar' ".
 						"WHERE kd = '$memberkd'");
 
 		
@@ -115,7 +115,7 @@ if ($_POST['btnKRM'])
 	
 	
 		//update
-		mysql_query("UPDATE psb_calon SET reg_bayar = '$c_nominal', ".
+		mysqli_query($koneksi, "UPDATE psb_calon SET reg_bayar = '$c_nominal', ".
 						"reg_bayar_tgl = '$c_tgl_bayar', ".
 						"reg_bayar_filex = '$namabaru' ".
 						"WHERE kd = '$memberkd'");

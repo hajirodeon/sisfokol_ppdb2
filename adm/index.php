@@ -23,15 +23,15 @@ $judulku = "$judul  [$adm_session]";
 
 
 //jml calon 
-$qyuk = mysql_query("SELECT * FROM psb_calon");
-$jml_calon_tk = mysql_num_rows($qyuk);
+$qyuk = mysqli_query($koneksi, "SELECT * FROM psb_calon");
+$jml_calon_tk = mysqli_num_rows($qyuk);
 
 
 
 //jml diterima 
-$qyuk = mysql_query("SELECT * FROM psb_calon ".
+$qyuk = mysqli_query($koneksi, "SELECT * FROM psb_calon ".
 						"WHERE diterima = 'true'");
-$jml_diterima_tk = mysql_num_rows($qyuk);
+$jml_diterima_tk = mysqli_num_rows($qyuk);
 
 
 
@@ -40,8 +40,8 @@ $jml_diterima_tk = mysql_num_rows($qyuk);
 
 
 //jml visitor
-$qyuk = mysql_query("SELECT * FROM cp_visitor");
-$jml_visitor = mysql_num_rows($qyuk);
+$qyuk = mysqli_query($koneksi, "SELECT * FROM cp_visitor");
+$jml_visitor = mysqli_num_rows($qyuk);
 
 
 
@@ -104,11 +104,11 @@ for($i=0; $i<=7; $i++)
 
 
 	//ketahui ordernya...
-	$qyuk = mysql_query("SELECT * FROM cp_visitor ".
+	$qyuk = mysqli_query($koneksi, "SELECT * FROM cp_visitor ".
 							"WHERE round(DATE_FORMAT(postdate, '%d')) = '$itgl' ".
 							"AND round(DATE_FORMAT(postdate, '%m')) = '$ibln' ".
 							"AND round(DATE_FORMAT(postdate, '%Y')) = '$itahun'");
-	$tyuk = mysql_num_rows($qyuk);
+	$tyuk = mysqli_num_rows($qyuk);
 	
 	if (empty($tyuk))
 		{

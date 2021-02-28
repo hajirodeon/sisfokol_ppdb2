@@ -54,7 +54,7 @@ if ($_POST['btnSMP'])
 	else
 		{
 		//perintah SQL
-		mysql_query("UPDATE cp_profil SET judul = '$e_nama', ".
+		mysqli_query($koneksi, "UPDATE cp_profil SET judul = '$e_nama', ".
 						"isi = '$e_isi', ".
 						"filex = '$namabaru', ".
 						"alamat = '$e_alamat', ".
@@ -110,7 +110,7 @@ if ($_POST['btnSMP2'])
 	else
 		{
 		//perintah SQL
-		mysql_query("UPDATE cp_profil SET alamat_googlemap = '$e_alamat'");
+		mysqli_query($koneksi, "UPDATE cp_profil SET alamat_googlemap = '$e_alamat'");
 
 
 		//auto-kembali
@@ -141,8 +141,8 @@ echo '<form action="'.$filenya.'" method="post" name="formx">';
 
 
 //detail
-$qku = mysql_query("SELECT * FROM cp_profil");
-$rku = mysql_fetch_assoc($qku);
+$qku = mysqli_query($koneksi, "SELECT * FROM cp_profil");
+$rku = mysqli_fetch_assoc($qku);
 $ku_judul = balikin($rku['judul']);
 $ku_isi = balikin($rku['isi']);
 $ku_web = balikin($rku['web']);

@@ -17,9 +17,9 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'pollsimpan'))
 	$v_opsi = nosql($_GET['v_opsi']);
 
 	//cek
-	$qcc = mysql_query("SELECT * FROM cp_polling");
-	$rcc = mysql_fetch_assoc($qcc);
-	$tcc = mysql_num_rows($qcc);
+	$qcc = mysqli_query($koneksi, "SELECT * FROM cp_polling");
+	$rcc = mysqli_fetch_assoc($qcc);
+	$tcc = mysqli_num_rows($qcc);
 
 	//if...
 	if ($v_opsi == "nopsi1")
@@ -53,7 +53,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'pollsimpan'))
 
 
 	//update
-	mysql_query("UPDATE cp_polling SET nil_opsi1 = '$nil_opsi1', ".
+	mysqli_query($koneksi, "UPDATE cp_polling SET nil_opsi1 = '$nil_opsi1', ".
 					"nil_opsi2 = '$nil_opsi2', ".
 					"nil_opsi3 = '$nil_opsi3', ".
 					"nil_opsi4 = '$nil_opsi4', ".
@@ -81,16 +81,16 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'newssimpan'))
 	$emailku = cegah($_GET['emailku']);
 
 	//cek
-	$qcc = mysql_query("SELECT * FROM cp_newsletter ".
+	$qcc = mysqli_query($koneksi, "SELECT * FROM cp_newsletter ".
 							"WHERE email = '$emailku'");
-	$rcc = mysql_fetch_assoc($qcc);
-	$tcc = mysql_num_rows($qcc);
+	$rcc = mysqli_fetch_assoc($qcc);
+	$tcc = mysqli_num_rows($qcc);
 
 	//jika null
 	if (empty($tcc))
 		{
 		//insert
-		mysql_query("INSERT INTO cp_newsletter(kd, email, postdate) VALUES ".
+		mysqli_query($koneksi, "INSERT INTO cp_newsletter(kd, email, postdate) VALUES ".
 						"('$x', '$emailku', '$today')");
 		}
 	
@@ -153,7 +153,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'artikelkomentar'))
 		if ($ongkoku == $ongkokux)
 			{
 			//insert
-			mysql_query("INSERT INTO cp_artikel_komentar(kd, kd_artikel, nama, email, isi, postdate) VALUES ".
+			mysqli_query($koneksi, "INSERT INTO cp_artikel_komentar(kd, kd_artikel, nama, email, isi, postdate) VALUES ".
 							"('$xyz', '$artkd', '$namaku', '$emailku', '$isiku', '$today')");
 		
 		
@@ -174,14 +174,14 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'artikelkomentar'))
 		
 			<?php
 			//update jumlah komentar
-			$qku = mysql_query("SELECT * FROM cp_artikel_komentar ".
+			$qku = mysqli_query($koneksi, "SELECT * FROM cp_artikel_komentar ".
 									"WHERE kd_artikel = '$artkd' ".
 									"AND aktif = 'true'");
-			$rku = mysql_fetch_assoc($qku);				
-			$tku = mysql_num_rows($qku);
+			$rku = mysqli_fetch_assoc($qku);				
+			$tku = mysqli_num_rows($qku);
 			
 			//update
-			mysql_query("UPDATE cp_artikel SET jml_komentar = '$tku' ".
+			mysqli_query($koneksi, "UPDATE cp_artikel SET jml_komentar = '$tku' ".
 							"WHERE kd = '$artkd'");
 			
 			
@@ -258,7 +258,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'bukutamu'))
 		if ($ongkoku == $ongkokux)
 			{
 			//insert
-			mysql_query("INSERT INTO cp_bukutamu(kd, nama, alamat, telp, email, situs, isi, postdate) VALUES ".
+			mysqli_query($koneksi, "INSERT INTO cp_bukutamu(kd, nama, alamat, telp, email, situs, isi, postdate) VALUES ".
 							"('$xyz', '$namaku', '$alamatku', '$telpku', '$emailku', '$situsku', '$isiku', '$today')");
 		
 		
@@ -320,7 +320,7 @@ if ((isset($_GET['aksi']) && $_GET['aksi'] == 'artikelsuka'))
 	$artkd = cegah($_GET['artkd']);
 
 	//update
-	mysql_query("UPDATE cp_artikel SET jml_suka = jml_suka + 1 ".
+	mysqli_query($koneksi, "UPDATE cp_artikel SET jml_suka = jml_suka + 1 ".
 					"WHERE kd = '$artkd'");
 		
 	echo '<p>

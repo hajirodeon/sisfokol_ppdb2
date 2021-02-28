@@ -281,7 +281,7 @@ function LoadTpl($template="")
 //xclose
 function xfree($str)
 	{
-//	mysql_free_result($str);
+//	mysqli_free_result($str);
 	}
 
 
@@ -289,7 +289,7 @@ function xfree($str)
 //xclose
 function xclose($str)
 	{
-	mysql_close($str);
+	mysqli_close($str);
 	}
 
 
@@ -1846,7 +1846,7 @@ function add_days($my_date,$numdays)
 
 
 //VERSI /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$versi = "SISFOKOL-PPDB v2.0";
+$versi = "SISFOKOL-PPDB v2.2";
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

@@ -7,12 +7,12 @@ $pass6_session = nosql($_SESSION['pass6_session']);
 $hajirobe_session = nosql($_SESSION['hajirobe_session']);
 $nama6_session = balikin($_SESSION['nama6_session']);
 
-$qbw = mysql_query("SELECT kd FROM psb_calon ".
+$qbw = mysqli_query($koneksi, "SELECT kd FROM psb_calon ".
 						"WHERE kd = '$kd6_session' ".
 						"AND usernamex = '$username6_session' ".
 						"AND passwordx = '$pass6_session'");
-$rbw = mysql_fetch_assoc($qbw);
-$tbw = mysql_num_rows($qbw);
+$rbw = mysqli_fetch_assoc($qbw);
+$tbw = mysqli_num_rows($qbw);
 
 if (($tbw == 0) OR (empty($kd6_session))
 	OR (empty($username6_session))

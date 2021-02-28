@@ -24,9 +24,9 @@ $filenya_ke = $sumber;
 
 
 //foto
-$qku2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qku2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"ORDER BY postdate DESC");
-$rku2 = mysql_fetch_assoc($qku2);
+$rku2 = mysqli_fetch_assoc($qku2);
 $ku2_kd = nosql($rku2['kd']);
 $ku2_nama = balikin($rku2['nama']);
 $ku2_filex = balikin($rku2['filex']);
@@ -227,9 +227,9 @@ echo '<div class="section-heading">
 
 <?php
 //foto
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"ORDER BY postdate DESC");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 
 do
 	{
@@ -249,7 +249,7 @@ do
     </div>';
 
 	}
-while ($ryuk2 = mysql_fetch_assoc($qyuk2));
+while ($ryuk2 = mysqli_fetch_assoc($qyuk2));
 
 
 
@@ -363,9 +363,9 @@ ob_start();
 
 
 
-$qyuk2 = mysql_query("SELECT * FROM cp_g_foto ".
+$qyuk2 = mysqli_query($koneksi, "SELECT * FROM cp_g_foto ".
 						"ORDER BY RAND() LIMIT 0,5");
-$ryuk2 = mysql_fetch_assoc($qyuk2);
+$ryuk2 = mysqli_fetch_assoc($qyuk2);
 
 do
 	{
@@ -388,7 +388,7 @@ do
 
 
 	}
-while ($ryuk2 = mysql_fetch_assoc($qyuk2));
+while ($ryuk2 = mysqli_fetch_assoc($qyuk2));
 
 
 
